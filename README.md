@@ -1,2 +1,1 @@
-# notes
-笔记
+# Hello VuePress!
