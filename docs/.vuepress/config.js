@@ -1,12 +1,16 @@
 module.exports = {
   title: '胖大人的日常记事',
   description: 'Just playing around',
+  plugins: ['@vuepress/pwa',{
+    serviceWorker: true,
+    popupComponent: 'MySWUpdatePopup',
+    updatePopup: true,
+  }],
   head: [
-    ['link', { rel: 'icon', href: `/docs/.vuepress/public/logo.ico` }],
+    ['link', { rel: 'icon', href: 'logo.ico' }],
     //增加manifest.json
-    ['link', { rel: 'manifest', href: '/docs/.vuepress/public/manifest.json' }],
+    ['link', { rel: 'manifest', href: 'manifest.json' }],
   ],
-  serviceWorker: true,
   themeConfig: {
     sidebar: [
       ['0001.md', '01 开篇词 | 使用 Webpack 实现前端工程化'],
@@ -56,5 +60,5 @@ module.exports = {
       //   link: 'https://google.com'
       // },
     ],
-  }
+  },
 }
