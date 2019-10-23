@@ -49,6 +49,7 @@ module.exports = {
       ['0028.md', '28 Webpack 的模块热替换做了什么？'],
       ['0029.md', '29 实战：使用 PostCSS 打造移动适配方案'],
       ['0030.md', '30 实战：手写一个 markdown-loader'],
+      ['0031.md', '31 实战：手写一个 prefetch-webpack-plugin 插件'],
     ],
     sidebarDepth: 2,
     lastUpdated: 'Last Updated',
