@@ -1,6 +1,7 @@
 # ES2015 + 常用API
 
 <p style="text-align: right">----胖大人本胖&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+
 ## 变量
 
 ### var和let与const
