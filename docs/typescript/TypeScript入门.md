@@ -180,3 +180,136 @@ let arrThree:Array<IState> = [{name: '李白', age: 64}, {name: '杜甫', age: 6
 let arrFour:IState [] = [{name: '李白', age: 64}, {name: '杜甫', age: 63}];
 ```
 
+## 函数
+
+```tsx
+// 声明 参数 name必须是string age必须是number 返回值必须是number
+function fn(name:string, age:number):number {
+    return age;
+}
+const ageNumber:number = fn('李白', 18);
+```
+
+* 可选的参数
+
+```tsx
+function fn(name:string, age:number, sex?:string):number {
+    return age;
+}
+fn('李白', 18); // sex参数可选
+```
+
+* 有默认值的参数
+
+```tsx
+function fn(name:string = '李白', age: number = 18):number {
+    return age;
+}
+```
+
+* 表达式类型的函数
+
+```tsx
+// 表达式限定类型
+const fn: (name:string, age: number) => number = (name:string,age:number):number => {
+  return age
+}
+```
+
+```tsx
+// 通过接口限定类型
+interface fnType {
+  (name:string,age:number):number
+}
+
+const fn:fnType = (name:string,age:number):number => {
+  return age
+}
+```
+
+```tsx
+// 联合类型 重载
+
+// 输入number 输出number
+// 输入string 输出string
+function fn(value:string):string; // 限定输入类型 输出类型
+function fn(value:number):number;
+function fn(value:number|string):number|string {
+  return value
+}
+```
+
+## 类型断言
+
+```js
+// 联合类型只能访问共有的属性和方法 number并没有length属性
+// (<string>name)就当是将值转成了string
+// 括号 尖括号 都不能少
+const fn:(name:number|string) => number = (name:number|string):number => {
+  return (<string>name).length
+}
+```
+
+```tsx
+// 联合类型只能访问共有的属性和方法 number并没有length属性
+// (name as string)就当是将值转成了string
+// 括号 as 都不能少
+const fn:(name:number|string) => number = (name:number|string):number => {
+  return (name as string).length
+}
+```
+
+> 类型断言并不是类型转换，断言成一个联合类型中不存在的类型是不允许的
+
+## 类型别名（自定义类型）
+
+**类型别名要用`type`关键字**
+
+```tsx
+type strType = string;
+const str = '1';
+```
+
+```tsx
+type muchType = string|number|boolean;
+let much = '1';
+much = 2;
+much = true;
+```
+
+```tsx
+interface muchType {
+  name:string,
+  str:number,
+}
+interface muchType2 {
+  age:number,
+  sex:string,
+}
+type muchTypeValue = muchType | muchType2;
+
+let obj:muchTypeValue = {name: '李白', str: 18};
+obj = {age: 18,sex: '男'};
+```
+
+```tsx
+// 限定字符串选择
+type sexStr = '男'|'女'|'未知';
+const getSex:(sex:sexStr) => sexStr = (sex:sexStr) => sex;
+getSex('未知')
+```
+
+## 枚举
+
+**枚举要使用`enum`关键字定义**
+
+* 枚举（Enum）类型用于取值被限定在一定范围内的场景
+* 枚举成员会被赋值为从零开始递增的数字，同时也会对枚举值到枚举名进行反向映射
+
+```tsx
+enum Days {sub,mon,tue,web,tuh,fri,stt};
+Days[2] === 'tue';
+Days[5] === 'fri';
+Days.tue === '';
+```
+
