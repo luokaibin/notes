@@ -1179,16 +1179,89 @@ orderList.orderList.join('<----->'); // "[object Object]<----->[object Object]<-
 ### .reduce和.reduceRight
 
 * `reduce` 和 `reduceRight` 都是ES5就有的方法
+
 * 都是累加器；`reduce` 从左往右执行，`reduceRight` 从右往左执行
+
+* **适用场景** 还记得讲模版字符串中可以使用变量的那个例子吗
+
 * 语法：
+
   * `arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])`
+
   * `arr.reduceRight(callback(accumulator, currentValue[, index[, array]])[, initialValue])`
+
     * `callback` 一个回调函数，用来操作数组中的每个元素，可接受四个参数
-      * `accumulator` 上一次调用回调的返回值，或提供的 `initialValue`。如果没有
+      * `accumulator` 上一次调用回调的返回值，或提供的 `initialValue`。如果没有提供`initialValue` , 第一次函数执行时`accumulator`就是数组的第0个元素，`currentValue`是数组的第一个元素
+      * `currentValue` 当前被处理的元素
+      * `index` 可选 数组中当前被处理的元素的索引
+      * `array` 可选 调用 `reducet()` 的数组
+
+    * `initialValue` 可选 值用作回调的第一次调用的累加器。如果未提供初始值，则将使用并跳过数组中的最后一个元素。在没有初始值的空数组上调用reduce或reduceRight就会创建一个TypeError。
+
+```js
+// 模版字符串中使用变量的例子是这么写的
+const prace = {title: '渡荆门送别', autor: '李白', content: ['渡远荆门外，来从楚国游。', '山随平野尽，江入大荒流。', '月下飞天镜，云生结海楼。', '仍怜故乡水，万里送行舟。']}
+
+const render = function (accumulator, currentValue, index) {
+  return index === 1 ? '<p>' + accumulator + '</p>' + '<p>' + currentValue + '</p>' : accumulator + '<p>' + currentValue + '</p>';
+}
+
+const nodes = '<article><h3>' + prace.title + '</h3><address>' + prace.autor + '</address>' + prace.content.reduce(render) + '</article>';
+
+// 可以看到上面例子由于我们没有提供 initialValue ，所以我们返回的时候做了判断
+// 现在我们对上面例子做个简化和优化
+['渡远荆门外，来从楚国游。', '山随平野尽，江入大荒流。', '月下飞天镜，云生结海楼。', '仍怜故乡水，万里送行舟。'].reduce((count,item) => {
+	return count + `<span>${item}</span>`
+}, '')
+// 输出 <span>渡远荆门外，来从楚国游。</span><span>山随平野尽，江入大荒流。</span><span>月下飞天镜，云生结海楼。</span><span>仍怜故乡水，万里送行舟。</span>
+// 我们提供了初始累计是空字符串，然后就可以省略掉判断了
+
+// 使用reduceRight
+['渡远荆门外，来从楚国游。', '山随平野尽，江入大荒流。', '月下飞天镜，云生结海楼。', '仍怜故乡水，万里送行舟。'].reduceRight((count,item) => {
+	return count + `<span>${item}</span>`
+},'')
+// 输出 <span>仍怜故乡水，万里送行舟。</span><span>月下飞天镜，云生结海楼。</span><span>山随平野尽，江入大荒流。</span><span>渡远荆门外，来从楚国游。</span>
+```
 
 ### .shift和.pop
 
+* `shift` 和`pop` 都是用来从数组中删除元素
+
+* `shift` 和`pop` 都会改变原数组
+
+* `shift`删除数组的第一个元素，并返回该元素的值；`pop`删除数组的最后一个元素，并返回该元素的值
+
+* 语法 
+
+  * `arr.shift()`
+
+  * `arr.pop()`
+    * 当数组为空时返回undefined
+
+> 这两个API很简单，也是较为常用的API，代码省略
+
 ### .unshift和.push
+
+* `unshift`和`push`都是用来向数组添加元素的
+* `unshift`和`push`都会返回数组的新长度
+* `unshift`和`push`都会改变原数组
+* `unshift`向数组的开头添加元素，`push`向数组的结尾添加元素
+* 语法
+  * `arr.unshift(element1, ..., elementN)`
+  * `arr.push(element1, ..., elementN)`
+    * `elementN` 被添加到数组开头或结尾的元素
+
+```js
+const list = [];
+let length = list.unshift({name: '李白'}, str =>str, ['柴志阳']);
+console.log(length,list) // 3 [{name: '李白'},str =>str, ['柴志阳']]
+
+// push
+length = list.push('a', 's', 909);
+console.log(length,list) // 6 [{name: '李白'},str =>str, ['柴志阳'],'a', 's', 909]
+```
+
+> 这两个API也很简单，也很好理解，可以多用用，多感受下
 
 ### .some和.every
 
