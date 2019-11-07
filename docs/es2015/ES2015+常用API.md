@@ -1,6 +1,8 @@
 # ES2015 + 常用API
 
 <p style="text-align: right">----胖大人本胖&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+
+
 ## 变量
 
 ### var和let与const
@@ -267,7 +269,7 @@ const [firstPeople = '第一个程序猿', secondPeople = '第二个程序猿'] 
 console.log(firstPeople, secondPeople); // 第一个程序猿 第二个程序猿
 ```
 
-##字符串
+## 字符串
 
 ### 模版字符串
 

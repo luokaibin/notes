@@ -7,15 +7,16 @@ module.exports = {
     updatePopup: true,
   }],
   head: [
-    ['link', { rel: 'icon', href: 'logo.png' }],
-    ['link', { rel: 'manifest', href: 'manifest.json' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
     ['link', { rel: 'apple-touch-icon', href: 'logo.png' }],
     ['link', { rel: 'mask-icon', href: 'logo.svg', color: '#3eaf7c' }],
     ['meta', { name: 'msapplication-TileImage', content: 'logo_144*144.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+    ['meta', { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' }]
   ],
   themeConfig: {
     sidebar: {
