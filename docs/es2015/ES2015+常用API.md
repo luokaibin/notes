@@ -1,8 +1,6 @@
 # ES2015 + 常用API
 
 <p style="text-align: right">----胖大人本胖&emsp;&emsp;&emsp;&emsp;&emsp;</p>
-
-
 ## 变量
 
 ### var和let与const
@@ -1571,7 +1569,67 @@ promise.then(res => {
 })
 ```
 
+```js
+// 链式调用
+const promise = new Promise((reslove,reject) => {
+  // 在这里去写异步操作，完成之后，修改promise状态。这里随便写写
+  const num = parseInt(Math.random()*2); // 取个0或者1的随机数
+  if(num) {
+    reslove({'success': num}); // 取的随机数是0或者1，1 的时候是true，调用resolve()将promise修改为成功状态
+  } else {
+    reject({'fail': num}); // 取的随机数是0或者1，0 的时候是false，调用reject()将promise修改为失败状态
+  }
+});
+promise.then(res => {
+  console.log('成功', res); // 当Promise变成成功状态执行，也就是随机数是1，走if，reslove()执行
+  return res;
+}, ({fail}) => {
+  console.log('失败', fail); // 当Promise变成失败状态执行，也就是随机数是0，走else，reject()执行
+  return Promise.reject(fail)
+}).then(res => {
+  console.log('第二次链式调用的结果', res)
+}, () => {
+	console.log('第二次链式调用失败结果,我不接其值')
+})
+```
+
 ### .catch
+
+* 如果`.then()` 方法没有提供第二个参数，且`Promise` 是失败状态，`.catch()` 的内容会被执行（官方描述： **catch()** 方法返回一个`Promise`，并且处理拒绝的情况。它的行为与调用[`Promise.prototype.then(undefined, onRejected)`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) 相同。 (事实上, calling `obj.catch(onRejected)` 内部calls `obj.then(undefined, onRejected)`)）
+
+* 语法`Promise.catch(onRejected);`
+
+  * 当Promise 被rejected时,被调用的一个Function。 该函数拥有一个参数：
+
+    `reason`  rejection 的原因。
+
+     如果 `onRejected` 抛出一个错误或返回一个本身失败的 Promise ，  通过 `catch()` 返回的Promise 被rejected；否则，它将显示为成功（resolved）
+
+```js
+const promise = new Promise((reslove,reject) => {
+  // 在这里去写异步操作，完成之后，修改promise状态。这里随便写写
+  const num = parseInt(Math.random()*2); // 取个0或者1的随机数
+  if(num) {
+    reslove({'success': num}); // 取的随机数是0或者1，1 的时候是true，调用resolve()将promise修改为成功状态
+  } else {
+    reject({'fail': num}); // 取的随机数是0或者1，0 的时候是false，调用reject()将promise修改为失败状态
+  }
+});
+promise.catch(res => {
+  console.log('失败', res); // 接受Promise失败状态，但是一般不会这么用
+})
+// 这么使用是有可能的
+promise.then(res => {
+  console.log('成功', res); // 当Promise变成成功状态执行，也就是随机数是1，走if，reslove()执行
+  return res; // 原先是成功状态,我返回了新的Promise并且是失败状态
+}).catch(res => {
+  console.log('失败', res)
+})
+```
+
+> 一般来说，如果我们给`.then()` 提供了第二个参数，也就是处理失败状态的函数，那么就完全没有必要调用`.catch()` 方法；如果没有给`.then()` 提供第二个参数，此时我们可以用`.catch()` 处理失败；
+>
+> 如果，既给`.then()` 提供了第二个参数，还写了`.catch()` 那么，`.catch()` 永远不会执行
 
 ### .all
 
