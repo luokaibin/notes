@@ -1,6 +1,9 @@
 # ES2015 + 常用API
 
 <p style="text-align: right">----胖大人本胖&emsp;&emsp;&emsp;&emsp;&emsp;</p>
+
+
+
 ## 变量
 
 ### var和let与const
@@ -528,7 +531,7 @@ console.log(str.split('', 3)); // [" ", "渡", " "]
 console.log(str.split('', 20)); // (11) [" ", "渡", " ", "远", " ", "荆", " ", "门", " ", "外", " "]
 ```
 
-## 箭头函数
+## 箭头函数<div id="function"></div>>
 
 ### 定义
 
@@ -1044,6 +1047,8 @@ const newList = orderList.filter(element => element.status === 3 || element.stat
     * `thisArg` 执行 `callback` 时，用于 `this` 的值。
 
   > `map`和`forEach`语法一样，没有写错
+  >
+  >  **注意：**如果使用[箭头函数表达式](#function)来传入函数参数，`thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 [`this`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。 
 
 ```js
 const orderList = [{"contact":"李贺","price":4,"orderStatus":4,"logisticsState":260},{"contact":"袁天罡","price":23.7,"orderStatus":5,"logisticsState":220},{"contact":"袁天罡","price":219.5,"orderStatus":4,"logisticsState":220},{"contact":"苏轼","price":59,"orderStatus":4,"logisticsState":220},{"contact":"秦始皇","price":175.6,"orderStatus":2,"logisticsState":110},{"contact":"孟浩然","price":127.62,"orderStatus":3,"logisticsState":260},{"contact":"苏轼","price":108,"orderStatus":2,"logisticsState":250},{"contact":"李商隐","price":230.8,"orderStatus":4,"logisticsState":220},{"contact":"孟浩然","price":111.3,"orderStatus":4,"logisticsState":110},{"contact":"秦始皇","price":34.8,"orderStatus":3,"logisticsState":260}];
@@ -1867,4 +1872,22 @@ const fn = async () => {
 ```
 
 ### 扩展运算符
+
+即`...` ，用来将数组或者对象进行展开，也可以展开字符串，还可以在函数调用时对入参进行展开（描述不准确，看代码演示）；（官方描述： **展开语法(Spread syntax),** 可以在函数调用/数组构造时, 将数组表达式或者string在语法层面展开；还可以在构造字面量对象时, 将对象表达式按key-value的方式展开。) 
+
+* 常用来用来实现数组和对象的深拷贝
+
+```js
+/************************** 浅拷贝 ****************************/
+let numList1 = [1,2,3,4,5,6,7,8];
+let numList2 = numList1;
+// 这里给forEach传了第二个参数，用来充当this
+// 这里使用了function定义函数，因为使用箭头函数第二个参数会被忽略
+numList2.forEach(function(item,index) {
+  this[index] = item * 3;
+},numList2);
+console.log(numList1, numList2)
+```
+
+
 
