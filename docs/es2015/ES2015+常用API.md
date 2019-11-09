@@ -531,7 +531,9 @@ console.log(str.split('', 3)); // [" ", "渡", " "]
 console.log(str.split('', 20)); // (11) [" ", "渡", " ", "远", " ", "荆", " ", "门", " ", "外", " "]
 ```
 
-## 箭头函数<div id="function"></div>>
+<div id="function"></div>
+
+## 箭头函数
 
 ### 定义
 
@@ -1886,8 +1888,51 @@ let numList2 = numList1;
 numList2.forEach(function(item,index) {
   this[index] = item * 3;
 },numList2);
-console.log(numList1, numList2)
+console.log(numList1, numList2);
+
 ```
+
+我们本意是希望将numList1拷贝一份给numList2，然后对numList2进行修改，numList1我们可能在其他地方还需要用，但由于js对引用类型实行的时浅拷贝，所以会造成numList1也被改变，基于此，我们希望numList2改变不会影响numList1，我们就需要对numList1进行深拷贝
+
+```js
+/************************** map深拷贝 ****************************/
+const numList1 = [1,2,3,4,5,6,7,8];
+const numList2 = [...numList1]
+numList2.forEach(function(item,index) {
+  this[index] = item * 3;
+},numList2);
+console.log(numList1, numList2);
+// 实现这功能最适合的应该是map()方法，一步到位。这里是为了刻意演示扩展运算符
+```
+
+* 对象深拷贝
+
+```js
+const obj1 = {name: '李白'};
+const obj2 = {age: 18};
+const obj3 = {job: '诗人'};
+const obj4 = {...obj1,...obj2,...obj3,friend: '汪伦'};
+console.log(obj4);
+```
+
+> 对于以上写法，如果`obj2`中的属性在`obj1`中已经存在了，则`obj2`中的属性会覆盖`obj1` 中的属性；**后覆盖前**
+>
+> 以上写法也是刻意为之，对象深拷贝还有其他API
+
+* 字符串扩展运算符和在函数调用时
+
+```js
+console.log(...'qasxxxxxdrrrrrrrfgbbbhuuuujmmmmko');
+
+const fn = (x,y,z) => {
+  return `${x}----${y}----${z}`;
+}
+fn(...['who','are','you']);
+```
+
+## 未完待续。。。
+
+想起来再更
 
 
 
