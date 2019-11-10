@@ -3,7 +3,6 @@
 <p style="text-align: right">----胖大人本胖&emsp;&emsp;&emsp;&emsp;&emsp;</p>
 
 
-
 ## 变量
 
 ### var和let与const
@@ -532,7 +531,6 @@ console.log(str.split('', 20)); // (11) [" ", "渡", " ", "远", " ", "荆", " 
 ```
 
 <div id="function"></div>
-
 ## 箭头函数
 
 ### 定义
@@ -1930,9 +1928,27 @@ const fn = (x,y,z) => {
 fn(...['who','are','you']);
 ```
 
-## 未完待续。。。
+## 扩展
 
-想起来再更
+### `async/await` `Promise` ` Generator ` 的前世今生
 
+### `forEach` VS `map` 性能对比
 
+### `Symbol` 新的JS原始数据类型
+
+### 使用Web自定义事件(`CustomEvent` 结合` EventTarget ` )更好的实现发布订阅
+
+### 借助`Map` 更好的实现策略模式
+
+### 放弃`Axios` 使用`fetch` 
+
+### `FileReader` 前端文件读取
+
+### `FormData` 详解
+
+### What is ` Blob ` 
+
+### 如何在Web使用手机原生的分享能力
+
+### 如何在`Input` 中输入图片(实现简易富文本编辑器)
 
