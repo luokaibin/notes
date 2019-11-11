@@ -2,7 +2,6 @@
 
 <p style="text-align: right">----胖大人本胖&emsp;&emsp;&emsp;&emsp;&emsp;</p>
 
-
 ## 变量
 
 ### var和let与const
@@ -530,7 +529,6 @@ console.log(str.split('', 3)); // [" ", "渡", " "]
 console.log(str.split('', 20)); // (11) [" ", "渡", " ", "远", " ", "荆", " ", "门", " ", "外", " "]
 ```
 
-<div id="function"></div>
 ## 箭头函数
 
 ### 定义
@@ -1048,7 +1046,7 @@ const newList = orderList.filter(element => element.status === 3 || element.stat
 
   > `map`和`forEach`语法一样，没有写错
   >
-  >  **注意：**如果使用[箭头函数表达式](#function)来传入函数参数，`thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 [`this`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。 
+  >  **注意：** 如果使用[箭头函数表达式](#箭头函数)来传入函数参数，`thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 [`this`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。 
 
 ```js
 const orderList = [{"contact":"李贺","price":4,"orderStatus":4,"logisticsState":260},{"contact":"袁天罡","price":23.7,"orderStatus":5,"logisticsState":220},{"contact":"袁天罡","price":219.5,"orderStatus":4,"logisticsState":220},{"contact":"苏轼","price":59,"orderStatus":4,"logisticsState":220},{"contact":"秦始皇","price":175.6,"orderStatus":2,"logisticsState":110},{"contact":"孟浩然","price":127.62,"orderStatus":3,"logisticsState":260},{"contact":"苏轼","price":108,"orderStatus":2,"logisticsState":250},{"contact":"李商隐","price":230.8,"orderStatus":4,"logisticsState":220},{"contact":"孟浩然","price":111.3,"orderStatus":4,"logisticsState":110},{"contact":"秦始皇","price":34.8,"orderStatus":3,"logisticsState":260}];
@@ -1269,6 +1267,34 @@ console.log(length,list) // 6 [{name: '李白'},str =>str, ['柴志阳'],'a', 's
 > 这两个API也很简单，也很好理解，可以多用用，多感受下
 
 ### .some和.every
+
+* `some` 和`every` 都是ES5就有的API
+
+* `some` 和 `every` 都是用来测试数组元素是否可以通过测试条件(我们提供的一个测试函数)，通过就返回 **true** ，否则返回 **false** ；不同的是数组中只要有一个元素通过测试`some`就会返回 **true**  ，而`every` 需要所有元素都通过测试才会返回**true**。
+
+* 语法
+
+  * `arr.some(callback(element[, index[, array]])[, thisArg])`
+
+  * `arr.every(callback(element[, index[, array]])[, thisArg])`
+
+    * `callback`  用来测试每个元素的函数，它可以接收三个参数： 
+      * `element`  用于测试的当前值。 
+      * `index` 可选  用于测试的当前值的索引。 
+      * `array` 可选  当前数组。 
+
+    * `thisArg` 可选  执行 `callback` 时使用的 `this` 值。 
+    * 返回值 回调函数必须返回Boolean值
+
+  > **注意：** 如果使用[箭头函数表达式](#箭头函数)来传入函数参数，`thisArg` 参数会被忽略，因为箭头函数在词法上绑定了 [`this`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 值。 
+
+```js
+const list = [{id: 1012098909, userName: '李白'}, {id: null, userName: '杜甫'}, {id: 102909890, userName: '松鼠航'}]
+console.log(list.every(item => Boolean(item.id))); // false
+console.log(list.some(item => Boolean(item.id))); // true
+```
+
+> 这两个判断很简单，就是一个并（&）一个或（|）。
 
 ### .slice
 
