@@ -65,6 +65,9 @@ module.exports = {
       ],
       '/es2015/': [
         ['ES2015+常用API.md', 'ES2015+常用API']
+      ],
+      '/other/': [
+        '恰运维一口饭',
       ]
     },
     sidebarDepth: 2,
@@ -81,12 +84,16 @@ module.exports = {
       },
       {
         text: 'typescript',
-        link: '/typescript/'
+        link: '/typescript/TypeScript入门'
       },
       {
         text: 'ES2015 +',
-        link: '/es2015/'
+        link: '/es2015/ES2015+常用API'
       },
+      {
+        text: 'other',
+        link: '/other/恰运维一口饭'
+      }
     ],
   },
 }
