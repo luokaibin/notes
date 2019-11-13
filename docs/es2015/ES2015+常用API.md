@@ -1,7 +1,6 @@
 # ES2015 + 常用API
 
 <p style="text-align: right">----胖大人本胖&emsp;&emsp;&emsp;&emsp;&emsp;</p>
-
 ## 变量
 
 ### var和let与const
@@ -1298,11 +1297,118 @@ console.log(list.some(item => Boolean(item.id))); // true
 
 ### .slice
 
+* 数组截取，根据传入的起始位置和截止位置从原数组中截取指定长度的元素组成新的数组返回，新数组为原数组的浅拷贝不会改变原数组；（官方描述：`slice()` 方法返回一个新的数组对象，这一对象是一个由 `begin` 和 `end` 决定的原数组的**浅拷贝**（包括 `begin`，不包括`end`）。原始数组不会被改变。）
+
+* 语法：`arr.slice([begin[, end]])`
+
+  * `begin` 可选 提取起始处的索引（从 `0` 开始），从该索引开始提取原数组元素。
+
+    如果该参数为负数，则表示从原数组中的倒数第几个元素开始提取，`slice(-2)` 表示提取原数组中的倒数第二个元素到最后一个元素（包含最后一个元素）。
+
+    如果省略 `begin`，则 `slice` 从索引 `0` 开始。
+
+    如果 `begin` 大于原数组的长度，则会返回空数组。
+
+  * `end` 可选 提取终止处的索引（从 `0` 开始），在该索引处结束提取原数组元素。`slice` 会提取原数组中索引从 `begin` 到 `end` 的所有元素（包含 `begin`，但不包含 `end`）。
+
+    `slice(1,4)` 会提取原数组中从第二个元素开始一直到第四个元素的所有元素 （索引为 1, 2, 3的元素）。
+
+    如果该参数为负数， 则它表示在原数组中的倒数第几个元素结束抽取。 `slice(-2,-1)` 表示抽取了原数组中的倒数第二个元素到最后一个元素（不包含最后一个元素，也就是只有倒数第二个元素）。
+
+    如果 `end` 被省略，则 `slice` 会一直提取到原数组末尾。
+
+    如果 `end` 大于数组的长度，`slice` 也会一直提取到原数组末尾。
+
+  * 返回值 一个含有被提取元素的新数组。
+
+> `slice` 不会修改原数组，只会返回一个浅复制了原数组中的元素的一个新数组。原数组的元素会按照下述规则拷贝：
+>
+> - 如果该元素是个对象引用 （不是实际的对象），`slice` 会拷贝这个对象引用到新的数组里。两个对象引用都引用了同一个对象。如果被引用的对象发生改变，则新的和原来的数组中的这个元素也会发生改变。
+>
+> - 对于字符串、数字及布尔值来说（不是 `String`、`Number` 或者 `Boolean`对象），`slice` 会拷贝这些值到新的数组里。在别的数组里修改这些字符串或数字或是布尔值，将不会影响另一个数组。
+>
+> 如果向两个数组任一中添加了新元素，则另一个不会受到影响。
+
+```js
+const obj1 = {name: '李白', age: 18};
+const list1 = [1,2,3,4,5];
+const list = ['item1', 'item2', obj1, 'item3', list1, 'item4']; // 数组中obj1 和 list1 都是引用
+console.log(list);
+
+const copyList = list.slice(1); // 省略了结束位置，则从第二个元素开始截取
+console.log(copyList);
+
+list1.forEach(function(item,index) {
+  this[index] = item * 2;
+}, list1); // 修改了list对list1的引用，修改list1，则copyList和list都会被改变
+console.log(list,copyList);
+
+list[2] = 'item5'; // 直接修改原始数组的元素，浅拷贝的数组也不会受影响
+console.log(list,copyList);
+```
+
 ### .splice
+
+* `splice()` 方法通过删除或替换现有元素或者原地添加新的元素来修改数组,并以数组形式返回被修改的内容。此方法会改变原数组。
+
+* 可以删除元素，也可以替换元素，也可以插入元素
+
+* 语法`array.splice(start[, deleteCount[, item1[, item2[, ...]]]])`
+
+  * `start` 指定修改的开始位置（从0计数）。
+
+    如果超出了数组的长度，则从数组末尾开始添加内容；
+
+    如果是负值，则表示从数组末位开始的第几位（从-1计数，这意味着-n是倒数第n个元素并且等价于`array.length-n`）；
+
+    如果负数的绝对值大于数组的长度，则表示开始位置为第0位。
+
+  * `deleteCount` 可选 整数，表示要移除的数组元素的个数。
+
+    如果 `deleteCount` 大于 `start` 之后的元素的总数，则从 `start` 后面的元素都将被删除（含第 `start` 位）。
+
+    如果 `deleteCount` 被省略了，或者它的值大于等于`array.length - start`(也就是说，如果它大于或者等于`start`之后的所有元素的数量)，那么`start`之后数组的所有元素都会被删除。
+
+    如果 `deleteCount` 是 0 或者负数，则不移除元素。这种情况下，至少应添加一个新元素。
+
+  * `item1,item2,...` 可选 要添加进数组的元素,从`start` 位置开始。如果不指定，则 `splice()` 将只删除数组元素。
+  * 返回值 由被删除的元素组成的一个数组。如果只删除了一个元素，则返回只包含一个元素的数组。如果没有删除元素，则返回空数组。
+
+```js
+const list = ['a', 1, ['李白'], {tip: '提示语'}];
+// 在指定位置插入元素
+const item = list.splice(2,0,'小白', '小二'); // 开始操作索引 2 ，删除元素0（也就是不删除元素），添加两个元素
+console.log(item,list); // item 返回被删除元素组成的数组，没有元素被删除，所以 item 是空数组
+
+// 替换元素
+const updatedList = list.splice(2,2, {say: 'how are you'}, 'fine', ['how are you', 'fine'] ); // 开始操作索引2，删除两个元素，补充进3个元素
+console.log(updatedList,list)
+
+// 删除元素
+console.log(list.splice(1,3), list); // 打印出来的第一个是被删除元素组成成的数组，第二个是被修改后的数组
+```
 
 ### 其他（不常用）
 
 #### from
+
+* 将一个可迭代对象创建为数组（官方描述：`Array.from()` 方法从一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例。）
+* 语法`Array.from(arrayLike[, mapFn[, thisArg]])`
+  * `arrayLike` 想要转换成数组的可迭代对象
+  * `mapFn` 可选 如果指定了该参数，新数组中的每个元素会执行该回调函数。
+  * `thisArg` 可选 可选参数，执行回调函数 `mapFn` 时 `this` 对象。
+  * 返回值 新数组
+
+```js
+const obj = {
+  job: '工作',
+  name: '名字',
+  age: '年龄'
+}
+console.log(obj, item => console.log(item))
+```
+
+
 
 #### of
 
