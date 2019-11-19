@@ -1052,7 +1052,7 @@ const orderList = [{"contact":"李贺","price":4,"orderStatus":4,"logisticsState
 
 // orderStatus 1 未付款 2 待发货 3 运输中 4 已收货 5 已评价
 // logisticsState 110 已接单 220 运输中 140 已揽收 260 配送中 250 已签收
-const newOrderList = orderList.orderList(item => {
+const newOrderList = orderList.map(item => {
   item.priceDesc = `${item.price}元`;
   if(item.orderStatus === 1) {
     item.orderStatusDesc = '未付款';
@@ -1395,24 +1395,43 @@ console.log(list.splice(1,3), list); // 打印出来的第一个是被删除元�
 * 将一个可迭代对象创建为数组（官方描述：`Array.from()` 方法从一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例。）
 * 语法`Array.from(arrayLike[, mapFn[, thisArg]])`
   * `arrayLike` 想要转换成数组的可迭代对象
-  * `mapFn` 可选 如果指定了该参数，新数组中的每个元素会执行该回调函数。
+  * `mapFn` 可选 如果指定了该参数，新数组中的每个元素会执行该回调函数。(也就表示，先转成数组，然后在对数组进行map遍历)
   * `thisArg` 可选 可选参数，执行回调函数 `mapFn` 时 `this` 对象。
   * 返回值 新数组
 
 ```js
-const obj = {
-  job: '工作',
-  name: '名字',
-  age: '年龄'
-}
-console.log(obj, item => console.log(item))
+// 字符串变数组
+const iterableStr = '渡远荆门外，来从楚国游。';
+const iterableStrList = Array.from(iterableStr, item =>`${item}${item}`); // ["渡渡", "远远", "荆荆", "门门", "外外", "，，", "来来", "从从", "楚楚", "国国", "游游", "。。"]
+
+// Map变数组
+// Map在之后的内容，不理解暂可忽略
+const mapObj = new Map([['name', '李白'], ['age', 18]]);
+const mapObjList = Array.from(mapObj); // [["name", "李白"], ["age", 18]]
 ```
 
-
+> js内置的可迭代对象有`String`、 `Array`、 `TypedArray`、 `Map`、 `Set` 
 
 #### of
 
+* 此API是ES6新增的API
+* `Array.of()` 方法创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。（**核心：用来创建数组**）
+* 语法：`Array.of(element0[, element1[, ...[, elementN]]])`
+  * `elementN`  任意个参数，将按顺序成为返回数组中的元素。
+  * 返回值为创建的数组
+
+```js
+Array.of('周日', '周一', '周二', '周三', '周四'); // ['周日', '周一', '周二', '周三', '周四']
+Array.of(6); // [6]
+```
+
+> `Array.of()` 和 `Array` 构造函数之间的区别在于处理整数参数：`Array.of(7)` 创建一个具有单个元素 **7** 的数组，数组长度为1，而 `Array(7)` 创建一个长度为7的空数组（**注意：**这是指一个有7个空位(empty)的数组，而不是由7个`undefined`组成的数组）。
+
 #### .copyWithin
+
+* 此API为ES6新增API
+* 将数组的某些元素复制插入到数组的指定位置，并返回改变后的数组（官方描述：`copyWithin()` 方法浅复制数组的一部分到同一数组中的另一个位置，并返回它，不会改变原数组的长度。）
+* 特点：浅拷贝、不会改变数组长度，但会改变数组元素（实质是替换）
 
 #### .fill
 
