@@ -64,10 +64,42 @@ module.exports = {
         ['TypeScript入门.md', 'TypeScript入门']
       ],
       '/es2015/': [
-        ['ES2015+常用API.md', 'ES2015+常用API']
+        {
+          title: 'ES2015+常用API',   // 必要的
+          // path: '/foo/',      // 可选的, 应该是一个绝对路径
+          collapsable: true, // 可选的, 默认值是 true,
+          sidebarDepth: 2,    // 可选的, 默认值是 1
+          children: [
+            '变量',
+            '字符串',
+            '箭头函数',
+            '数组',
+            '对象',
+            'Map',
+            'Set',
+            'Promise',
+            '语句和声明',
+            '扩展',
+          ]
+        },
+        'async和Promise以及Generator什么关系',
+        '如何使用Gzip进行前端性能优化',
+        'forEach与map性能对比',
+        'Symbol新的JS原始数据类型',
+        '借助Web自定义事件更好的实现发布订阅',
+        '借助Map更好的实现策略模式',
+        '使用fetch更轻量的去做请求',
+        'FileReader前端文件读取',
+        'FormData详解',
+        'What is  Blob',
+        '如何在Web使用手机原生的分享能力',
+        '如何在Input中输入图片(实现简易富文本编辑器)',
       ],
       '/other/': [
         '恰运维一口饭',
+        '将Vue玩出花',
+        '将小程序玩出花',
+        '算法复杂度是什么',
       ]
     },
     sidebarDepth: 2,
