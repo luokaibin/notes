@@ -102,6 +102,11 @@ module.exports = {
         '算法复杂度是什么',
         '大型前端项目架构设计',
         '较大型前端项目git管理方案',
+      ],
+      '/discipline/HRM/': [
+        '人力资源管理概述',
+        '工作分析与岗位评价',
+        '人力资源规划',
       ]
     },
     sidebarDepth: 2,
@@ -127,6 +132,16 @@ module.exports = {
       {
         text: 'other',
         link: '/other/恰运维一口饭'
+      },
+      {
+        text: '课程',
+        ariaLabel: 'discipline',
+        items: [
+          {
+            text: 'HRM',
+            link: '/discipline/HRM/人力资源管理概述'
+          }
+        ]
       }
     ],
   },
