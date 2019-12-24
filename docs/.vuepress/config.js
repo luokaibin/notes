@@ -107,6 +107,14 @@ module.exports = {
         '人力资源管理概述',
         '工作分析与岗位评价',
         '人力资源规划',
+        '员工招聘',
+        '员工培训',
+        '职业生涯管理',
+        '绩效管理',
+        '薪酬管理',
+      ],
+      '/discipline/exam/': [
+        '工商行政管理'
       ]
     },
     sidebarDepth: 2,
@@ -140,6 +148,10 @@ module.exports = {
           {
             text: 'HRM',
             link: '/discipline/HRM/人力资源管理概述'
+          },
+          {
+            text: 'EXAM',
+            link: '/discipline/exam/工商行政管理'
           }
         ]
       }
