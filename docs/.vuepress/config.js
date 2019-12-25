@@ -114,7 +114,9 @@ module.exports = {
         '薪酬管理',
       ],
       '/discipline/exam/': [
-        '工商行政管理'
+        '工商行政管理',
+        '货币银行学',
+        '现代企业制度管理',
       ]
     },
     sidebarDepth: 2,
