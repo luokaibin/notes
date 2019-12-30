@@ -3,7 +3,6 @@ title: Set
 ---
 
 <p style="font-size: 1.65rem;padding-bottom: 0.3rem;border-bottom: 1px solid #eaecef;font-weight:700;"> Set </p>
-
 `Set` 是**ES6**引入的一个新的数据结构，它是一个类数组对象，与数组不同的是`Set` 的元素都是唯一的。
 
 ## 创建
@@ -98,8 +97,57 @@ console.log(s1.has(arr)); // true
 
 ## 其他（不常用）
 
-### .entries
-
 ### .forEach
 
+- `forEach` 方法会根据集合中元素的插入顺序，依次执行提供的回调函数。
+- 语法：`mySet.forEach(callback([currentValue[,currentKey[,set]]])[, thisArg])`
+  - `callback` 为集合中每个元素执行的回调函数，该函数接收三个参数：
+    - `currentValue` , `currentKey` **currentValue** 是正在被操作的元素。并且由于集合没有索引，所以 **currentKey** 也表示这个正在被操作的元素。
+    - `set` 可选 调用当前 `forEach` 方法的集合对象
+  - `thisArg` 回调函数执行过程中的 `this` 值。
+
+> **`Set`** 对象中没有索引(keys)，所以前两个参数都是`Set`中元素的值(**values**)，之所以这样设计回调函数是为了和[`Map`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/foreach) 以及`Array` 函数用法保持一致
+
+```js
+const arr = [0,1];
+const s1 = new Set(['a', {name: '李白'}, arr]);
+s1.forEach((currentValue,currentKey,set) => {
+  console.log(currentValue,currentKey,set)
+})
+```
+
 ### .values
+
+-  `values()` 方法返回一个 `Iterator` 对象，该对象按照原Set 对象元素的插入顺序返回其所有元素。
+- **`keys()`** 方法是这个方法的别名 (与 `Map`对象相似); 它的行为与 value 方法完全一致，返回 Set 对象的元素。
+- 语法：`mySet.values();`
+  - 返回值 将返回一个新生成的可迭代对象，以插入 Set 对象的顺序返回其包含的每个元素的值。
+
+```js
+const arr = [0,1];
+const s1 = new Set(['a', {name: '李白'}, arr]);
+const setIter = s1.values();
+
+console.log(setIter.next()); // 输出 {value: "a", done: false}; done 是否遍历结束
+console.log(setIter.next()); // 输出 {value: {name: "李白"}, done: false};
+```
+
+### .entries
+
+- `entries()` 方法返回一个新的迭代器对象 ，这个对象的元素是类似 [value, value] 形式的数组，value 是集合对象中的每个元素，迭代器对象元素的顺序即集合对象中元素插入的顺序。由于集合对象不像 Map 对象那样拥有 key，然而，**为了与 Map 对象的 API 形式保持一致**，故使得每一个 entry 的 key 和 value 都拥有相同的值，因而最终返回一个 [value, value] 形式的数组
+- 大胆猜测这个API可能最终会被删除，在`Set` 对象中，这个API的意义并不大
+- 语法：`mySet.entries()`
+  - 返回值   一个新的包含 [value, value] 形式的数组迭代器对象，value 是给定集合中的每个元素，迭代器 对象元素的顺序即集合对象中元素插入的顺序。
+
+```js
+const arr = [0,1];
+const s1 = new Set(['a', {name: '李白'}, arr]);
+const setIter = s1.entries();
+
+console.log(setIter.next()); // 输出 {value: ["a", "a"], done: false}; done 是否遍历结束
+console.log(setIter.next()); // 输出 {value: [{name: "李白"}, {name: "李白"}], done: false};
+```
+
+
+
+> `Set` 对象的API大多数都有参照`Map` 对象设计，学习过程中可以参考`Map` 对象
