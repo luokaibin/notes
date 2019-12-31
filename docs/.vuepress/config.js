@@ -3,8 +3,10 @@ module.exports = {
   description: 'Just playing around',
   plugins: ['@vuepress/pwa',{
     serviceWorker: true,
-    popupComponent: 'MySWUpdatePopup',
-    updatePopup: true,
+    updatePopup: {
+      message: '内容有更新',
+      buttonText: '刷新'
+    },
   }],
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
