@@ -3,8 +3,10 @@ module.exports = {
   description: 'Just playing around',
   plugins: ['@vuepress/pwa',{
     serviceWorker: true,
-    popupComponent: 'MySWUpdatePopup',
-    updatePopup: true,
+    updatePopup: {
+      message: '有新内容加入,注意刷新哦',
+      buttonText: '刷新',
+    },
   }],
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
@@ -126,10 +128,6 @@ module.exports = {
       {
         text: 'Home',
         link: '/'
-      },
-      {
-        text: 'webpack',
-        link: '/webpack/'
       },
       {
         text: 'typescript',
