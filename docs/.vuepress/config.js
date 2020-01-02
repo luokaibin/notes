@@ -4,8 +4,8 @@ module.exports = {
   plugins: ['@vuepress/pwa',{
     serviceWorker: true,
     updatePopup: {
-      message: '有新内容加入,注意刷新哦',
-      buttonText: '刷新',
+      message: '内容有更新',
+      buttonText: '刷新'
     },
   }],
   head: [
