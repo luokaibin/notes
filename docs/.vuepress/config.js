@@ -130,10 +130,6 @@ module.exports = {
         link: '/'
       },
       {
-        text: 'webpack',
-        link: '/webpack/'
-      },
-      {
         text: 'typescript',
         link: '/typescript/TypeScript入门'
       },
