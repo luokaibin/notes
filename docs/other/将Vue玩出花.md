@@ -246,6 +246,74 @@ export default {
 
 ## 通过`provide / inject` 来进行父子组件传值
 
+> `provide` 和 `inject` 主要在开发高阶插件/组件库时使用。并不推荐用于普通应用程序代码中。[官方文档](https://cn.vuejs.org/v2/api/#provide-inject)
+
+有没有遇到过这种业务场景，用户下单但是未支付，半小时未支付自动取消订单，前端在这个时候就需要做一个倒计时，在倒计时结束的时候刷新下页面，使订单状态更新。
+
+固然，当倒计时结束的时候你可以使用`window.location.reload()` 来使页面更新，但这样会造成整个页面的刷新，而我们只希望某一块区域小范围刷新。所以这个时候其实我们就可以借助`provide / inject` 来玩下（其实有其他更好的方法，这里主要为了演示`provide / inject` 使用）。
+
+### 父组件
+
+```vue
+<template>
+	<div class="page">
+    <p-child v-if="isShow"></p-child>
+  </div>
+</template>
+
+<script>
+import PChild from 'pchild';
+export default {
+  components: {PChild},
+  // 通过provide向子组件提供一个函数,这个函数来源于methods
+  provide() {
+    return {
+      reload: this.reload
+    };
+  },
+  data() {
+    return {
+      isShow: true
+    }
+  },
+  methods: {
+    // 这个方法被调用的时候子组件首先会被销毁，然后等待销毁之后也就是dom更新后，重新渲染这个组件（相当于组件重启）
+    reload() {
+      this.isShow = false;
+      this.$nextTick(function() {
+        this.isShow = true;
+      });
+    }
+  }
+}
+</script>
+```
+
+### 子组件: pchild.vue
+
+```vue
+<template>
+	<div class="page">
+    <button @click="handleReload">
+      刷新
+  	</button>
+  </div>
+</template>
+
+<script>
+export default {
+  // 将父组件提供的函数通过inject注入到子组件中
+  inject: ['reload'],
+  methods: {
+    // 被点击的时候执行父组件的方法（其实可以直接点击的时候执行reload，没必要通过handleReload来调用）
+    handleReload() {
+      this.reload();
+    }
+  }
+}
+</script>
+```
+
 ## 把你的组件改为通过JS方法来调用
 
 ## 在Vue中使用JSX
