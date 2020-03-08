@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
   title: '胖大人的日常记事',
   description: 'Just playing around',
@@ -7,6 +8,8 @@ module.exports = {
       message: '内容有更新',
       buttonText: '刷新'
     },
+  }, {
+    clientRootMixin: path.resolve(__dirname, 'urlChange.js')
   }],
   head: [
     ['link', { rel: 'icon', href: '/logo.png' }],
@@ -18,7 +21,10 @@ module.exports = {
     ['link', { rel: 'mask-icon', href: 'logo.svg', color: '#3eaf7c' }],
     ['meta', { name: 'msapplication-TileImage', content: 'logo_144*144.png' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
-    ['meta', { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' }]
+    ['meta', { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' }],
+    ['script', { src: 'https://res2.wx.qq.com/open/js/jweixin-1.6.0.js', defer: 'defer'}],
+    ['script', { src: 'https://static.jindll.com/static/cdn/html2canvas.min.js', defer: 'defer'}],
+    ['script', { src: '/share.js?2gu6df', defer: 'defer'}],
   ],
   themeConfig: {
     sidebar: {
@@ -98,6 +104,18 @@ module.exports = {
         '实现简易富文本编辑器',
       ],
       '/other/': [
+        {
+          title: '前端面试系列',   // 必要的
+          collapsable: true, // 可选的, 默认值是 true,
+          sidebarDepth: 2,    // 可选的, 默认值是 1
+          children: [
+            '扫盲--前端面试',
+            '在浏览器输入一个地址发生了什么',
+            '如何使页面更快的呈现在用户面前',
+            '如何收集产品线上错误'
+          ]
+        },
+        'iframe架构微前端实战',
         '恰运维一口饭',
         '将Vue玩出花',
         '将小程序玩出花',
