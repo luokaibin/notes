@@ -29,8 +29,8 @@ module.exports = {
   themeConfig: {
     sidebar: {
       '/webpack/': [
-        ['0001.md', '01 开篇词 | 使用 Webpack 实现前端工程化'],
-        ['0002.md', '02 什么是 Webpack'],
+        '01 使用 Webpack 实现前端工程化',
+        '02 什么是 Webpack',
         ['0003.md', '03 Webpack 开发环境搭建'],
         ['0004.md', '04 使用 webpack-cli 体验零配置打包'],
         ['0005.md', '05 基础概念和常见配置项介绍（一）'],
@@ -112,7 +112,9 @@ module.exports = {
             '扫盲--前端面试',
             '在浏览器输入一个地址发生了什么',
             '如何使页面更快的呈现在用户面前',
-            '如何收集产品线上错误'
+            '如何收集产品线上错误',
+            '函数节流与函数防抖',
+            'webpack性能优化'
           ]
         },
         'iframe架构微前端实战',
@@ -147,6 +149,10 @@ module.exports = {
         text: 'Home',
         link: '/'
       },
+      // {
+      //   text: 'Webpack',
+      //   link: '/webpack/01 使用 Webpack 实现前端工程化'
+      // },
       {
         text: 'typescript',
         link: '/typescript/TypeScript入门'

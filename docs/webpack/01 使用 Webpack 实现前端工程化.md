@@ -1,4 +1,11 @@
+---
+title: 使用 Webpack 实现前端工程化
+---
+
+
+
 ![](https://img3.mukewang.com/5cdb7d6600011eab06400359.jpg)
+
 > 人的影响短暂而微弱，书的影响则广泛而深远
 > 
 > &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——普希金
