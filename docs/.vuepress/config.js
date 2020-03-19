@@ -117,6 +117,7 @@ module.exports = {
             'webpack性能优化'
           ]
         },
+        '如何自定义一套Vue-Cli项目模版',
         'iframe架构微前端实战',
         '恰运维一口饭',
         '将Vue玩出花',

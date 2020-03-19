@@ -65,3 +65,5 @@ docs/static/image-20200204143048887.png
 docs/static/image-20200205110753875.png
 server/*
 vue-cli/*
+index.html
+vue.js
