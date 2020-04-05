@@ -1,7 +1,7 @@
 ---
 title: 28 Webpack 的模块热替换做了什么？
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd9648e0001230906400360.jpg)

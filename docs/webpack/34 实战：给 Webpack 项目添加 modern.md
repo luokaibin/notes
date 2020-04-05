@@ -1,7 +1,7 @@
 ---
 title: 34 实战：给 Webpack 项目添加 modern
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd964ea0001a95806400359.jpg)

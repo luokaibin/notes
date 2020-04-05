@@ -1,7 +1,7 @@
 ---
 title: 16 Webpack 环境相关配置及配置文件拆分
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img1.mukewang.com/5cd963cd0001682f06400359.jpg)

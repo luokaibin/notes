@@ -1,7 +1,7 @@
 ---
 title: 11 Webpack 中使用 lint 工具来保证代码风格和质量
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img4.mukewang.com/5cd9637a000197b906400359.jpg)

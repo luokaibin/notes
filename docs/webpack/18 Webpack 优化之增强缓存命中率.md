@@ -1,7 +1,7 @@
 ---
 title: 18 Webpack 优化之增强缓存命中率
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd963ec000144d306400360.jpg)

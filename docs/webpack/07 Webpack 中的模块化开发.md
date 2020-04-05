@@ -1,7 +1,7 @@
 ---
 title: 07 Webpack 中的模块化开发
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img2.mukewang.com/5cd96312000163ce06400359.jpg)

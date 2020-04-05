@@ -25,7 +25,8 @@ const ready = async () => {
   const imgBlob = await getBlob(canvas);
   const formdata = new FormData();
   formdata.append('file', imgBlob)
-  const result = await fetch('https://notes.jindll.com/server/uploadImg', {
+  // const result = await fetch('https://notes.jindll.com/server/uploadImg', {
+  const result = await fetch('https://notes.jindll.com/api/upload/singleFild', {
     method: 'POST',
     body: formdata,
   })
@@ -64,7 +65,7 @@ const shareFn = () => {
 }
 var request = async () => {
   const url = window.location.href.split('#')[0];
-  const result = await fetch(`https://notes.jindll.com/server/wechat/config?url=${url}`, {
+  const result = await fetch(`https://notes.jindll.com/api/wechat/config?url=${url}`, {
     method: 'GET',
   })
   const {data} = await result.json();

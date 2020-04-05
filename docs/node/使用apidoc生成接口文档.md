@@ -1,7 +1,7 @@
 ---
 title: 使用apidoc生成接口文档
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 title: 15 Webpack 中配置React和Vue开发环境
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img2.mukewang.com/5cd963bb0001a96f06400359.jpg)

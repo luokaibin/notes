@@ -1,7 +1,7 @@
 ---
 title: 27 从 Webpack 的产出代码来看 Webpack 是怎么执行的
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img2.mukewang.com/5cd9648000019c9706400359.jpg)

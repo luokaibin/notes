@@ -1,7 +1,7 @@
 ---
 title: 19 使用 Webpack 的 splitChunks 功能来拆分代码
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img3.mukewang.com/5cd963fc000167cb06400360.jpg)

@@ -1,7 +1,7 @@
 ---
 title: egg-redis常用api
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 

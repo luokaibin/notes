@@ -1,7 +1,7 @@
 ---
 title: 32 实战：使用 Express 和中间件来实现 Webpack-dev-server
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img2.mukewang.com/5cd964ce0001639e06400359.jpg)

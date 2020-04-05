@@ -1,7 +1,7 @@
 ---
 title: 14 Webpack Dev Server 本地开发服务
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd963ac0001b6ac06400359.jpg)

@@ -1,7 +1,7 @@
 ---
 title: 22 为你准备了一份 Webpack 工程化最佳实践总结
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img1.mukewang.com/5cd9642f0001145406400359.jpg)

@@ -1,7 +1,7 @@
 ---
 title: 17 Webpack 优化之体积优化
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd963de0001b93006400360.jpg)

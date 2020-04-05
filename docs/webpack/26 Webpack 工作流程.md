@@ -1,7 +1,7 @@
 ---
 title: 26 Webpack 工作流程
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img3.mukewang.com/5cd964700001973406390359.jpg)

@@ -1,7 +1,7 @@
 ---
 title: 29 实战：使用 PostCSS 打造移动适配方案
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img4.mukewang.com/5cd964a00001e41606400360.jpg)

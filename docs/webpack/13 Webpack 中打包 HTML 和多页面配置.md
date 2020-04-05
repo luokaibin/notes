@@ -1,7 +1,7 @@
 ---
 title: 13 Webpack 中打包 HTML 和多页面配置
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img3.mukewang.com/5cd9639d00012c7a06400359.jpg)

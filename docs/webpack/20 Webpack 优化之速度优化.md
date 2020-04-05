@@ -1,7 +1,7 @@
 ---
 title: 20 Webpack 优化之速度优化
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img3.mukewang.com/5cd9640a000113f306400360.jpg)

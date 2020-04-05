@@ -1,7 +1,7 @@
 ---
 title: node常用功能
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ## 读取文件夹下所有文件
@@ -75,7 +75,7 @@ config.forEach((value,key) => {
   content = `---
 title: ${value}
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ${content}

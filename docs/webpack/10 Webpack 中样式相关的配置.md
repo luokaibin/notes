@@ -1,7 +1,7 @@
 ---
 title: 10 Webpack 中样式相关的配置
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd96367000154f506400360.jpg)

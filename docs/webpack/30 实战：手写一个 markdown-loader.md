@@ -1,7 +1,7 @@
 ---
 title: 30 实战：手写一个 markdown-loader
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img3.mukewang.com/5cd964af0001fdb906400360.jpg)

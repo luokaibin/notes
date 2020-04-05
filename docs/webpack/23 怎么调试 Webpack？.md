@@ -1,7 +1,7 @@
 ---
 title: 23 怎么调试 Webpack？
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd9643f0001e11806390358.jpg)

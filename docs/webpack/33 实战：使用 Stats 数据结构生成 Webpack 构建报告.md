@@ -1,7 +1,7 @@
 ---
 title: 33 实战：使用 Stats 数据结构生成 Webpack 构建报告
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img4.mukewang.com/5cd964dc0001b9bb06400359.jpg)

@@ -1,7 +1,7 @@
 ---
 title: 04 使用 webpack-cli 体验零配置打包
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img4.mukewang.com/5cd962f40001a7a706400360.jpg)

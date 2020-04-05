@@ -1,7 +1,7 @@
 ---
 title: 08 在 Webpack 中使用 Babel 转换 JavaScript 代码
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img3.mukewang.com/5cd9633d0001c94a06400359.jpg)

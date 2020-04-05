@@ -1,7 +1,7 @@
 ---
 title: 03 Webpack 开发环境搭建
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img2.mukewang.com/5cd962eb000160d406400359.jpg)

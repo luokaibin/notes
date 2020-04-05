@@ -1,7 +1,7 @@
 ---
 title: 21 使用 Webpack 的 Tree-Shaking
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img1.mukewang.com/5cd9641e0001c6c306390359.jpg)

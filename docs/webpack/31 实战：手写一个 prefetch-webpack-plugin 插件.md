@@ -1,7 +1,7 @@
 ---
 title: 31 实战：手写一个 prefetch-webpack-plugin 插件
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img3.mukewang.com/5cd964bf00013cec06400360.jpg)

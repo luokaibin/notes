@@ -1,7 +1,7 @@
 ---
 title: 35 Webpack 5.0
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img4.mukewang.com/5cd964f90001836a06400360.jpg)

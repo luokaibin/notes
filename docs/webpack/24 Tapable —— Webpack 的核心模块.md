@@ -1,7 +1,7 @@
 ---
 title: 24 Tapable —— Webpack 的核心模块
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img1.mukewang.com/5cd9645100016fb206400360.jpg)

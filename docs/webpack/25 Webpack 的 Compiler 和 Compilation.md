@@ -1,7 +1,7 @@
 ---
 title: 25 Webpack 的 Compiler 和 Compilation
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd9645f000128e506400360.jpg)

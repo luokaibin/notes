@@ -1,7 +1,7 @@
 ---
 title: eggjs上手问题处理
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ## 怎么获取前端传入的参数

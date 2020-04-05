@@ -1,7 +1,7 @@
 ---
 title: 12 使用 Webpack 管理项目中的静态资源
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img.mukewang.com/5cd9638b00019dce06400360.jpg)

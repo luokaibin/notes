@@ -1,7 +1,7 @@
 ---
 title: 09 Webpack 中使用 TypeScript 开发项目
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img4.mukewang.com/5cd9634e0001c59e06400359.jpg)

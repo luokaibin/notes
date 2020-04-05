@@ -1,7 +1,7 @@
 ---
 title: 37 附录：项目中常用的 loader
 description: 
-lang: zh_CN
+lang: zh-CN
 ---
 
 ![](https://img2.mukewang.com/5cd965150001c63306400360.jpg)
