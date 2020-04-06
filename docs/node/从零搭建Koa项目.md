@@ -120,8 +120,8 @@ Koa 的中间件本质就是一个函数，当使用 `app.use()` 去加载这个
 因为 CORS 是我们给客户端返回的时候添加的内容，所以我们可以先执行 `next()` 再进行逻辑处理
 
 ```js
-const cors = (ctx, next) => {
-  next()
+const cors = async (ctx, next) => {
+  await next()
   //指定服务器端允许进行跨域资源访问的来源域。可以用通配符*表示允许任何域的JavaScript访问资源，但是在响应一个携带身份信息(Credential)的HTTP请求时，必需指定具体的域，不能用通配符
   ctx.set("Access-Control-Allow-Origin", "*");
  
