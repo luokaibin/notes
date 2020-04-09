@@ -325,34 +325,257 @@ module.exports = HomeService;
 
 给 Web 来用，肯定要涉及到跨域，同时 egg 也支持中间件，所以这里我们就写一个中间件，学习下 egg 的中间件，再解决个跨域。
 
-## 如何获取上传的文件
-
-官方文档: [获取上传的文件](https://eggjs.org/zh-cn/basics/controller.html#获取上传的文件)
-
-获取上传的文件
+egg 是基于 koa 实现的，egg 的中间件看形式其实就是给 koa 的中间件包了一层，所以我们先写个 koa 的跨域中间件：
 
 ```js
-ctx.request.files
+const cors = async (ctx, next) => {
+  // 因为我们是给浏览器返回的时候设置响应头，所以先调用 next() 放过来时的请求，然后在返回的时候设置header头
+  await next()
+  // 指定服务器端允许进行跨域资源访问的来源域。可以用通配符*表示允许任何域的JavaScript访问资源，但是在响应一个携带身份信息(Credential)的HTTP请求时，必需指定具体的域，不能用通配符
+  ctx.set("Access-Control-Allow-Origin", "*");
+ 
+  // 指定服务器允许进行跨域资源访问的请求方法列表，一般用在响应预检请求上
+  ctx.set("Access-Control-Allow-Methods", "OPTIONS,POST,GET,HEAD,DELETE,PUT");
+  
+  // 必需。指定服务器允许进行跨域资源访问的请求头列表，一般用在响应预检请求上 因为客户端请求接口的时候需要在header中携带token，所以也需要设置为允许
+  ctx.set("Access-Control-Allow-Headers", "x-requested-with, accept, origin, content-type, token");
+  
+  // 告诉客户端返回数据的MIME的类型，这只是一个标识信息,并不是真正的数据文件的一部分
+  ctx.set("Content-Type", "application/json;charset=utf-8");
+  
+  // 可选，单位为秒，指定浏览器在本次预检请求的有效期内，无需再发送预检请求进行协商，直接用本次协商结果即可。当请求方法是PUT或DELETE等特殊方法或者Content-Type字段的类型是application/json时，服务器会提前发送一次请求进行验证
+  ctx.set("Access-Control-Max-Age", 300);
+
+  // 可选。它的值是一个布尔值，表示是否允许客户端跨域请求时携带身份信息(Cookie或者HTTP认证信息)。默认情况下，Cookie不包括在CORS请求之中。当设置成允许请求携带cookie时，需要保证"Access-Control-Allow-Origin"是服务器有的域名，而不能是"*";如果没有设置这个值，浏览器会忽略此次响应。
+  ctx.set("Access-Control-Allow-Credentials", true);
+
+  // 可选。跨域请求时，客户端xhr对象的getResponseHeader()方法只能拿到6个基本字段，Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。要获取其他字段时，使用Access-Control-Expose-Headers，xhr.getResponseHeader('myData')可以返回我们所需的值
+  ctx.set("Access-Control-Expose-Headers", "myData");
+  if (ctx.request.method === "OPTIONS") {
+    ctx.response.status = 204
+  }
+}
 ```
 
-文件上传需要进行配置，框架默认文件大小不能超过 10M
+koa 的中间件就是这个样子，egg 的中间件要的其实也是一个函数，然后这个函数把 koa 的中间件返回即可，同时这个函数接收两个参数，一个插件配置 options，一个应用实例 app，所以对上方的代码改造下：
+
+```js
+const cors = async (ctx, next) => {
+  await next()
+  ctx.set("Access-Control-Allow-Origin", "*");
+
+  ctx.set("Access-Control-Allow-Methods", "OPTIONS,POST,GET,HEAD,DELETE,PUT");
+  
+  ctx.set("Access-Control-Allow-Headers", "x-requested-with, accept, origin, content-type, token");
+  
+  ctx.set("Content-Type", "application/json;charset=utf-8");
+  
+  ctx.set("Access-Control-Max-Age", 300);
+
+  ctx.set("Access-Control-Allow-Credentials", true);
+
+  ctx.set("Access-Control-Expose-Headers", "myData");
+  if (ctx.request.method === "OPTIONS") {
+    ctx.response.status = 204
+  }
+}
+// 这个是 egg 中间件包的函数，最后将这个函数导出即可
+module.exports = (options,app) => {
+  return cors;
+}
+```
+
+egg 的中间件我们写完了，然后就需要去挂载到应用上，中间件的配置在 `/config/config.default.js` 中：
+
+```js
+'use strict';
+module.exports = appInfo => {
+  const config = exports = {};
+
+  config.keys = appInfo.name + '_1586250824909_3576';
+
+  config.middleware = [];
+
+  const userConfig = {};
+
+  return {
+    ...config,
+    ...userConfig,
+    security: {
+      csrf: {
+        enable: false, // 关闭框架默认得csrf插件
+      },
+    },
+    // 配置需要的中间件，数组顺序即为中间件的加载顺序
+    middleware: [ 'cors' ],
+    cors:{}, // 中间件的配置
+  };
+};
+```
+
+## 如何输出接口文档
+
+接口写完后必然是要提供给客户端来使用的，那么关于入参出参请求方式必须要有详细的接口文档，并且及时进行更新，如果单独去写接口文档是需要耗费相当大的精力的，所以更希望的是可以基于注释来自动生成接口文档，这里可以用 **swagger** 和 **apidoc** ，最后我选择使用 **apidoc** ，原因是 swagger 在 node 中使用比较麻烦，还需要接入部分配置，完成 swagger 在 node 中使用，赶上我搭一个小型项目了，最重要 swagger 的界面也不好看，所以最后我选择了 **apidoc** 。
+
+首先在项目中安装 `apidoc` :
+
+```
+npm i apidoc -D
+```
+
+然后在项目 `package.json` 中添加 `apidoc` 字段，进行配置 `apidoc`
+
+```json
+"apidoc": {
+  "title": "胖大人笔记接口文档",
+  "url": "https://notes.jindll.com",
+  "template": {
+    "forceLanguage": "zh_cn"
+  }
+}
+```
+
+`title` 是页面的 `title` ，`url` 是接口前缀，会拼在示例接口前，`template` 是关于接口模版的配置，`forceLanguage` 指定页面语言，更多的 `apidoc` 相关内容，之后会专门出一篇文章，或者也可以看官方文档：[https://apidocjs.com/](https://apidocjs.com/)
+
+然后在 `contriller` 中根据 `apidoc` 要求写注释，以下是示例：
+
+```js
+// app/controller/home
+const Controller = require('egg').Controller;
+
+class HomeController extends Controller {
+    /**  
+    * @api {POST} /post post接口名称
+    * @apiDescription post接口描述
+    * @apiVersion 1.0.0
+    * @apiName /post
+    * @apiGroup HOME
+    * @apiParam {String} userName 用户名
+    * @apiParam {Number} userId 用户ID
+    * @apiParamExample {json} 入参示例:
+    * {
+    *   "userName": "法外狂徒张三",
+    *		"userId": 0910923212
+    * }
+    * @apiSuccess {Object} data 消息体，请求失败消息体是null
+    * @apiSuccess {String} data.name 用户姓名
+    * @apiSuccess {Number} data.id 用户ID
+    * @apiSuccess {String} data.token token
+    * @apiSuccess {Number} code 请求状态 1 请求成功，0 请求出错
+    * @apiSuccess {String} msg 错误消息
+    * @apiSuccessExample {json} 出参示例:
+    * {
+        "code": 1,
+        "msg": "",
+        "data": {
+          "name": "张三",
+          "id": 1585977255,
+          "token": "wxdfsdgsd1d1b6684282dac4b"
+        }
+      }
+    */
+  async post() {
+    const { ctx } = this;
+    ctx.body = 'hi, post';
+  }
+}
+
+module.exports = HomeController;
+```
+
+注释写完了，然后我们再在项目 `package.json` 中添加一个 `docs` 命令，用来生成文档：
+
+```json
+"script": {
+  "docs": "npx apidoc -i ./app/controller/ -o app/public/docs"
+}
+```
+
+配置完成之后，我们 `npm run docs` 运行一下，然后会在 `app/public/docs` 生成接口文档，重新运行项目，访问 `http://127.0.0.1:7001/public/docs/index.html` 就可以看输出的接口文档了
+
+![](https://static.jindll.com/notes/0010091209323.png)
+
+根据截图我们再回头解释下上面的注释都是什么意思
+
+| 注释                                                     | 说明                                                         |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| `@api {POST} /post post接口名称`                         | `{POST}` 请求方式，即上方页面的蓝色标签<br />`/post` 即蓝色标签下面的完整接口地址，前方的域名来源于 `package.json` 文件 `apidoc.url`<br />`post接口名称` 即显示在页面侧栏的接口名称和`HOME - post接口名称` |
+| `@apiDescription post接口描述`                           | 即对应页面上的接口描述                                       |
+| `@apiVersion 1.0.0`                                      | 接口版本号                                                   |
+| `@apiName /post`                                         | 接口名称，与版本配合使用，可以定义同样的名称不同的版本进行对比 |
+| `@apiParam {String} userName 用户名`                     | `{String}` 数据类型<br />`userName` 入参名称<br />`用户名` 对于字段的说明<br />参照于参数的表格 |
+| `@apiParamExample {json} 入参示例:`                      | 入参示例，JSON 格式                                          |
+| `@apiSuccess {Object} data 消息体，请求失败消息体是null` | 接口返回说明，参考Success 200表格<br />`{Object}` 数据类型<br />`data` 出参字段<br />`消息体，请求失败消息体是null` 字段说明 |
+| `@apiSuccessExample {json} 出参示例:`                    | 出参示例，JSON 格式                                          |
+
+**参考文档：**
+
+官方文档：[https://apidocjs.com/](https://apidocjs.com/)
+
+## 如何获取上传的文件
+
+框架默认的文件上传模式是 `stream` 模式，可以在 Controller 中通过 `ctx.getFileStream` 获取到上传的文件流，然后将流写入文件，或者传到OSS：
+
+```js
+// app/controller/home
+const Controller = require('egg').Controller;
+
+class HomeController extends Controller {
+  async post() {
+    const { ctx } = this;
+    const fileStream = await ctx.getFileStream();
+    console.log(fileStream);
+    ctx.body = 'hi, post';
+  }
+}
+
+module.exports = HomeController;
+```
+
+如果对文件流不熟悉，框架还提供了一个 file 模式，首先在 config 中配置成 file 模式，然后再修改下允许上传的文件大小：
 
 ```js
 // config/config.default.js
-
+'use strict';
 module.exports = appInfo => {
+  const config = exports = {};
+
+  config.keys = appInfo.name + '_1586250824909_3576';
+
+  config.middleware = [];
+
+  const userConfig = {};
+
   return {
+    ...config,
+    ...userConfig,
     multipart: {
-      mode: 'file',
-      fileSize: '1024mb',
-      fileExtensions: [ '.exe', '.zip' ] // 增加对 其他类型文件的支持
+      mode: 'file', // 配置文件上传模式
+      fileSize: '1024mb' // 配置允许上传的文件大小
     },
   };
 };
-
 ```
 
-框架默认的上传文件类型只支持以下类型
+然后在 Controller 中通过 `ctx.request.files` 可以拿到上传的文件列表：
+
+```js
+// app/controller/home
+const Controller = require('egg').Controller;
+
+class HomeController extends Controller {
+  async post() {
+    const { ctx } = this;
+    const file = ctx.request.files[0];
+    console.log(file);
+    ctx.body = 'hi, post';
+  }
+}
+
+module.exports = HomeController;
+```
+
+但是当你上传 `.doc` 等后缀的文件会报错，这是由于框架默认只允许以下类型文件上传：
 
 ```
 // images
@@ -380,5 +603,78 @@ module.exports = appInfo => {
 '.avi',
 ```
 
+所以我们就需要在 config 中扩展下允许上传的文件类型：
 
+```js
+// config/config.default.js
+'use strict';
+module.exports = appInfo => {
+  const config = exports = {};
+
+  config.keys = appInfo.name + '_1586250824909_3576';
+
+  config.middleware = [];
+
+  const userConfig = {};
+
+  return {
+    ...config,
+    ...userConfig,
+    multipart: {
+      mode: 'file', // 配置文件上传模式
+      fileSize: '1024mb', // 配置允许上传的文件大小
+      fileExtensions: [ '.exe', '.zip' ] // 增加对 其他类型文件的支持
+    },
+  };
+};
+```
+
+配置完成重启下服务。
+
+**参考文档：**
+
+官方文档：[https://eggjs.org/zh-cn/basics/controller.html](https://eggjs.org/zh-cn/basics/controller.html#获取上传的文件)
+
+## 如何转发请求
+
+做中间层，大部分接口我们可能都是直接转发到真实的接口，不需要做二次过滤，所以我们就需要对某一类的接口进行直接转发，这里直接可以使用个插件 `egg-proxy` ，项目中 `npm i egg-proxy` ，然后在配置中启用插件：
+
+```js
+// config/plugin.js
+'use strict';
+exports.proxy = {
+  enable: true,
+  package: 'egg-proxy',
+};
+```
+
+```js
+// config/config.default.js
+'use strict';
+module.exports = appInfo => {
+  const config = exports = {};
+
+  config.keys = appInfo.name + '_1586250824909_3576';
+
+  config.middleware = [];
+
+  const userConfig = {};
+
+  return {
+    ...config,
+    ...userConfig,
+    proxy: {
+      host: 'https://www.baidu.com', // 将请求转发到这个地址
+      match: /^(\/api)/, // 以 /api 开头的域名再进行转发
+      map(path) {
+        const finalPath = path.replace(/^(\/api)/, ''); // 转发的时候把 /api 删除掉
+        // 把修改后的请求路径返回
+        return finalPath;
+      },
+    },
+  };
+};
+```
+
+转发请求也配置完成了
 
