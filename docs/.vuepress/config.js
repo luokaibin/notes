@@ -104,7 +104,7 @@ module.exports = {
       ],
       '/node/': [
         "egg-redis常用api",
-        "eggjs上手问题处理",
+        "eggjs新手村指南",
         "node常用功能",
         "从零搭建Koa项目",
         "使用apidoc生成接口文档",
@@ -120,9 +120,13 @@ module.exports = {
             '如何使页面更快的呈现在用户面前',
             '如何收集产品线上错误',
             '函数节流与函数防抖',
-            'webpack性能优化'
+            'webpack性能优化',
+            'JS运行机制',
+            '前端技术发展史',
           ]
         },
+        '基础正则',
+        '数据劫持',
         '如何自定义一套Vue-Cli项目模版',
         'iframe架构微前端实战',
         '恰运维一口饭',
@@ -164,10 +168,10 @@ module.exports = {
             text: 'ES2015 +',
             link: '/es2015/ES2015+常用API'
           },
-          {
-            text: 'Webpack',
-            link: '/webpack/'
-          },
+          // {
+          //   text: 'Webpack',
+          //   link: '/webpack/'
+          // },
           {
             text: 'TypeScript',
             link: '/typescript/TypeScript入门'

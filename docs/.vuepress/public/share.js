@@ -63,7 +63,16 @@ const shareFn = () => {
     imgUrl: imgUrl || 'https://notes.jindll.com/logo.png',
   });
 }
+// 是否是微信内置浏览器
+const isBrowserType = () => {
+  var ua = navigator.userAgent.toLowerCase();
+  if(ua.match(/MicroMessenger/i)=="micromessenger") {
+    return true;
+  }
+  return false;
+}
 var request = async () => {
+  if(!isBrowserType()) return
   const url = window.location.href.split('#')[0];
   const result = await fetch(`https://notes.jindll.com/api/wechat/config?url=${url}`, {
     method: 'GET',
