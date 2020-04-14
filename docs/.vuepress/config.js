@@ -74,7 +74,6 @@ module.exports = {
       '/es2015/': [
         {
           title: 'ES2015+常用API',   // 必要的
-          // path: '/foo/',      // 可选的, 应该是一个绝对路径
           collapsable: true, // 可选的, 默认值是 true,
           sidebarDepth: 2,    // 可选的, 默认值是 1
           children: [
@@ -91,7 +90,6 @@ module.exports = {
           ]
         },
         'async和Promise以及Generator什么关系',
-        '如何使用Gzip进行前端性能优化',
         'forEach与map性能对比',
         'Symbol新的JS原始数据类型',
         '借助Map更好的实现策略模式',
