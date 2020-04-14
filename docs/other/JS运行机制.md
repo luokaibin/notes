@@ -40,3 +40,63 @@ DOM 引擎、JS 引擎相互独立，但又工作在同一线程（主线程）J
 - Virtual Dom 不会立刻进行重排与重绘的操作。
 - Virtual Dom 进行频繁更改，然后一次性比较并修改真实 DOM 中需要更改的部分，最后在真实 DOM 进行重排重绘，减少过多的 DOM 操作。
 - Virtual Dom 有效降低大面积真实 DOM 的重绘重排，因为最终与真实 DOM 比较差异，可以只渲染局部。
+
+## 严格模式与非严格模式
+
+开启 JS 严格模式
+
+```js
+"use strict";
+```
+
+如果 `"use strict"` 写在脚本文件第一行，则整个脚本文件都以严格模式运行；
+
+如果 `"use strict"` 写在函数定义的第一行，则整个函数以严格模式运行；
+
+如果 `"use strict"` 写在其他位置，则就是一行普通的字符串；
+
+### 严格模式与非严格模式的区别
+
+- 严格模式的全局变量必须显示声明；非严格模式不需要
+
+  ```js
+  a = 1;
+  // 严格模式下代码会报错，a未被声明
+  // 非严格模式下，a会挂载到全局，为全局变量
+  ```
+
+- 严格模式下 `this` 指向 `undefined` ；非严格模式下 `this` 指向 `window` 
+
+  ```js
+  function fn() {
+    "use strict";
+    return this; // 严格模式this是undefined；非严格模式是 window
+  }
+  fn();
+  ```
+
+- 严格模式下禁止删除变量，对于 `Object` ，只有设置了 `configurable=true` 的属性才可以删除
+
+  ```js
+  "use strict";
+  var x;
+  delete x; // 语法错误
+  
+  var o = Object.create(null, {'x': {
+    value: 1,
+    configurable: true
+  }});
+  delete o.x; // 删除成功
+  ```
+
+- 严格模式下对于只读属性赋值将会报错；非严格模式静默失败
+
+  ```js
+  "use strict";
+  var o = {};
+  Object.defineProperty(o, "v", { value: 1, writable: false });
+  o.v = 2; // 报错
+  ```
+
+
+
