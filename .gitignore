@@ -71,3 +71,4 @@ vue-cli/*
 egg-server/*
 index.html
 vue.js
+*.html
