@@ -1,6 +1,6 @@
 ---
 title: webpack性能优化
-lang: en-US
+lang: zh-CN
 description: 随着一个产品的功能变复杂，项目也变的越来越大，必然造成打包耗时更久，打出来的包也越来越大，那么我们可以如何借助webpack来进行优化
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: iframe架构微前端实战
-lang: en-US
+lang: zh-CN
 description: 最近看到了好几篇与为前端相关的文章，对于微前端的架构基本都提到了 iframe 方式，但最终也没看到那篇文章最后选择了 iframe 架构。既然如此，那我就来试试看用 iframe 实现微前端怎么样。
 ---
 

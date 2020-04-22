@@ -1,6 +1,6 @@
 ---
 title: 自定义一套Vue-Cli项目模版
-lang: en-US
+lang: zh-CN
 description: 
 ---
 

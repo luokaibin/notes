@@ -1,6 +1,6 @@
 ---
 title: 恰运维一口饭(Nginx实用教程)
-lang: en-US
+lang: zh-CN
 ---
 # ES2015 + 常用API
 

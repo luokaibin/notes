@@ -1,6 +1,6 @@
 ---
 title: 将Vue玩出花
-lang: en-US
+lang: zh-CN
 ---
 
 ## 使用ref来主动操作子组件
