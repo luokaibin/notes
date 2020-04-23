@@ -72,3 +72,4 @@ egg-server/*
 index.html
 vue.js
 *.html
+*.js
