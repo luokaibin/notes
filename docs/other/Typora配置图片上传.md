@@ -1,3 +1,8 @@
+---
+title: Typora配置图片上传
+lang: zh-CN
+---
+
 ```js
 const program = require('commander');
 const progress = require('child_process');

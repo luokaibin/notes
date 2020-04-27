@@ -28,7 +28,7 @@ module.exports = {
   ],
   themeConfig: {
     sidebar: {
-      '/webpack/': [
+      '/web/webpack/': [
         '01 使用 Webpack 实现前端工程化',
         '02 什么是 Webpack',
         '03 Webpack 开发环境搭建',
@@ -68,10 +68,10 @@ module.exports = {
         '37 附录：项目中常用的 loader',
         '38 附录：项目中常用的插件',
       ],
-      '/typescript/': [
+      '/web/typescript/': [
         ['TypeScript入门.md', 'TypeScript入门']
       ],
-      '/es2015/': [
+      '/web/es2015/': [
         {
           title: 'ES2015+常用API',   // 必要的
           collapsable: true, // 可选的, 默认值是 true,
@@ -100,6 +100,30 @@ module.exports = {
         '如何在Web使用手机原生的分享能力',
         '实现简易富文本编辑器',
       ],
+      '/web/': [
+        {
+          title: '前端面试系列',   // 必要的
+          collapsable: true, // 可选的, 默认值是 true,
+          sidebarDepth: 2,    // 可选的, 默认值是 1
+          children: [
+            'interview/扫盲--前端面试',
+            'interview/在浏览器输入一个地址发生了什么',
+            'interview/如何使页面更快的呈现在用户面前',
+            'interview/如何收集产品线上错误',
+            'interview/函数节流与函数防抖',
+            'interview/webpack性能优化',
+            'interview/JS运行机制',
+            'interview/前端技术发展史',
+            'interview/腾讯四道笔试真题',
+          ]
+        },
+        '如何自定义一套Vue-Cli项目模版',
+        'iframe架构微前端实战',
+        '将Vue玩出花',
+        '将小程序玩出花',
+        '大型前端项目结构设计',
+        '大型前端项目git管理方案',
+      ],
       '/node/': [
         "egg-redis常用api",
         "eggjs新手村指南",
@@ -108,31 +132,11 @@ module.exports = {
         "使用apidoc生成接口文档",
       ],
       '/other/': [
-        {
-          title: '前端面试系列',   // 必要的
-          collapsable: true, // 可选的, 默认值是 true,
-          sidebarDepth: 2,    // 可选的, 默认值是 1
-          children: [
-            '扫盲--前端面试',
-            '在浏览器输入一个地址发生了什么',
-            '如何使页面更快的呈现在用户面前',
-            '如何收集产品线上错误',
-            '函数节流与函数防抖',
-            'webpack性能优化',
-            'JS运行机制',
-            '前端技术发展史',
-          ]
-        },
         '基础正则',
-        '数据劫持',
-        '如何自定义一套Vue-Cli项目模版',
-        'iframe架构微前端实战',
+        '速查',
         '恰运维一口饭',
-        '将Vue玩出花',
-        '将小程序玩出花',
         '算法复杂度是什么',
-        '大型前端项目结构设计',
-        '大型前端项目git管理方案',
+        'Typora配置图片上传',
       ],
       '/discipline/HRM/': [
         '人力资源管理概述',
@@ -164,15 +168,19 @@ module.exports = {
         items: [
           {
             text: 'ES2015 +',
-            link: '/es2015/ES2015+常用API'
+            link: '/web/es2015/ES2015+常用API'
           },
           // {
           //   text: 'Webpack',
-          //   link: '/webpack/'
+          //   link: '/web/webpack/'
           // },
           {
             text: 'TypeScript',
-            link: '/typescript/TypeScript入门'
+            link: '/web/typescript/TypeScript入门'
+          },
+          {
+            text: 'more...',
+            link: '/web/iframe架构微前端实战'
           },
         ]
       },
