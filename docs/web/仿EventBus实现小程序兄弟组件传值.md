@@ -20,5 +20,77 @@ description: 在Vue中兄弟组件间可以使用EventBus是进行传值，但�
 
 方式一是很容易想到的方案，但是缺点很明显，实现的过程太过于繁琐了，所以方式一直接 pass，我们重点来研究另一个实现方案——EventBus。
 
+实现方式二：方式二我们就仿照 Vue 的 EventBus 来实现兄弟组件传值，实质其实利用发布订阅模式。
 
+首先是当我们点击标签的时候，我们需要向外触发一个事件，然后把标签的内容携带过去，它就是消息的发布者；然后我们需要在 textarea 组件内监听标签组件触发的事件，然后接收标签的内容，他是消息的订阅者。我们需要实现的就是标签组件和 textarea 通信的桥梁。
+
+## 编码
+
+组件我已经写好了，文末附有 demo 的 github 地址，我下面只展示关键代码，组件基础代码就不演示了。
+
+### 编写订阅者
+
+首先，我们需要一个对象，这个对象给我们提供了一个 **`on`** 方法，用来让我们监听另一个组件触发的事件。所以这个 `on` 方法需要接收两个参数，一个是我们要监听的事件名字，另一个参数是函数，当事件被触发的时候，通过这个函数来通知我们。
+
+我们需要把订阅写在组件的生命周期内，确保另一个组件抛出事件时，我们是订阅过的。
+
+```js
+// textArea组件的JS
+import bus from '../../utils/eventbus'; // 这里的代码还没写，我们先假定提供订阅API的对象是这个js模块提供的
+Component({
+  data: {},
+  lifetimes: {
+    ready() {
+      // 当组件的ready生命周期执行的时候，我们通过bus对象提供的on方法去订阅了sendTag事件
+      // 当sendTag事件被触发的时候，我们给它提供了一个函数，这个函数接收个tagText参数，这个就是标签组件被点击要传递的内容
+      // 我们这里订阅的是sendTag事件，那么也就是要求标签被点击的时候也必须向外抛出sendTag事件
+      bus.on('sendTag', tagText => {
+        console.log(tagText);
+      });
+    },
+  },
+  methods: {}
+})
+```
+
+接下来，我们编写 eventbus 模块，首先这个模块最终必须向外暴露一个对象，这个对象必须拥有 on 方法。
+
+```js
+// eventbus.js
+class Bus {
+  on(Event, cb) {
+  }
+}
+export default new Bus();
+```
+
+我们继续分析 on 方法，我们需要将 Event 作为 key，cb 作为 value 存起来，这样当发布者发布消息（向外触发事件）的时候，我们找到对应的事件，然后去执行对应的方法就行。
+
+为了通用性，同一个事件可能有多个订阅者，比如下面还有三个 textarea 组件，都需要在标签被点击的时候拿到标签内容，所以，我们就需要一个数组，把多个订阅者都放里面。
+
+```js
+class Bus {
+  constructor() {
+    // events 是一个容器，里面放的是，各个事件和它的订阅者，数据格式如：
+    /**
+    	this.events = {
+    		sendTag: [cb1,cb2,cb3],
+    		sendMsg: [cb4,cb5,cb6]
+    	};
+    */
+    // 当然也可以直接this.sendTag = [cb1,cb2,cb3];个人习惯不同，我更喜欢放的容器内
+    this.events = {};
+  }
+  on(Event, cb) {
+    if(this.events[Event]) {
+      // 如果这个事件存在，那说明之前已经有订阅者了，此时只需要将这个订阅者再push进去即可
+      this.events[Event].push(cb);
+    } else {
+      // 如果这个事件不存在，那我们就需要对其初始化，将我们作为第一个订阅者，放到数组中赋给这个事件
+      this.events[Event] = [cb];
+    }
+  }
+}
+export default new Bus();
+```
 
