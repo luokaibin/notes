@@ -117,6 +117,7 @@ module.exports = {
             'interview/腾讯四道笔试真题',
           ]
         },
+        '仿EventBus实现小程序兄弟组件传值',
         '如何自定义一套Vue-Cli项目模版',
         'iframe架构微前端实战',
         '将Vue玩出花',
