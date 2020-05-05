@@ -6,7 +6,7 @@ lang: zh-CN
 
 
 
-![](https://img3.mukewang.com/5cdb7d6600011eab06400359.jpg)
+![](https://static.jindll.com/notes/5cdb7d6600011eab06400359.jpg)
 
 > 人的影响短暂而微弱，书的影响则广泛而深远
 > 
