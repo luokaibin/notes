@@ -54,3 +54,9 @@
 
 解决方法：[https://www.jianshu.com/p/939eb5157e83](https://www.jianshu.com/p/939eb5157e83)
 
+### 8. 查看当前数据库存在哪些用户
+
+```shell
+] SELECT User, Host FROM mysql.user;
+```
+
