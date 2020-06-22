@@ -112,9 +112,9 @@ module.exports = {
             'interview/如何收集产品线上错误',
             'interview/函数节流与函数防抖',
             'interview/webpack性能优化',
-            'interview/JS运行机制',
             'interview/前端技术发展史',
             'interview/腾讯四道笔试真题',
+            'interview/前端面试自问自答'
           ]
         },
         '仿EventBus实现小程序兄弟组件传值',
