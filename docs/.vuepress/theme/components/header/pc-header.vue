@@ -35,23 +35,23 @@ export default {
 @import '~@styles/common';
 .container
   width 100vw
-  height 70px
-  border-bottom 1px solid #cccccc
+  height 60px
   box-sizing border-box
   padding 0 30px
+  border_bottom()
   flex()
   .title
     height 100%
     cursor pointer
     flex(row,flex-start)
     .h1
+      font-family: pdrfont
       font-size 26px
-      margin 0
       font-weight 400
       margin-left 0.2em
     .logo
-      width 50px
-      height 50px
+      width 45px
+      height 45px
       border-radio 50%
   .menu
     flex()

@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-  title: '胖大人的日常记事',
+  title: '胖大人笔记',
   description: 'Just playing around',
   plugins: ['@vuepress/pwa',{
     serviceWorker: true,

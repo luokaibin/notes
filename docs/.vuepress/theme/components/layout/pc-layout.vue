@@ -1,14 +1,14 @@
 <template>
   <div class="layout">
-    <pc-header />
+    <Header />
   </div>
 </template>
 
 <script>
-import PcHeader from '@components/header/pc-header';
+import Header from '@components/header/pc-header';
 export default {
   name: 'Layout',
-  components: {PcHeader},
+  components: {Header},
   data() {
     return {};
   },
