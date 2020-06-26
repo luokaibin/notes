@@ -27,6 +27,9 @@ module.exports = {
     ['script', { src: '/share.js?2gu6df', defer: 'defer'}],
   ],
   themeConfig: {
+    header: {
+      logo: './logo.png',
+    },
     sidebar: {
       '/web/webpack/': [
         '01 使用 Webpack 实现前端工程化',
