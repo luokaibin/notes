@@ -25,6 +25,7 @@ module.exports = {
     ['script', { src: 'https://res2.wx.qq.com/open/js/jweixin-1.6.0.js', defer: 'defer'}],
     ['script', { src: 'https://static.jindll.com/static/cdn/html2canvas.min.js', defer: 'defer'}],
     ['script', { src: '/share.js?2gu6df', defer: 'defer'}],
+    ['link', { rel: 'stylesheet', href: '/reset.css?2gu6df'}],
   ],
   themeConfig: {
     sidebar: {
@@ -153,6 +154,10 @@ module.exports = {
         '工商行政管理',
         '货币银行学',
         '现代企业制度管理',
+      ],
+      '/discipline/degree/': [
+        '学位英语',
+        '单词'
       ]
     },
     sidebarDepth: 2,
@@ -197,6 +202,10 @@ module.exports = {
         text: '课程',
         ariaLabel: 'discipline',
         items: [
+          {
+            text: '学位考试',
+            link: '/discipline/degree/学位英语'
+          },
           {
             text: 'HRM',
             link: '/discipline/HRM/人力资源管理概述'
