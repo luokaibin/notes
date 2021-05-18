@@ -60,3 +60,9 @@
 ] SELECT User, Host FROM mysql.user;
 ```
 
+### 9. 创建数据库(8.x)
+
+```
+CREATE DATABASE dbName;
+```
+

@@ -1,13 +1,38 @@
 ---
+
 title: 恰运维一口饭(Nginx实用教程)
 lang: zh-CN
 ---
 
 > 就是皮一下，靠这些去恰运维的饭，被打你也不能顺着网线找我啊！！！
 
+## 主题：反向代理
+
+反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器
+
+> 以下操作基于 **环境：CentOS7**
+
 ## 安装
 
-**[Nginx安装及启动配置文件等基础内容看我这篇文章](https://juejin.im/post/5cbb37385188254160581dde)**
+```sh
+# 1，将nginx添加到yum repro库中
+[root@izbp1b498epn4trb75oykez ~]# rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+# 2，查看nginx信息
+[root@izbp1b498epn4trb75oykez ~]# yum info nginx
+# 3，使用yum安装ngnix
+[root@izbp1b498epn4trb75oykez ~]# yum -y install nginx
+# 4，启动nginx
+[root@izbp1b498epn4trb75oykez ~]# systemctl start nginx
+
+```
+
+## 修改配置文件
+
+> 配置文件路径 /etc/nginx/conf.d/default.conf
+
+```sh
+[root@izbp1b498epn4trb75oykez ~]# vi /etc/nginx/conf.d/default.conf
+```
 
 ## 基本配置（前端项目部署：单页面应用）
 

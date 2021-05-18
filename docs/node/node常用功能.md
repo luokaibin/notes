@@ -88,3 +88,19 @@ ${content}
 })
 ```
 
+
+
+```js
+const init = () => {
+  document.querySelector('#competitor_action').value = '无';
+  document.querySelector('#competitor_url').value = '无';
+  document.querySelector('#is_auth [value="0"]').selected = true;
+  document.querySelector('#url_type [value="1"]').selected = true;
+  document.querySelector('#svr_url').value = 'http://ocloud-tcenter-tcs-app:8088/api/v1';
+  document.querySelector('#is_wiki [value="0"]').selected = true;
+  document.querySelector('#category [value="应用管理相关接口"]').selected = true;
+  [...document.querySelectorAll('#del_example_body')].forEach(el => el.click());
+  [...document.querySelectorAll('[name="competitor_name[]"]')].forEach(el => el.value = '无')
+}
+```
+
