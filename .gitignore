@@ -37,6 +37,7 @@ node_modules/
 jspm_packages/
 docs/.vuepress/dist
 docs/work
+docs/node_modules
 # TypeScript v1 declaration files
 typings/
 

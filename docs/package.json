@@ -1,0 +1,31 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx vuepress dev",
+    "build": "npx vuepress build",
+    "deploy": "cloudbase framework deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luokaibin/notes.git"
+  },
+  "keywords": [
+    "笔记"
+  ],
+  "author": "kaibinluo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luokaibin/notes/issues"
+  },
+  "homepage": "https://github.com/luokaibin/notes#readme",
+  "dependencies": {
+    "@cloudbase/cli": "^1.7.0",
+    "vuepress": "^1.2.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.2.0"
+  }
+}
