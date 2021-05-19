@@ -2,6 +2,7 @@ const path = require('path');
 module.exports = {
   title: '胖大人的日常记事',
   description: 'Just playing around',
+  base: '/vuepress/',
   plugins: ['@vuepress/pwa',{
     serviceWorker: true,
     updatePopup: {
