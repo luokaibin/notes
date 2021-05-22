@@ -132,13 +132,32 @@ module.exports = {
         "node常用功能",
         "从零搭建Koa项目",
         "使用apidoc生成接口文档",
+        'nvm常用命令'
+      ],
+      '/raspberrypi/': [
+        '树莓派入门到实战'
+      ],
+      '/mysql/': [
+        'mysql'
+      ],
+      '/linux/': [
+        'Nginx',
+        'SCP常用指令',
+        'linux常用命令',
+        '手摸手教你搭建自己的邮局',
+      ],
+      '/docker/': [
+        'Docker 学习计划',
+        'docker常用命令',
+        'Mac Docker Desktop新版换源的问题'
       ],
       '/other/': [
         '基础正则',
         '速查',
-        'Nginx',
         '算法复杂度是什么',
         'Typora配置图片上传',
+        'git 常用命令',
+        '给Vuepress做个微信分享'
       ],
       '/discipline/HRM/': [
         '人力资源管理概述',
@@ -195,8 +214,25 @@ module.exports = {
         link: '/node/node常用功能'
       },
       {
-        text: 'other',
-        link: '/other/恰运维一口饭'
+        text: 'Linux',
+        items: [
+          {
+            text: 'Raspberry Pi',
+            link: '/raspberrypi/树莓派入门到实战'
+          },
+          {
+            text: 'Linux',
+            link: '/linux/Nginx'
+          },
+          {
+            text: 'Mysql',
+            link: '/mysql/mysql'
+          },
+          {
+            text: 'Docker',
+            link: '/docker/Docker 学习计划'
+          },
+        ]
       },
       {
         text: '课程',
