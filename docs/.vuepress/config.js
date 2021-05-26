@@ -132,7 +132,8 @@ module.exports = {
         "node常用功能",
         "从零搭建Koa项目",
         "使用apidoc生成接口文档",
-        'nvm常用命令'
+        'nvm常用命令',
+        'npm常见问题'
       ],
       '/raspberrypi/': [
         '树莓派入门到实战'
@@ -145,6 +146,7 @@ module.exports = {
         'SCP常用指令',
         'linux常用命令',
         '手摸手教你搭建自己的邮局',
+        'linux解压'
       ],
       '/docker/': [
         'Docker 学习计划',
