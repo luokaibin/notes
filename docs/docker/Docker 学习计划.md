@@ -309,6 +309,17 @@ docker images
 docker run -d -p 宿主机端口:容器端口 --name 容器名称 镜像的标示[镜像名称[:tag]]
 # 5. 通过 docker ps 查看运行起来的容器
 docker ps
+
+{
+  "registry-mirrors": [
+    "https://mirror.ccs.tencentyun.com",
+    "https://hub.daocloud.io/",
+    "https://reg-mirror.qiniu.com",
+    "https://mirror.baidubce.com",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://htd3lccj.mirror.aliyuncs.com"
+  ]
+}
 ```
 
 ## 六、Docker-Compose

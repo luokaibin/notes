@@ -91,40 +91,13 @@ firewall-cmd --permanent --zone=public --remove-port=8080/tcp
 [root@pangdaren]# systemctl mask firewalld
 ```
 
+## 查找某个命令在系统的什么位置
 
-
-```
-server {
-  server_name nps.kaibinluo.com;
-  listen 80;
-  
-  # 证书文件名称
-  # ssl_certificate /ssl/notes/3048277_notes.jindll.com.pem; 
-  # 私钥文件名称
-  # ssl_certificate_key /ssl/notes/3048277_notes.jindll.com.key;
-  # ssl_session_timeout 5m;
-  # 请按照以下协议配置
-  # ssl_protocols TLSv1 TLSv1.1 TLSv1.2; 
-  # 请按照以下套件配置，配置加密套件，写法遵循 openssl 标准。
-  # ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE; 
-  # ssl_prefer_server_ciphers on;
-     
-  location / {
-  	proxy_pass_header Server;
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header Host $host;
-    proxy_set_header X_Forward_For $proxy_add_x_forwarded_for;
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection 'upgrade';
-		
-    proxy_pass http://127.0.0.1:10000; # 配置转发；将https://notes.jindll.com转发到本机http://127.0.0.1:3939
-  }
-}
+```shell
+whereis nps
 ```
 
-```
+
 
   
-```
 

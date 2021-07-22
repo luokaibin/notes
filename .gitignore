@@ -76,3 +76,8 @@ index.html
 vue.js
 *.html
 *.js
+.DS_Store
+db.json
+public/
+.deploy*/
+source/_posts/*
