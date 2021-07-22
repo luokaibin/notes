@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 32 实战：使用 Express 和中间件来实现 Webpack-dev-server
-description: 
+comments: 
+description: 世界上最快乐的事，莫过于为理想而奋斗。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——苏格拉底在原理篇介绍HMR实现的文章中，我们对 Webpack-dev-server 和 HMR 做了深入的剖析。在实际开发中，我们仅仅使用 Webpack-dev-server 功能可能不够，例如：
 lang: zh-CN
 ---
 

@@ -1,6 +1,11 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - node
 title: egg-redis常用api
-description: 
+comments: 
+description: 官方文档：https //github.com/eggjs/egg-redis功能存单个值expiryMode 过期时间单位是秒 过期时间单位是分钟修改过期时间修改过期时间修改过期时间修改过期时间修改过期时间修改过期时间修改过期时间修改过期时间修改过期时间修改过期时间设置 key 在指定时间过期
 lang: zh-CN
 ---
 

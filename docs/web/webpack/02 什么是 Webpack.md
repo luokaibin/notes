@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 什么是 Webpack
-description: 
+comments: 
+description: 勤能补拙是良训，一分辛劳一分才。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——华罗庚随着 Web 前端的不断发展，传统网页开发在逐渐往 Web 应用（Web Application，简称 WebAPP）的开发方式转变，页面开始变得越来越复杂，复杂的应用场景必然引起技术的进步，出现新的技术手段来解决现有问题。前端模块化和工程化的呼声越来越高，随着前些年大行其道的 Grunt、Gulp、FIS 等构建工具的发展，带动了一波前端工程化热。近几年，经过 React、Vue 库这些年的扩张，大型 Webapp 不再局限于手写 jQuery 操作 DOM，让大型 Webapp 有了全新的开发体验。在这个过程中，前端逐渐发展成了模块化和单页应用（single-page application，简称 SPA）为主的形式，在这种形态和 React、Vue 这些库的普及下，Webpack 越来越被更多成为主流构建工具。
 lang: zh-CN
 ---
 

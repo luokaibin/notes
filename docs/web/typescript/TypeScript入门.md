@@ -1,3 +1,13 @@
+---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - typescript
+title: TypeScript入门
+comments: 
+description: TypeScript入门基本类型声明关于null和undefinedunll和undefined是string|number|boolean的子类型Any 任意类型声明一个any类型的变量,此变量可以被任意赋值变量在声明的时候没有指定类型,此时就默认为any类型类型推论当给一个变量赋值初始化时,如果没有指定类型,会根据初始值倒推类型
+---
 # TypeScript入门
 
 ## 基本类型声明

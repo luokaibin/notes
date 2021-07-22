@@ -1,6 +1,11 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - node
 title: eggjs新手村指南
-description: 
+comments: 
+description: 前言公司最近准备建 node 中间层，可考虑的方案就 express koa nest egg ，express 和 koa 都太轻了，给企业用不合适，nest 中文文档太少，开发中如果出现问题，查找相关解决方案并不容易，所以最后可选的也就 eggJs 了。eggjs 是阿里出品的企业级 node 框架，奉行 
 lang: zh-CN
 ---
 

@@ -1,6 +1,11 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - other
 title: 给Vuepress加个微信分享
-description: 用 Vuepress 做个人博客，好不容易写了篇文章想分享到朋友圈装个X，结果连个头图都没有，也太丑了
+comments: 
+description: 前言用 Vuepress 做个人博客，好不容易写了篇文章想分享到朋友圈装个X，结果却是这个样子Low暴了，连个头图都没有，太丑了，所以本文的目标就是给 Vuepress 加个微信分享功能。准备工作需要有一个微信公众号需要会 node 或者看得懂 node 代码，本文服务端基于 node eggjs 框架
 lang: zh-CN
 ---
 

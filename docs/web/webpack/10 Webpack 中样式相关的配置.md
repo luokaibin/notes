@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 10 Webpack 中样式相关的配置
-description: 
+comments: 
+description: 人的影响短暂而微弱，书的影响则广泛而深远。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——普希金Webpack 中一切皆模块，CSS 也可以在 JavaScript 中被直接引用，但是 CSS 的语法 JavaScript 是不能解析的，所以下面代码会报错：
 lang: zh-CN
 ---
 

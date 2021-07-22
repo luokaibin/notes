@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 15 Webpack 中配置React和Vue开发环境
-description: 
+comments: 
+description: 上天赋予的生命，就是要为人类的繁荣和平和幸福而奉献。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——松下幸之助当下前端最火的两个框架就是了 React 和 Vue 了，本篇文章主要介绍手动配置 Webpack 来做 React 和 Vue 的开发。
 lang: zh-CN
 ---
 

@@ -1,5 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - es2015
 title: 使用fetch更轻量的去做请求
+comments: 
+description: 浏览器兼容性兼容性感人!!!
 ---
 
 ```typescript

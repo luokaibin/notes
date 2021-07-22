@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 27 从 Webpack 的产出代码来看 Webpack 是怎么执行的
-description: 
+comments: 
+description: 老骥伏枥，志在千里； 烈士暮年，壮心不已。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——曹操通过之前的章节内容，我们已经了解了 Webpack 的整个打包流程，并且针对源码做了分析。这篇文章，来分析下 Webpack 打包产出物是怎样执行的。本文基于 
 lang: zh-CN
 ---
 

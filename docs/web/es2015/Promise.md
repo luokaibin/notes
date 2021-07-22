@@ -1,5 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - es2015
 title: Promise
+comments: 
+description:  描述请看MDN创建也许经常在项目中看到的是在函数内作为 返回值返回的，其实都是一样的。不要被局限.then 接收 成功（官方描述：接收）或失败（官方描述：拒绝）状态（或者就理解 成功或失败状态的时候会执行） 支持链式调用语法： 当 Promise 变成成功状态时调用的函数。该函数有一个参数，即接受的最终结果（result）。如果该参数不是函数，则会在内部被替换为 
 ---
 
 <p style="font-size: 1.65rem;padding-bottom: 0.3rem;border-bottom: 1px solid #eaecef;font-weight:700;"> Promise </p>

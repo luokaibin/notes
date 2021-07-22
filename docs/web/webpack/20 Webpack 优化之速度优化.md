@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 20 Webpack 优化之速度优化
-description: 
+comments: 
+description: 什么是路？就是从没路的地方践踏出来的，从只有荆棘的地方开辟出来的。 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;—— 鲁迅当 Webpack 的项目文件多了之后，构建过程会越来越慢，这时候就需要做一些构建速度方面的优化手段了，本篇文章就是介绍了构建速度优化相关的配置。影响 Webpack 构建速度的有两个「大户」：一个是 loader 和 plugin 方面的构建过程，一个就是压缩，把这两个东西优化起来，可以减少很多发布的时间，所以本文将从构建过程和压缩两个方面来做讲解。
 lang: zh-CN
 ---
 

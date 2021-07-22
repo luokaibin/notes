@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 24 Tapable —— Webpack 的核心模块
-description: 
+comments: 
+description: 立志是事业的大门，工作是登门入室的的旅途。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——巴斯德Webpack 工程相当庞大，但 Webpack 本质上是一种事件流机制。通过事件流将各种插件串联起来，最终完成 Webpack 的全流程，而实现事件流机制的核心是今天要讲的Tapable 模块。Webpack 负责编译的 Compiler 和创建 Bundle 的 Compilation 都是继承自 Tapable。所以在讲 Webpack 工作流程之前，我们需要先掌握 Tapable。
 lang: zh-CN
 ---
 

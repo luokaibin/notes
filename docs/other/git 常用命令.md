@@ -1,3 +1,12 @@
+---
+updated: 2021/07/26 20:14:36
+date: 2021/07/26 20:14:36
+categories: 
+  - other
+title: git 常用命令
+comments: 
+description: 命令说明git init# 初始化本地git仓库（创建新仓库）git config --global user.name &quot;xxx&quot;# 配置用户名git config --global user.email &quot;&#x78;&#120;&#120;&#64;&#x78;&#x78;&#120;&#46;&#x63;&#111;&#x6d;
+---
 |命令|说明|
 |---|---|
 |git init                                                  |# 初始化本地git仓库（创建新仓库）|
@@ -242,4 +251,12 @@ git rebase --continue
 如果你在之前的编辑框修改了n行，也就是说要对n次提交做修改，则需要重复执行以上步骤n次。
 
 需要注意的是，在执行rebase命令对指定提交修改或删除之后，该次提交之后的所有提交的”commit id”都会改变。
+
+
+
+651b09a5a104de2d276f4201433bb5d81b1c8a19
+
+738cbd2afba4a5008928167640768de60507db6a  bak
+
+
 

@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 14 Webpack Dev Server 本地开发服务
-description: 
+comments: 
+description: 不想当将军的士兵，不是好士兵。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——拿破仑webpack-dev-server是一个基于 Express
 lang: zh-CN
 ---
 

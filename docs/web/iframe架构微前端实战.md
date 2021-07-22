@@ -1,7 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
 title: iframe架构微前端实战
+comments: 
 lang: zh-CN
-description: 最近看到了好几篇与为前端相关的文章，对于微前端的架构基本都提到了 iframe 方式，但最终也没看到那篇文章最后选择了 iframe 架构。既然如此，那我就来试试看用 iframe 实现微前端怎么样。
+description: 前言最近看到了好几篇与为前端相关的文章，对于微前端的架构基本都提到了  方式，但最终也没看到那篇文章最后选择了  架构。既然如此，那我就来试试看用  实现微前端怎么样。项目介绍demo演示：https //notes.jindll.com/frame项目地址：https //github.com/luokaibin/miniWeb
 ---
 
 ## 前言

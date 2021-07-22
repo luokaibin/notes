@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 11 Webpack 中使用 lint 工具来保证代码风格和质量
-description: 
+comments: 
+description: 当你做成功一件事，千万不要等待着享受荣誉，应该再做那些需要的事。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;—— 巴斯德代码不是写给机器看的，归根结底还是写给人看的！
 lang: zh-CN
 ---
 

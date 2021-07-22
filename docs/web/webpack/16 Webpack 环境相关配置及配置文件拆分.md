@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 16 Webpack 环境相关配置及配置文件拆分
-description: 
+comments: 
+description: 最聪明的人是最不愿浪费时间的人。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——但丁在实际开发实践中，为了方便开发调试和上线，项目中我们一般配置两个 Webpack 配置，一个是
 lang: zh-CN
 ---
 

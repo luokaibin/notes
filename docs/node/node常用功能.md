@@ -1,6 +1,11 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - node
 title: node常用功能
-description: 
+comments: 
+description: 读取文件夹下所有文件批量修改文件名
 lang: zh-CN
 ---
 

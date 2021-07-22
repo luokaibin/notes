@@ -1,6 +1,11 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - node
 title: 从零搭建Koa项目
-description: 
+comments: 
+description: 初始化项目安装koa创建入口文件项目根目录下新建  ，在  中写入以下代码配置 package.json 启动项目在 package.json 中的 script 字段内添加 start 命令控制台运行  启动项目，浏览器打开  可以看到输出 将 require 导入改成 import 导入
 lang: zh-CN
 ---
 

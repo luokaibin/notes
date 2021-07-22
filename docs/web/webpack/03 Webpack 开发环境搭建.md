@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 03 Webpack 开发环境搭建
-description: 
+comments: 
+description: 从不浪费时间的人，没有工夫抱怨时间不够。 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——杰弗逊本文将包括安装 Node、NPM、WebPack 开发环境，我使用的开发 IDE 是 
 lang: zh-CN
 ---
 

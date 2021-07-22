@@ -5,20 +5,21 @@
 # Site
 title: 摸鱼笔记
 subtitle: 三点几啦饮茶先了
-description: ''
-keywords:
-author: John Doe
+description: 
+keywords: 树莓派
+author: 胖大人
 language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://notes.jiabanmoyu.com
+# root: public
 permalink: :category/:hash.html
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source

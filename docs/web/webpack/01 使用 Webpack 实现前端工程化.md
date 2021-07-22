@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 使用 Webpack 实现前端工程化
-description: 
+comments: 
+description: 人的影响短暂而微弱，书的影响则广泛而深远&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——普希金我是三水清，之前曾就职于新浪微博和腾讯，目前在某厂做前端架构师。这次专栏我们讲 Webpack，作为笔试必考、面试必问、工作必用的内容，Webpack 正变得越来越重要，尤其对于大型公司，会不会 Webpack 甚至能直接决定你是否被录用，那讲 Webpack 就离不开前端工程化这个大的课题。
 lang: zh-CN
 ---
 

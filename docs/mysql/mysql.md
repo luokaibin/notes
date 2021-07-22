@@ -1,7 +1,12 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - mysql
 title: mysql 常用命令
+comments: 
 lang: zh-CN
-description: 
+description: 1. 查看有哪些数据库2. 切换数据库3. 查看当前库下面有哪些表4. mysql登录命令详解https //blog.csdn.net/smart_isan/article/details/745265475. Mysql 添加用户给予授权https //blog.csdn.net/qq_39331713/article/details/81747188
 ---
 
 ## 1. 查看有哪些数据库

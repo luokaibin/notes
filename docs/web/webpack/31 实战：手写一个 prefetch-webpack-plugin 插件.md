@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 31 实战：手写一个 prefetch-webpack-plugin 插件
-description: 
+comments: 
+description: 人生太短，要干的事太多，我要争分夺秒。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——爱迪生Webpack 的plugin是 Webpack 的核心概念，可以说整个 Webpack 都是由插件组成的。本章节讨论的内容是我们在配置文件配置的 plugin。这个是在整个工作流程的后半部分，Webpack 将整个模块的依赖关系都处理完毕，最终生成 bundle 的时候，然后扔给内置的插件和用户配置的插件依次处理。与loader只操作单个模块不同，plugin关注得是打包后的 bundle 整体，即所有模块组成的 bundle。所以跟产出相关的都是需要插件来实现的，比如压缩、拆分公共代码。
 lang: zh-CN
 ---
 

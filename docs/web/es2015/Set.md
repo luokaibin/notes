@@ -1,5 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - es2015
 title: Set
+comments: 
+description: 创建 本身是一个构造函数，所以我们使用 关键字创建 对象语法： 可选 的元素都是唯一的，所以多出的 &#39;a&#39;, &#39;s&#39;, undefined, NaN, null并没有添加进去, 但是两个对象和数组都添加进去了，说明同样的数组和对象并不等于他自身。但是如果数组和对象是引用的，那么它是相等的，不会被重复添加的，比如：
 ---
 
 <p style="font-size: 1.65rem;padding-bottom: 0.3rem;border-bottom: 1px solid #eaecef;font-weight:700;"> Set </p>

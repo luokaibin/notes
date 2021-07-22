@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 28 Webpack 的模块热替换做了什么？
-description: 
+comments: 
+description: 不安于小成，然后足以成大器；不诱于小利，然后可以立远功。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——方孝孺Webpack 的模块热替换（HMR - Hot Module Replacement，又称为热替换、热更新等）是 Webpack 最令人兴奋的特性之一。在没有 HMR 之前，Web 前端开发者使用类似 LiveReload 这类工具配合浏览器插件监听文件变化，然后重新加载整个页面。当 Webpack 开启了 HMR 功能之后，我们的代码修改之时，Webpack 会重新打包，并且将修改后的代码发送到浏览器，浏览器替换老的代码，保证了页面状态不会丢失，在不刷新整个页面的前提下进行局部的更新。
 lang: zh-CN
 ---
 

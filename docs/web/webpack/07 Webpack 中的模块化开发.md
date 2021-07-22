@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 07 Webpack 中的模块化开发
-description: 
+comments: 
+description: 要成就一件大事业，必须从小事做起。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——列宁模块是指为了完成某功能所需的程序或者子程序，模块是系统中「职责单一」且「可替换」的部分。所谓的模块化就是指把系统代码分为一系列职责单一且可替换的模块。模块化开发是指如何开发新的模块和复用已有的模块来实现应用的功能。Webpack 作为 JavaScript 模块化打包工具，自然对 JavaScript 的模块化做了不少工作，本文将从模块规范说起，逐渐介绍 Webpack 中对模块化的一些增强处理。
 lang: zh-CN
 ---
 

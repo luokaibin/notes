@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 25 Webpack 的 Compiler 和 Compilation
-description: 
+comments: 
+description: 与有肝胆人共事，从无字句处读书。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;—— 周恩来在 Webpack 工作流程 文章中已经提到过，Compiler 和 Compilation 都是继承自
 lang: zh-CN
 ---
 

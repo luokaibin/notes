@@ -1,7 +1,12 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - linux
 title: Linux 解压
+comments: 
 lang: zh-CN
-description: 
+description: tar命令 解压 显示所有过程 使用文件名字，这个参数是最后一个参数，后面只能接文件名 建立压缩文件 将文件解开到标准输出 有gzip属性的 有bz2属性的 更新原压缩包中的文件 查看内容unzip-c 将解压缩的结果显示到屏幕上，并对字符做适当的转换。-f 更新现有的文件。-l 显示压缩文件内所包含的文件。
 ---
 
 ## tar命令

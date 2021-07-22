@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 18 Webpack 优化之增强缓存命中率
-description: 
+comments: 
+description: 勤学如春起之苗，不见其增，日有所长。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——陶潜在 web 开发中，我们应该充分利用 HTTP 协议和浏览器的缓存来做好页面代码的持久化缓存，本文将介绍如何合理配置 Webpack 来更好的提升应用持久化缓存策略，通过将资源缓存在客户端中，可以避免之后每次都重新下载。
 lang: zh-CN
 ---
 

@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 34 实战：给 Webpack 项目添加 modern
-description: 
+comments: 
+description: 学习这件事不在乎有没有人教你，最重要的是在于你自己有没有觉悟和恒心。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——法布尔在 Vue-CLI 3 中有个
 lang: zh-CN
 ---
 

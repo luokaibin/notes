@@ -1,6 +1,11 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - node
 title: 使用apidoc生成接口文档
-description: 
+comments: 
+description: 官方文档： https //apidocjs.com/简书资料： https //www.jianshu.com/p/9353d5cc1ef8安装在项目中新建  文件，也可以放到  文件中配置项说明参数描述name工程名称;如果文件中没有配置该参数，会尝试从文件中读取version
 lang: zh-CN
 ---
 

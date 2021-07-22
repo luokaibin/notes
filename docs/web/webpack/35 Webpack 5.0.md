@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 35 Webpack 5.0
-description: 
+comments: 
+description: 先相信你自己，然后别人才会相信你。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——屠格涅夫Webpack 5.0 从 2018 年年底就开始发布 alpha 版本了，截稿时间，已经过去大半年了还没有发布正式版本。上次 6 月份在 GMTC 大会上 Webpack 的核心开发者 Sean Larkin 说 Webpack 5.0 还需要几个月的时间完成集中的测试，总体来说 Webpack 5.0 离我们不远了。今天的文章来自于 Webpack 团队的 Dennis Gaebel 《
 lang: zh-CN
 ---
 

@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 33 实战：使用 Stats 数据结构生成 Webpack 构建报告
-description: 
+comments: 
+description: 完成工作的方法，是爱惜每一分钟。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——达尔文上篇文章我们手写了一个 150 行左右的 dev-server 代码，在代码的最后我们使用了
 lang: zh-CN
 ---
 

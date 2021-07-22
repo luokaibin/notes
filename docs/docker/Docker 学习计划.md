@@ -1,7 +1,12 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - docker
 title: Docker 入门
+comments: 
 lang: zh-CN
-description: 
+description: Docker 是什么Docker 可以做什么如何配置Docker如何借助Docker隔离环境，实现电脑上同时具备Node，Python，Golang开发环境如何方便的进行资源回收一、Docker 介绍1.1 引言我本地运行没问题啊。环境不一致通过Docker可以提供一致的环境那个哥们又写死循环了，怎么这么卡
 ---
 
 > 1. Docker 是什么

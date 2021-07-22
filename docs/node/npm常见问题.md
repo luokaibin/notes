@@ -1,7 +1,12 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - node
 title: npm 常见问题
+comments: 
 lang: zh-CN
-description: 
+description: Npm install failed with “cannot run in wd”Run  with the  flag Add the  flag to your  FATAL ERROR  Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
 ---
 
 ## Npm install failed with “cannot run in wd”
@@ -34,6 +39,8 @@ description:
    4. 然后`npm install`。
 
    如果此解决方案不起作用，请尝试**解决方案1**。
+
+
 
 
 

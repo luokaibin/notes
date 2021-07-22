@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 13 Webpack 中打包 HTML 和多页面配置
-description: 
+comments: 
+description: 辛苦是获得一切的定律。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——牛顿在项目中我们除了需要 JavaScript、CSS 和图片等静态资源，还需要页面来承载这些内容和页面结构，怎么在 Webpack 中处理 HTML。并且我们项目也不仅仅是单页应用（Single-Page Application，SPA），也可能是多页应用，所以我们还需要使用 Webpack 来给多页应用做打包。本小节将讲解这俩问题。
 lang: zh-CN
 ---
 

@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 26 Webpack 工作流程
-description: 
+comments: 
+description: 机会不会上门来找人，只有人去找机会。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——狄更斯Webpack 主要工作是从一个入口开始，将小块独立的代码编制成更大而复杂的可以运行在浏览器中的代码，独立的代码就是一些 JavaScript 及其它可以被 JavaScript 引用的文件。今天章节来理解下 Webpack 的工作流程和基本原理。为了方便理解，我先将 Webpack 整个工作流程打个比方：
 lang: zh-CN
 ---
 

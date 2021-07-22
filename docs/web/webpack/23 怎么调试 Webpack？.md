@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 23 怎么调试 Webpack？
-description: 
+comments: 
+description: 宝剑锋从磨砺出，梅花香自苦寒来。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;—— 佚名在深入理解 Webpack 内核原理之前，我们先来学习下研究方法，即怎么调试 Webpack。我们都知道 Webpack 实际是 Node.js 编写的，执行的时候我们使用webpack-cli命令进行执行，所以我们可以利用 Node.js 的调试方法来调试 Webpack。
 lang: zh-CN
 ---
 

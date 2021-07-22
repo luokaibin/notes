@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 19 使用 Webpack 的 splitChunks 功能来拆分代码
-description: 
+comments: 
+description: 读一本好书，就是和许多高尚的人谈话。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——歌德在 Webpack4 之前，我们处理公共模块的方式都是使用 CommonsChunkPlugin，然后该插件让开发配置繁琐，并且使公共代码的抽离不够彻底和细致，因此新的splitChunks改进了这些能力，不过虽然splitChunks相对 CommonsChunkPlugin 进步不少，但是 splitChunks 的配置却比较复杂。
 lang: zh-CN
 ---
 

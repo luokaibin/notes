@@ -1,3 +1,12 @@
+---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - other
+title: QQMusicApi
+comments: 
+description: QQMusicApi这是一个基于 Express + Axios 的 Nodejs 项目，一切仅供学习参考，该支持的还是要支持的，不然杰伦喝不起奶茶了。其实有点点嫌弃qq音乐接口的数据格式，所以会对部分接口返回做一些处理，但是考虑到一些之前扒过接口的项目，有些人可能还是喜欢原汁原味， 可以在接口处增加一个参数 
+---
 # QQMusicApi
 
 这是一个基于 Express + Axios 的 Nodejs 项目，一切仅供学习参考，该支持的还是要支持的，不然杰伦喝不起奶茶了。

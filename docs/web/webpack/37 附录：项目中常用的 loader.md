@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 37 附录：项目中常用的 loader
-description: 
+comments: 
+description: 自信和希望是青年的特权。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——大仲马本小节列出项目中常用的 Webpack Loader，大家在实际项目中有类似需求的可以直接通过本小节的介绍来快速查找使用。
 lang: zh-CN
 ---
 

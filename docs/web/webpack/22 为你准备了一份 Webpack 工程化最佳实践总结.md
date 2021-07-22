@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 22 为你准备了一份 Webpack 工程化最佳实践总结
-description: 
+comments: 
+description: 世界上最快乐的事，莫过于为理想而奋斗。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;—— 苏格拉底介绍了这么多 Webpack 的配置和优化项目，可能大家有点迷糊了，本小节将用小幅内容来总结下 Webpack 的最佳实践，让大家在实际项目中可以直接拿本篇文章的内容作为 CheckList 手册使用！
 lang: zh-CN
 ---
 

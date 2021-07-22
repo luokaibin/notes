@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 21 使用 Webpack 的 Tree-Shaking
-description: 
+comments: 
+description: 你若要喜爱你自己的价值，你就得给世界创造价值。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;—— 歌德Tree-Shaking 是一个前端术语，本意为摇树的意思，在前端术语中通常用于描述移除 JavaScript 上下文中没用的代码，这样可以有效地缩减打包体积。关于 Tree-Shaking，Webpack 官方文档有一段很形象的描述：
 lang: zh-CN
 ---
 

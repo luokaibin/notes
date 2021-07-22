@@ -1,7 +1,12 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - linux
 title: Linux 常用命令
+comments: 
 lang: zh-CN
-description: 
+description: 启动一个服务关闭一个服务重启一个服务显示一个服务的状态在开机时启用一个服务在开机时禁用一个服务查看服务器开放的端口开启一个端口关闭一个端口查看占用端口的进程FirewallD is not running 防火墙未启动启动防火墙Failed to start firewalld.service  Unit is masked. 防火墙服务被锁
 ---
 
 ## 启动一个服务
@@ -99,5 +104,5 @@ whereis nps
 
 
 
-  
+  ⇧
 

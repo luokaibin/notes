@@ -3,16 +3,15 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo generate",
+    "build": "node cmd.js build",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "node cmd.js server"
   },
   "hexo": {
     "version": "5.4.0"
   },
   "dependencies": {
-    "@cloudbase/cli": "^1.7.0",
     "hexo": "^5.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
@@ -26,8 +25,8 @@
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
-    "install": "^0.13.0",
-    "npm": "^7.20.0",
+    "hexo-wordcount": "^6.0.1",
+    "lodash": "^4.17.21",
     "vuepress": "^1.2.0"
   },
   "devDependencies": {

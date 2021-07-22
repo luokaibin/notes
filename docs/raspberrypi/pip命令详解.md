@@ -1,3 +1,12 @@
+---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - raspberrypi
+title: pip命令详解
+comments: 
+description: pip 是 Python 的包安装程序。其实，pip 就是 Python 标准库（The Python Standard Library）中的一个包，只是这个包比较特殊，用它可以来管理 Python 标准库（The Python Standard Library）中其他的包。pip 支持从 PyPI，版本控制，本地项目以及直接从分发文件进行安装。pip 是一个命令行程序。 安装 pip 后，会向系统添加一个 pip 命令，该命令可以从命令提示符运行。
+---
 pip 是 Python 的包安装程序。其实，pip 就是 Python 标准库（The Python Standard Library）中的一个包，只是这个包比较特殊，用它可以来管理 Python 标准库（The Python Standard Library）中其他的包。pip 支持从 PyPI，版本控制，本地项目以及直接从分发文件进行安装。pip 是一个命令行程序。 安装 pip 后，会向系统添加一个 pip 命令，该命令可以从命令提示符运行。
 
 > PyPI（The Python Package Index，Python包索引）是 Python 编程语言的软件存储库。通常，我们就是从这上面安装各种 Python 的包，也可以在上面发布自己的包。

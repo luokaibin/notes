@@ -1,5 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - es2015
 title: Map
+comments: 
+description: Map和Object引用自MDN 和  类似的是，它们都允许你按键存取一个值、删除键、检测一个键是否绑定了值。因此（并且也没有其他内建的替代方式了）过去我们一直都把对象当成  使用。不过  和  有一些重要的区别，在下列情况里使用  会是更好的选择：一个的键只能是或者 ，但一个  的键可以是
 ---
 
 <p style="font-size: 1.65rem;padding-bottom: 0.3rem;border-bottom: 1px solid #eaecef;font-weight:700;"> Map </p>

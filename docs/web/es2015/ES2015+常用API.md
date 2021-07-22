@@ -1,6 +1,13 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - es2015
 title: 恰运维一口饭(Nginx实用教程)
+comments: 
 lang: zh-CN
+description: ES2015 + 常用API变量var和let与const相同点声明变量区别var声明的变量存在变量提升（变量被声明前可用）；let和const不存在变量提升（变量声明前使用会抛出错误）示例 1示例二示例 3示例 4总结： 1. var声明的变量的变量提升不是直接提到最顶层，而是提升到当前变量执行作用域的顶层；            2. 除var存在变量提升外，function同样存在变量提升
 ---
 # ES2015 + 常用API
 

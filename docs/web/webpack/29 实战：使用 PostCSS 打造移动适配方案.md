@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 29 实战：使用 PostCSS 打造移动适配方案
-description: 
+comments: 
+description: 生活永远不像我们想像的那样好，但也不会像我们想像的那样糟。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——莫泊桑在 Web 移动开发中，手机屏幕适配是个很大的话题，最开始做屏幕适配可以追溯到桌面页面（PC）阶段。随着电脑屏幕越来越大和 iPad 的出现，前端工程师需要适配不同的屏幕页面，当时最火的技术是响应式布局，即通过媒体查询（Media Queries）将主流的设备进行分类，根据设备屏幕宽度占比划分出来大中小等多个标准尺寸，然后设置不同的尺寸，这样做有两个缺点：
 lang: zh-CN
 ---
 

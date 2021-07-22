@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 17 Webpack 优化之体积优化
-description: 
+comments: 
+description: 自信和希望是青年的特权。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——大仲马Webpack 毕竟是个项目打包工具，一般 web 项目，打完包之后，需要发布到服务器上供用户使用，受带宽的限制，我们的项目体积需要越小越好，所以 Webpack 中打包的体积是 Webpack 中重要的一环，本小节内容将从 JavaScript、CSS 和其他静态资源体积优化入手，介绍项目的体积优化方案。
 lang: zh-CN
 ---
 

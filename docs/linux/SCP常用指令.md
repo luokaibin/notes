@@ -1,7 +1,12 @@
 ---
+updated: 2021/07/26 19:53:25
+date: 2021/07/26 19:53:25
+categories: 
+  - linux
 title: SCP常用命令
+comments: 
 lang: zh-CN
-description: 
+description: 1. 从服务器下载文件2. 上传本地文件到服务器3. 从服务器下载整个目录4. 上传目录到服务器5. 在两个远程主机之间复制文件
 ---
 
 ## 1. 从服务器下载文件

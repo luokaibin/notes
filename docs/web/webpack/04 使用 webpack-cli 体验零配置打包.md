@@ -1,6 +1,12 @@
 ---
+updated: 2021/07/26 19:53:26
+date: 2021/07/26 19:53:26
+categories: 
+  - web
+  - webpack
 title: 04 使用 webpack-cli 体验零配置打包
-description: 
+comments: 
+description: 人生太短，要干的事太多，我要争分夺秒。&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——爱迪生下面通过搭建一个使用 Webpack 打包的项目，来体验下 Webpack 的零配置打包。
 lang: zh-CN
 ---
 

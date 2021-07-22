@@ -1,5 +1,12 @@
 ---
+updated: 2021/03/26 19:53:26
+date: 2021/03/26 19:53:26
+categories: 
+  - web
+  - es2015
 title: FileReader前端文件读取
+comments: 
+description: 读取图片宽高
 ---
 
 
