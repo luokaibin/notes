@@ -26,6 +26,7 @@
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
+    "hexo-wordcount": "^6.0.1",
     "install": "^0.13.0",
     "npm": "^7.20.0",
     "vuepress": "^1.2.0"
