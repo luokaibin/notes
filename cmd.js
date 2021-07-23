@@ -3,11 +3,15 @@ const fs = require('fs');
 const day = require('dayjs');
 const fm = require('front-matter');
 const mark = require('marked');
-const { exec } = require('child_process');
+const { execSync } = require('child_process');
 const targetDir = path.resolve(__dirname, 'source/_posts');
 const docsDir = path.resolve(__dirname, 'docs')
 const ignoreDir = ['work'];
 const renderer = new mark.Renderer();
+const CMDMap = {
+  server: 'npx hexo server',
+  build: 'npx hexo generate'
+}
 // 复制之前先清空
 const delDir = (path) => {
   let files = [];
@@ -110,6 +114,7 @@ const listFile = (dir) => {
 const run = () => {
   delDir(targetDir);
   listFile(docsDir);
-  exec('npx hexo server')
+  const cmdstr = CMDMap[process.argv[2]];
+  execSync(cmdstr, {stdio: 'inherit'})
 }
 run()
