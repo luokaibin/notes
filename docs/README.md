@@ -37,3 +37,23 @@ https://1258712167.vod2.myqcloud.com/fb8e6c92vodtranscq1258712167/3217d702370192
 
 ```
 
+```
+version: '3'
+services:
+  mail:
+    image: palidin/extmail:latest
+    hostname: mail.jiabanmoyu.com
+    container_name: extmail
+    ports:
+    - "25:25"
+    - "110:110"
+    - "143:143"
+    - "10080:80"
+    privileged: true
+    environment:
+      EXTMAIL_LANG: zh_CN
+    volumes:
+    - /data/extmail/vmail:/home/domains
+    - /data/extmail/database:/var/lib/mysql/extmail
+```
+
