@@ -6,7 +6,7 @@ const mark = require('marked');
 const omit = require('lodash/omit')
 const { execSync } = require('child_process');
 const targetDir = path.resolve(__dirname, 'source/_posts');
-const docsDir = path.resolve(__dirname, 'docs/web/webpack')
+const docsDir = path.resolve(__dirname, 'docs')
 const ignoreDir = ['work'];
 const renderer = new mark.Renderer();
 const CMDMap = {
@@ -53,7 +53,7 @@ const wreiteFile = (params) => {
     prev.push(curr);
     return prev;
   }, []);
-  const meta = {...params, ...attributes, description: attributes.attributes || description, updated: '2020/04/27 22:56:04', date: '2020/04/27 22:56:04'};
+  const meta = {...params, ...attributes, description: attributes.attributes || description};
   const newmeta = omit(meta, ['fullpath'])
   // 新meta
   const metaStr = Object.entries(newmeta).reduce((prev,[key,value], currindex, arr) => {
