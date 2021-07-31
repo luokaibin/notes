@@ -53,7 +53,7 @@ const wreiteFile = (params) => {
     prev.push(curr);
     return prev;
   }, []);
-  const meta = {...params, ...attributes, description: attributes.attributes || description};
+  const meta = {...params, ...attributes, description: attributes.description || description};
   const newmeta = omit(meta, ['fullpath'])
   // 新meta
   const metaStr = Object.entries(newmeta).reduce((prev,[key,value], currindex, arr) => {

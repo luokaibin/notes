@@ -1,3 +1,7 @@
+.costume-code {
+  color: #ff5d52;
+  background-color: #fff3f0;
+}
 blockquote {
   margin: 0;
   padding: 0.5em 0.3em;
@@ -47,6 +51,16 @@ blockquote {
     li {
       p {
         margin-bottom: 0.3em;
+      }
+    }
+    p {
+      code {
+        @extend .costume-code;
+      }
+    }
+    ul,ol {
+      code {
+        @extend .costume-code;
       }
     }
   }

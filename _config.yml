@@ -45,15 +45,15 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
-  preprocess: true
+  enable: true
+  preprocess: false # true 服务端高亮 false 浏览器端高亮
   line_number: true
   tab_replace: ''
 
