@@ -109,8 +109,9 @@ const listFile = (dir) => {
           return prev;
         }
         prev.title = curr.replace('.md','')
+        prev.post_title = curr.replace('.md','')
         return prev;
-      }, {categories: [], title: ''})
+      }, {categories: [], title: '', post_title: ''})
       console.log('==============获取文件信息', fullpath);
       wreiteFile({updated, date, ...fileInfo, comments: 'true', fullpath});
     }

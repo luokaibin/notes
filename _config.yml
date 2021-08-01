@@ -15,7 +15,7 @@ timezone: ''
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://notes.jiabanmoyu.com
 # root: public
-permalink: :category/:hash.html
+permalink: :category/:title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
@@ -45,14 +45,14 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: false
+  enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: true
+  enable: false
   preprocess: false # true 服务端高亮 false 浏览器端高亮
   line_number: true
   tab_replace: ''
