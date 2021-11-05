@@ -1,3 +1,13 @@
+---
+updated: 2021/10/29 12:25:23
+date: 2021/10/29 12:25:23
+categories: 
+  - raspberrypi
+title: 树莓派安装docker
+post_title: 树莓派安装docker
+comments: true
+description: 树莓派安装docker 需要使用  命令，apt-get 命令是 Ubuntu 系统中的包管理工具，可以用来安装、卸载包，也可以用来升级包，还可以用来把系统升级到新的版本。但是 apt-get 默认的软件源是国外的，安装包非常慢，还经常安装失败，所以我们需要修改一下软件源地址更改apt源为阿里源
+---
 
 
 树莓派安装docker 需要使用 **`apt-get`** 命令，**apt-get 命令**是 Ubuntu 系统中的包管理工具，可以用来安装、卸载包，也可以用来升级包，还可以用来把系统升级到新的版本。**但是** apt-get 默认的软件源是国外的，安装包非常慢，还经常安装失败，所以我们需要修改一下软件源地址
