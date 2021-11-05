@@ -27,7 +27,7 @@ npm i koa
 
 ```js
 // 导入 koa
-const koa = require('koa');
+const Koa = require('koa');
 // 对koa实例化
 const app = new Koa();
 // 设置返回 hello world

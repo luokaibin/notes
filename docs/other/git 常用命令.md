@@ -217,8 +217,10 @@ git push -u origin master
 
 
 
-> 如果出现这个错误可能是因为远程仓库的 **README.md** 文件没有 pull 到本地仓库而导致的冲突
-> 输入 `git pull --rebase origin master` 将文件拉到本地后重新输入步骤5即可解决。
+> 1. 如果出现这个错误可能是因为远程仓库的 **README.md** 文件没有 pull 到本地仓库而导致的冲突
+>    输入 `git pull --rebase origin master` 将文件拉到本地后重新输入步骤5即可解决。
+>
+> 2. 如果有冲突，先解决冲突，解决完之后，如果显示正在变基，输入 `git rebase --continue` ，然后执行第五步 push
 
 # 命令
 
@@ -327,3 +329,4 @@ git push -u origin master
 | git branch -D branchName               | 强制删除本地分支                                |
 | git push origin --delete branchName    | 删除远程分支                                    |
 |                                        |                                                 |
+

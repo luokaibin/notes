@@ -13,7 +13,7 @@ description: 胖大人笔记TODO树莓派科学上网换博客架构netdata 汉�
 **TODO**
 
 - [x] 树莓派科学上网
-- [ ] 换博客架构
+- [x] 换博客架构
 - [ ] netdata 汉化
 - [ ] nas切换nextcloud
 - [ ] 邮件服务器用docker部署
@@ -33,6 +33,50 @@ description: 胖大人笔记TODO树莓派科学上网换博客架构netdata 汉�
 - Modoboa
 
 - Mailu
+
+
+# 加密过程
+
+```js
+const getBytes = (str) => {
+  // TextEncoder 接受代码点流作为输入，并提供 UTF-8 字节流作为输出。
+  // encode 方法返回一个 Uint8Array (en-US) 对象。
+  const encoder = new TextEncoder('utf8');
+  return encoder.encode(str);
+}
+const byteToStr = (bytes) => {
+  // 先对字节流按位非运算 再把字节转为字符串
+  // 静态 String.fromCharCode() 方法返回由指定的 UTF-16 代码单元序列创建的字符串。
+  return bytes.map(item => ~item).reduce((prev, curr) => `${prev}${String.fromCharCode(curr)}`, '')
+}
+// base64加密
+const base64Encode = (str) => btoa(str)
+```
+
+# 解密过程
+
+```js
+// base64解密
+const base64decode = (str) => atob(str);
+const strToByte = (str) => {
+  const bytes = [];
+  for(let i = 0; i < str.length; i++) {
+    // charCodeAt() 方法返回 0 到 65535 之间的整数，表示给定索引处的 UTF-16 代码单元
+    bytes.push(str.charCodeAt(i))
+  }
+  // 用创建出来的数组构造一个 Uint8Array 对象
+  let bytesBuffer = new Uint8Array(bytes)
+  // 对字节流按位非运算 还原
+  return bytesBuffer.map(item => ~item)
+}
+const getStr = (bytes) => {
+  // 和加密的第一步是相反的
+  const decoder = new TextDecoder();
+  return decoder.decode(bytes)
+}
+```
+
+
 
 
 

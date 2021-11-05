@@ -7,7 +7,7 @@ const omit = require('lodash/omit')
 const { execSync } = require('child_process');
 const targetDir = path.resolve(__dirname, 'source/_posts');
 const docsDir = path.resolve(__dirname, 'docs')
-const ignoreDir = ['work'];
+const ignoreDir = ['work', 'myStory', '杂记.md', 'QQMusicApi.md', 'engineering', 'discipline', 'plan', 'static', '将阿里云盘挂载到电脑.md', '树莓派入门到实战.md', '自定义SSH登录提示信息.md'];
 const renderer = new mark.Renderer();
 const CMDMap = {
   server: 'npx hexo server',
@@ -126,7 +126,7 @@ const run = () => {
   execSync('npm -v', {stdio: 'inherit'})
   console.log('===========开始删除目标目录', targetDir)
   delDir(targetDir);
-  console.log('===========递归文档目录', targetDir)
+  console.log('===========递归文档目录', docsDir)
   listFile(docsDir);
   console.log('===========递归完成')
   console.log('===========执行命令--start', process.argv)
