@@ -1,0 +1,24 @@
+{
+  "name": "hexo-theme-miracle",
+  "version": "2.0.1",
+  "description": "A clean and lightweight single-column theme for Hexo.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hifun-team/hexo-theme-miracle.git"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-theme",
+    "oCoke",
+    "hexo-theme-miracle",
+    "miracle",
+    "hifun-team",
+    "hifun"
+  ],
+  "author": "oCoke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hifun-team/hexo-theme-miracle/issues"
+  },
+  "homepage": "https://github.com/hifun-team/hexo-theme-miracle#readme"
+}

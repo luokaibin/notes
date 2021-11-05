@@ -98,9 +98,16 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: maupassant
+theme: miracle
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+lazyload:
+	enable: true
+	# 仅用于文章
+	onlypost: false
+	# 加载图片
+	loadingImage: "/path/to/your/file"
