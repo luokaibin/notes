@@ -7,7 +7,7 @@ const omit = require('lodash/omit')
 const { execSync } = require('child_process');
 const targetDir = path.resolve(__dirname, 'source/_posts');
 const docsDir = path.resolve(__dirname, 'docs')
-const ignoreDir = ['work', 'myStory', '杂记.md', 'QQMusicApi.md', 'engineering', 'discipline', 'plan', 'static', '将阿里云盘挂载到电脑.md', '树莓派入门到实战.md'];
+const ignoreDir = ['work', 'myStory', '杂记.md', 'QQMusicApi.md', 'engineering', 'discipline', 'static', '将阿里云盘挂载到电脑.md', '树莓派入门到实战.md'];
 const renderer = new mark.Renderer();
 const CMDMap = {
   server: 'npx hexo server',
