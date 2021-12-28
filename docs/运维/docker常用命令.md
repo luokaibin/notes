@@ -2,10 +2,12 @@
 updated: 2021/07/26 19:53:25
 date: 2021/07/26 19:53:25
 categories: 
-  - docker
+  - 运维
 title: Docker 常用命令
 comments: 
 lang: zh-CN
+tags:
+  - docker
 description: Docker run 运行一个容器，当镜像不存在时，会先拉取镜像再启动容器参数说明参数说明-a stdin指定标准输入输出内容类型，可选 STDIN/STDOUT/STDERR 三项；-d后台运行容器，并返回容器ID；-i以交互模式运行容器，通常与 -t 同时使用；-P随机端口映射，容器内部端口随机映射到主机的端口
 ---
 ## Docker run

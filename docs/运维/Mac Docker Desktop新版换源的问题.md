@@ -2,9 +2,11 @@
 updated: 2021/07/26 19:53:25
 date: 2021/07/26 19:53:25
 categories: 
-  - docker
+  - 运维
 title: Mac Docker Desktop新版换源的问题
 comments: 
+tags:
+  - docker
 description: Mac Docker Desktop新版换源的问题一、问题因为官方仓库实在是太慢了，所以一般我们都换个国内的使用，但网上查了下都是老资料了，根本没用，所以查了下官方资料。当前使用的版本2、解决看了下资料，其实也很简单打开 Prefreences 点击Docker Engine ，如图
 ---
 # Mac Docker Desktop新版换源的问题
