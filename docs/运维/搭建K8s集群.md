@@ -1,3 +1,14 @@
+---
+updated: 2021/11/25 19:26:28
+date: 2021/11/28 13:54:30
+categories: 
+  - 运维
+title: 搭建K8s集群
+post_title: 搭建K8s集群
+comments: true
+description: 配置互信所有机器执行关闭防火墙所有机器都执行关闭SELinux所有机器都执行关闭Swap所有机器都执行内核参数修改所有机器都执行这个操作相当于安装 kubelet、kubectl、kubeadm所有机器都执行安装docker所有机器都执行修改docker配置所有机器都执行/etc/docker/daemon.json
+---
+
 ## 配置互信
 
 > 所有机器执行

@@ -1,3 +1,14 @@
+---
+updated: 2021/11/06 17:37:25
+date: 2021/11/06 17:37:25
+categories: 
+  - node
+title: pangFs使用文档
+post_title: pangFs使用文档
+comments: true
+description: fs 常用操作工具库安装使用文档方法入参出参说明getCurrPath-当前路径获取当前CMD命令执行路径copyDirOrFile- src  string 要复制的源文件或者原目录。基于当前项目的相对路径，不需要传入完整路径。- desc  string 要复制到的一个目标目录，必须是一个存在的目录，必须是目录，路径是基于当前项目的相对路径，不需要传入完整路径。
+---
+
 fs 常用操作工具库
 
 ## 安装
