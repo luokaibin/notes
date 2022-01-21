@@ -74,3 +74,4 @@ public/
 .deploy*/
 docs_bak/*
 source/_posts
+package-lock.json

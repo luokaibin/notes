@@ -182,7 +182,7 @@ navbar:
         分类: /categories/
         标签: /tags/
         # 说说: /talk/
-        # 友链: /links/
+        友链: /links/
         关于: /about/
         # ...
 
@@ -414,13 +414,17 @@ tag:
 # Links Page
 #---------------------------
 links:
-    enable: false
+    enable: true
     items:
+        - {
+            title: "CloudBase Webify 提供网站托管服务",
+            link: "https://webify.cloudbase.net"
+        }
         
     # JSON 友链
     # JSON Links
     json_links:
-        enable: true
+        enable: false
 
         # JSON 文件链接
         # Link to JSON file

@@ -85,7 +85,9 @@ const wreiteFile = (params) => {
   } else {
     word = `${metaStr}\n${content}`
   }
-  fs.writeFileSync(path.resolve(targetDir, ...categories, `${title}.md`), word, {encoding: 'utf-8'})
+  const targetPosition = path.resolve(targetDir, ...categories, `${title}.md`)
+  console.log('要写入文件了', targetPosition)
+  fs.writeFileSync(targetPosition, word, {encoding: 'utf-8'})
 }
 const listFile = (dir) => {
   let arr = fs.readdirSync(dir, {encoding: 'utf-8', withFileTypes: false});
@@ -112,7 +114,7 @@ const listFile = (dir) => {
         prev.post_title = curr.replace('.md','')
         return prev;
       }, {categories: [], title: '', post_title: ''})
-      console.log('==============获取文件信息', fullpath);
+      console.log('==============获取文件路径', fullpath);
       wreiteFile({updated, date, ...fileInfo, comments: 'true', fullpath});
     }
   });
