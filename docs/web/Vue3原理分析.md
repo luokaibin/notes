@@ -6,6 +6,8 @@ categories:
 title: Vue3原理分析
 post_title: Vue3原理分析
 comments: true
+tags:
+  - Vue3原理
 description: Vue3初始化的流程Vue3初体验
 ---
 
@@ -82,9 +84,6 @@ H3-1---H3-1__2("update")---diff
 ### 造轮子之旅：手写Vue3初始化
 
 {% mermaid %}
-
-
-```mermaid
 graph LR
 root("造轮子")---A("基本结构")---A1("createApp")
 A---A2("app.mount")
@@ -110,7 +109,6 @@ D---I("trigger()")---I1("触发依赖关系")
 
 a("VDom")---b("js对象，能够描述视图")
 a---c("精确的定点更新")---c1("oldVnode,newVnode")
-```
 {% endmermaid %}
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="Vue初始化流程" src="https://codepen.io/luokaibin/embed/KKXPvmq?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">

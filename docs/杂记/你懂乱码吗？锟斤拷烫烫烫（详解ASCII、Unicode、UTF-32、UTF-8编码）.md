@@ -11,7 +11,7 @@ tags:
   - 字符集
   - Unicode
   - Utf-8
-  - Utf-16
+  - Utf-32
   - ASCII
   - GBK
   - GBK2312
