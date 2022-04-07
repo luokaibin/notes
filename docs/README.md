@@ -712,3 +712,25 @@ const getStr = (bytes) => {
 }
 ```
 
+```yaml
+version: '2'
+services:
+  mongodb:
+    restart: always # 代表只要docker启动，那么这个容器就跟着一起启动
+    image: bitnami/mongodb:5.0 # 指定镜像路径
+    container_name: mongodb # 指定容器名称
+    environment: # 指定环境信息
+      V2RAYA_VERBOSE: 'true'
+      MONGODB_ROOT_PASSWORD: 'Aaaaaaaa1!'
+      MONGODB_USERNAME: 'admin'
+      MONGODB_PASSWORD: 'Aaaaaaaa1!'
+      MONGODB_DATABASE: 'task-center'
+      MONGODB_DISABLE_SYSTEM_LOG: 'true'
+      MONGODB_SYSTEM_LOG_VERBOSITY: '0'
+      TZ: Asia/Shanghai # 指定时区
+    volumes: # 配置数据卷
+      - /mongo:/bitnami/mongodb
+    ports:
+      - 27017:27017 # 指定端口号的映射
+```
+
