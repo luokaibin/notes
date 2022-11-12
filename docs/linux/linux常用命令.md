@@ -104,5 +104,4 @@ whereis nps
 
 
 
-  ⇧
-
+  

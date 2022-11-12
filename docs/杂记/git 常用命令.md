@@ -213,8 +213,6 @@ git remote add origin 你的远程仓库地址
 git push -u origin master
 ```
 
-![img](https://static.jindll.com/notes/webp)
-
 
 
 > 1. 如果出现这个错误可能是因为远程仓库的 **README.md** 文件没有 pull 到本地仓库而导致的冲突
@@ -329,4 +327,6 @@ git push -u origin master
 | git branch -D branchName               | 强制删除本地分支                                |
 | git push origin --delete branchName    | 删除远程分支                                    |
 |                                        |                                                 |
+
+
 
