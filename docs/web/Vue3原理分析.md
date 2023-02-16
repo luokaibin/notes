@@ -41,8 +41,8 @@ description: Vue3初始化的流程Vue3初体验
 
 ### Vue3变化和设计原理
 
-{% mermaid %}
 
+```mermaid
 graph LR
 A("Vue3设计理念")---B("函数的方式")---B1("类型支持更好")
 A---C("Tree shaking")
@@ -54,13 +54,11 @@ A---F("性能优化")----F1("响应式系统")
 F---F2("编译器优化")
 A---G("扩展性")---G1("自定义渲染器")
 G---G2("独立响应式")
-
-{% endmermaid %}
+```
 
 ### 源码刨析：初始化流程
 
-{% mermaid %}
-
+```mermaid
 graph LR
 A("Vue")---B("打包入口")
 A---C("依赖")---C1("runtime-dom")---C1-1("依赖runtime-core")
@@ -78,12 +76,11 @@ H2-1---H2-1__2("方法初始化")
 H2-1---H2-1__3("状态初始化")---数据响应式
 H---H3("初始化界面及更新机制建立")---H3-1("setupRenderEffact()")---H3-1__1("mount")
 H3-1---H3-1__2("update")---diff
-
-{% endmermaid %}
+```
 
 ### 造轮子之旅：手写Vue3初始化
 
-{% mermaid %}
+```mermaid
 graph LR
 root("造轮子")---A("基本结构")---A1("createApp")
 A---A2("app.mount")
@@ -109,7 +106,7 @@ D---I("trigger()")---I1("触发依赖关系")
 
 a("VDom")---b("js对象，能够描述视图")
 a---c("精确的定点更新")---c1("oldVnode,newVnode")
-{% endmermaid %}
+```
 
 <iframe height="500" style="width: 100%;" scrolling="no" title="Vue初始化流程" src="https://codepen.io/luokaibin/embed/KKXPvmq?default-tab=html%2Cresult&editable=true&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/luokaibin/pen/KKXPvmq">

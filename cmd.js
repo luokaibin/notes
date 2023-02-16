@@ -15,6 +15,37 @@ const CMDMap = {
   server: 'npx hexo server',
   build: 'npx hexo generate'
 }
+
+// 将mermaid换成hexo的格式
+const replaceMermaid = (text) => {
+  const reg = /(```mermaid)|(``````mermaid)/;
+  if (!reg.test(text)) return text;
+  const textArr = text.split(/\n/);
+  const obj = textArr.reduce((prev,curr, currentIndex) => {
+    if (['```mermaid', '``````mermaid'].includes(curr)) {
+      if (!prev.position.length) {
+        prev.position.push(currentIndex)
+      }
+    }
+  
+    if (['```', '``````'].includes(curr)) {
+      if (prev.position.length === 1) {
+        prev.position.push(currentIndex)
+      }
+    }
+    prev.arr.push(curr);
+    if (prev.position.length === 2) {
+      prev.total = prev.total + 1;
+      const [start, end] = prev.position;
+      prev.arr[start] = '{% mermaid %}';
+      prev.arr[end] = '{% endmermaid %}';
+      prev.position = [];
+    }
+    return prev;
+  }, {total: 0, position: [], arr: []})
+  return obj.arr.join('\n')
+}
+
 // 复制之前先清空
 const delDir = (path) => {
   let files = [];
@@ -87,9 +118,10 @@ const wreiteFile = (params) => {
   } else {
     word = `${metaStr}\n${content}`
   }
+  const text = replaceMermaid(word);
   const targetPosition = path.resolve(targetDir, ...categories, `${title}.md`)
   console.log('要写入文件了', targetPosition)
-  fs.writeFileSync(targetPosition, word, {encoding: 'utf-8'})
+  fs.writeFileSync(targetPosition, text, {encoding: 'utf-8'})
 }
 const listFile = (dir) => {
   let arr = fs.readdirSync(dir, {encoding: 'utf-8', withFileTypes: false});

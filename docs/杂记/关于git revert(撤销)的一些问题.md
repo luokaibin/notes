@@ -27,9 +27,7 @@ graph TB
 
 按照上面约定的流程进行开发，正常是不会出现问题的。但是再一次操作中，理财的小伙伴没注意将 `beta-financial` merge 到 `beta-ts` 上了
 
-![image-20221109180727710](https://static.jindll.com/notes/image-20221109180727710.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta-ts"}}}%%
 gitGraph
 	commit id: "t-1"
@@ -51,9 +49,7 @@ gitGraph
 
 这就造成了一个问题，当开发 KYC 的小伙伴将 `beta-ts` merge 到 `beta-kyc` 之后，发现自己的分支上出现了 理财 的业务代码，因为理财和KYC并不是同时开发完成，同时提测的，所以这种情况是不被允许的。然后我们在 beta-ts 分支上对那次错误的 merge 进行了撤销，然后重新 merge 到 KYC
 
-![image-20221110094947858](https://static.jindll.com/notes/image-20221110094947858.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta-ts", 'showCommitLabel': true}}}%%
 gitGraph
 	commit id: "t-1"
@@ -94,9 +90,7 @@ gitGraph
 >
 > 所以当 将 `beta-ts`  merge 到 `beta-financial`  时，`beta-financial` 的代码、图片被删除了
 
-![image-20221110095048858](https://static.jindll.com/notes/image-20221110095048858.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta-ts", 'showCommitLabel': true}}}%%
 gitGraph
 	commit id: "t-1"
@@ -142,9 +136,7 @@ $: git cherry-pick t-6
 $: git push
 ```
 
-![image-20221110095153546](https://static.jindll.com/notes/image-20221110095153546.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta-ts", 'showCommitLabel': true, 'rotateCommitLabel': true}}}%%
 gitGraph
 	commit id: "t-1"
@@ -185,9 +177,7 @@ gitGraph
 
 但是我们并没有对 `beta-kyc` 的做任何修改，这就导致 `beta-kyc` 在 **t-4** 依旧保留了原先的删除操作，当他提测 merge 到 `beta` 之后，`beta` 分支也拥有了撤销的commit 记录。
 
-![image-20221110095239112](https://static.jindll.com/notes/image-20221110095239112.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta", 'showCommitLabel': true}}}%%
 gitGraph
   commit
@@ -204,9 +194,7 @@ gitGraph
 
 > 执行merge之后，`beta` 分支的 commit 记录就成了这个样子
 
-![image-20221110095321989](https://static.jindll.com/notes/image-20221110095321989.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta", 'showCommitLabel': true}}}%%
 gitGraph
   commit
@@ -221,9 +209,7 @@ gitGraph
 
 这就导致当 `beta-financial` 往 `beta` merge 的时候，一些图片被删除了，大量代码存在冲突(在beta上文件已经被删除了，在 `beta-financial` 上，还在文件内做了修改)
 
-![image-20221110095410272](https://static.jindll.com/notes/image-20221110095410272.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta", 'showCommitLabel': true}}}%%
 gitGraph
   commit
@@ -259,9 +245,7 @@ gitGraph
 
 因为此，严重影响了理财业务的提测，而此时完整的beta commit 大概是这样
 
-![image-20221110102044651](https://static.jindll.com/notes/image-20221110102044651.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta", 'showCommitLabel': true}}}%%
 gitGraph
   commit
@@ -334,9 +318,7 @@ $: git rebase -i k-15^
 
 此时的情况大概是这样
 
-![image-20221112134027615](https://static.jindll.com/notes/image-20221112134027615.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta", 'showCommitLabel': true}}}%%
 gitGraph
   commit
@@ -385,9 +367,7 @@ $: git push
 
 这样一来，`beta-bak` 和 `beta` 分支的代码完全一致，但是又没有 `beta` 分支的 **merge** 与 **撤销** 的 commit 记录。此时 `beta-bak` 分支的 commit 记录，大概是这样的
 
-![image-20221112135655663](https://static.jindll.com/notes/image-20221112135655663.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta-bak", 'showCommitLabel': true}}}%%
 gitGraph
   commit
@@ -411,9 +391,7 @@ $: git commit -m "xxxxx"
 $: git push
 ```
 
-![image-20221112141531913](https://static.jindll.com/notes/image-20221112141531913.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta-financial-bak", 'showCommitLabel': true}}}%%
 gitGraph
   commit
@@ -449,9 +427,7 @@ $: git merge beta-bak
 $: git push
 ```
 
-![image-20221112142316350](https://static.jindll.com/notes/image-20221112142316350.png)
-
-```
+```mermaid
 %%{init: {'gitGraph': {'mainBranchName': "beta", 'showCommitLabel': true}}}%%
 gitGraph
   commit

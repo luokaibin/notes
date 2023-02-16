@@ -52,6 +52,12 @@ const byteToStr = (bytes) => {
 }
 // base64加密
 const base64Encode = (str) => btoa(str)
+
+const encrypt = (str) => {
+  const bytes = getBytes(str);
+  const newStr = byteToStr(bytes);
+  return base64Encode(newStr);
+}
 ```
 
 # 解密过程
@@ -75,4 +81,13 @@ const getStr = (bytes) => {
   const decoder = new TextDecoder();
   return decoder.decode(bytes)
 }
+
+const decrypt = (str) => {
+  const newStr = base64decode(str);
+  const bytes = strToByte(newStr);
+  return getStr(bytes)
+}
 ```
+
+
+

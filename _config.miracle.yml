@@ -80,7 +80,7 @@ global:
         from_year: 2020
         # 结束年份
         # End year.
-        to_year: '2021'
+        to_year: '2023'
         name: "摸鱼笔记"
 
     # 哀悼模式，网页黑白
@@ -494,7 +494,7 @@ static_prefix:
     valine: https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/
     waline: https://cdn.jsdelivr.net/npm/@waline/client/dist/
     fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/
-    mermaid: https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/ 
+    mermaid: https://cdn.jsdelivr.net/npm/mermaid@9.3.0/dist/ 
     twikoo: https://cdn.jsdelivr.net/npm/twikoo@1.3.0/dist/
     artitalk: https://cdn.jsdelivr.net/npm/artitalk
     hpp: https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus@1.2.0/
