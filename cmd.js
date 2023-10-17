@@ -70,7 +70,7 @@ const wreiteFile = (params) => {
   renderer.text = (text, level) => {
     description.push(text)
   };
-  mark(body, { renderer: renderer });
+  mark.marked(body, { renderer: renderer });
   description = description.reduce((prev,curr) => {
     if (prev.length > 140) {
       return prev;

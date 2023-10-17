@@ -89,5 +89,71 @@ const decrypt = (str) => {
 }
 ```
 
+# 单个字符Base 64 编码过程
+
+```js
+/** base64 编码表 */
+const keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='
+```
+
+1. 先查找字符的 ASCII 编码，得到一个10进制数
+2. 将10进制数转为一个字节(一个字节为8比特，二进制数的每一位是一个比特)的2进制数
+3. 如果这个二进制数不足8位(也就是不足一个字节8比特)，就往前补0
+4. 将这个8位长度的2进制字符串(第三步得到的结果，呈现出来的就是一个8位长度的字符串)以每6位进行切割
+5. 分割后如果每一项的长度为6往前补两个0；如果为4，往前补两个0，往后补两个0；如果长度为2，往前补两个0，往后补4个0
+6. 将每组的2进制数转为10进制，然后查找 base64 编码表，然后查找对应字符
+7. 字符以4位长度为1组，不足4为往后补=
+
+```js
+'M'.charCodeAt(0).toString(2).padStart(8,'0').replace(/(.{6})/g, '$1 ').trim().split(' ').map(item => {
+    if(item.length === 6) return item.padStart(8,'0')
+    if(item.length === 4) return `00${item}00`
+    if(item.length === 2) return `00${item}0000`
+    console.log('既不是6位也不是4位', item);
+}).map(item => keyStr[parseInt(item,2)]).join('').padEnd(4, '=')
+```
+
+# 多个字符 Base64 编码过程
+
+> 与单个字符基本相同，不同的点在上述的第三步和和第四步之间，先将每个字符的8位2进制数拼接后，再进行6位一组的分割
+
+```js
+let str = 'dvdjDHADA'
+let i = 0;
+let codeList = '';
+while(i < str.length) {
+    const code = str.charCodeAt(i);
+    codeList = codeList + code.toString(2).padStart(8,'0');
+    i++
+}
+codeList.replace(/(.{6})/g, '$1 ').trim().split(' ').map(item => {
+    if(item.length === 6) return item.padStart(8,'0')
+    if(item.length === 4) return `00${item}00`
+    if(item.length === 2) return `00${item}0000`
+    console.log('既不是6位也不是4位', item);
+}).map(item => keyStr[parseInt(item,2)]).join('').padEnd(4, '=')
+```
+
+# Base64 解码过程
+
+```js
+let str = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+M/A8B8ABQAB'
+str = str.replace(/=/g, '')
+// const strstr.replace(/(.{4})/g, '$1 ').trim().split(' ')
+
+let i = 0;
+let codeList = [];
+while(i < str.length) {
+  const code = keyStr.indexOf(str[i]);
+  codeList.push(code);
+  i++
+}
+const codeStr = codeList.reduce((prev,curr) => {
+  prev = prev + code.toString(2).padStart(8,'0')
+  return prev;
+}, '')
+codeStr.replace(/(.{8})/g, '$1 ').trim().split(' ')
+```
+
 
 
