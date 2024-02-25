@@ -1,1 +1,2 @@
+pnpm run build:docs
 pnpm run build
