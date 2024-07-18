@@ -20,13 +20,13 @@ description: 在日常开发中我们时常会遇到 node_modules 中的依赖�
 
 一开始的 npm 在安装依赖包之后会将依赖以树形结构存储在项目根目录的 node_modules中，如下图：
 
-<img src="https://static.jindll.com/notes/image-20220504151629263.png" alt="image-20220504151629263" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220504151629263.png" alt="image-20220504151629263" style="zoom:50%;" />
 
 也就是项目中依赖的包会被安装到 node_modules 下面的一级子目录，然后依赖包的子依赖也会被安装到依赖包中的 node_modules 下，以此循环。 这种做法看起来非常的直观，并且符合依赖关系。但问题是这样做的话同一个包如果被不同的依赖或者子依赖所使用的话，就必须安装多个相同的包在不同的目录下。 以上图为例，即存在两个不同版本的 D 包（D@1.0.0 和D@2.0.0），并且在 A/B/C 三个依赖包下面都存在单独的一份。
 
 在这种情况下一个项目的依赖包安装完就是占用大量的本地磁盘，并且安装依赖数的方式逐层安装的方式会导致依赖层数太深，进而导致在 Window 会因为引用路径太长的问题导致无法直接删除。 因此 npm 3 为了解决这个问题把 node_modules 下的依赖包结构打平了：
 
-<img src="https://static.jindll.com/notes/image-20220504151700365.png" alt="image-20220504151700365" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220504151700365.png" alt="image-20220504151700365" style="zoom:50%;" />
 
 如图所示，把 B/C 两个依赖包具有的相同的子依赖提升到了 node_modules 下，这样就在既满足 Node.js 的模块查找规则的同时降低了依赖层级，某种程度上缓解了占用磁盘空间和路径过长的问题。 但这样做依然会产生一些问题：[幻影依赖（Phantom dependencies）](https://rushjs.io/pages/advanced/npm_doppelgangers/) 和 [npm分身（NPM doppelgangers）](https://rushjs.io/pages/advanced/npm_doppelgangers/)。
 
@@ -36,7 +36,7 @@ description: 在日常开发中我们时常会遇到 node_modules 中的依赖�
 
 在上一个图的那种情况下其他在 node_modules 下的依赖包可以直接访问到并不属于它的依赖D@2.0.0，在不更改项目的依赖版本的前提下可能是可以正常的运行的。但是某些情况下有可能会运行失败，例如 node_modules 中的依赖也可能是如下结构：
 
-<img src="https://static.jindll.com/notes/image-20220504151834237.png" alt="image-20220504151834237" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220504151834237.png" alt="image-20220504151834237" style="zoom:50%;" />
 
 如果此时使用的幻影依赖的其他依赖包引用 D，则会引用到 D@1.0.0 而不是之前的D@2.0.0，从而导致运行出错。 这是因为在 npm 中将哪个版本放到项目 node_modules 目录下是通过复杂的依赖计算逻辑得出的，[不同的安装顺序可能会有不同的依赖结构](http://npm.github.io/how-npm-works-docs/npm3/non-determinism.html)。 同时这也是我们为什么需要 package-lock.json 的原因，在存在 package-lock.json 的情况下，npm install 能够保证安装后的依赖结构是相同的。
 
@@ -59,7 +59,7 @@ pnpm 解决占用磁盘空间以及依赖路径过长的方案是通过硬链接
 
 以上面的例子为例，则结构为下图所示：
 
-<img src="https://static.jindll.com/notes/image-20220504152050745.png" alt="image-20220504152050745" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220504152050745.png" alt="image-20220504152050745" style="zoom:50%;" />
 
 整个图看起来有一点点复杂，其中的虚线代表的是软连接，pnpm 会将所有的项目依赖以及相关的子依赖以平铺的结构[硬链接](https://zh.wikipedia.org/wiki/%E7%A1%AC%E9%93%BE%E6%8E%A5)到 node_modules/.pnpm 下，然后在对应的项目依赖中通过软链接的方式链接到子依赖，最后再软连接回到项目的 node_modules。
 

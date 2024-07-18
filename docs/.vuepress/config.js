@@ -23,7 +23,7 @@ module.exports = {
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     ['meta', { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' }],
     ['script', { src: 'https://res2.wx.qq.com/open/js/jweixin-1.6.0.js', defer: 'defer'}],
-    ['script', { src: 'https://static.jindll.com/static/cdn/html2canvas.min.js', defer: 'defer'}],
+    ['script', { src: 'https://static.jiabanmoyu.com/static/cdn/html2canvas.min.js', defer: 'defer'}],
     ['script', { src: '/share.js?2gu6df', defer: 'defer'}],
     ['link', { rel: 'stylesheet', href: '/reset.css?2gu6df'}],
   ],

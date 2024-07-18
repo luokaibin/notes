@@ -27,4 +27,4 @@ customElements.define('custom-start', CustomStart);
 
 - [**`this.attachShadow`**](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/attachShadow) mode 可以取 `open` 或 `closed` 
 
-  > <img src="https://static.jindll.com/notes/image-20220321155413237.png" alt="image-20220321155413237" style="zoom:50%;" />
+  > <img src="https://static.jiabanmoyu.com/notes/image-20220321155413237.png" alt="image-20220321155413237" style="zoom:50%;" />

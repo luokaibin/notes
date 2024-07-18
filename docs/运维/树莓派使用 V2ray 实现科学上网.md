@@ -67,17 +67,17 @@ services:
 
 部署好之后，我们浏览器通过 `ip:2017` 访问，第一次访问会让你创建一个管理员账号，如果遗忘，使用`docker exec v2raya v2raya --reset-password`命令重置。
 
-![创建账号](https://static.jindll.com/notes/create-account.png)
+![创建账号](https://static.jiabanmoyu.com/notes/create-account.png)
 
 然后我们登录进管理页面，以创建或导入的方式导入节点，导入支持节点链接、订阅链接、扫描二维码和批量导入等方式。
 
-![image-20211010173310171](https://static.jindll.com/notes/image-20211010173310171.png)
+![image-20211010173310171](https://static.jiabanmoyu.com/notes/image-20211010173310171.png)
 
-![连接节点](https://static.jindll.com/notes/connect1.png)
+![连接节点](https://static.jiabanmoyu.com/notes/connect1.png)
 
 导入成功后，节点将显示在 `SERVER` 或新的标签中。如图是导入了一个订阅后的界面。
 
-![连接节点](https://static.jindll.com/notes/connect2.png)
+![连接节点](https://static.jiabanmoyu.com/notes/connect2.png)
 
 切换到该标签页，选择一个节点连接。
 

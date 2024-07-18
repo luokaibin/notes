@@ -51,11 +51,11 @@ description: 最近看了一本书《解构-领域驱动设计》，书中提出
 
 这种协同方式的弊端在于：**无法形成能够消除认知差异的模型**。产品同学从业务角度提出用户需求，这些需求可能是易变的、定制化的，而研发同学在缺少行业经验的情况下，往往会选择直译，即根据需求直接转换为数据模型。而研发同学从技术实现角度设计技术方案，其中涉及很多的技术细节，产品同学无法从中判断是否与自己提出的业务诉求和产品规划相一致，最终形成认知差异。且认知差异会随着迭代不断被放大，最后系统变成一个大泥球。
 
-![image.png](https://static.jindll.com/notes/bVbtz4.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtz4.png)
 
 DDD 通过解锁新角色**”领域专家"**以及**模型驱动设计**，有效地降低产品和研发的认知差异。领域专家是具有丰富行业经验和领域知识储备的人，他们能够在易变的、定制化的需求中提炼出清晰的边界，稳定的、可复用的领域概念和业务规则，并携手产品和研发共同构建出领域模型。领域模型是对业务需求的知识表达形式，它不涉及具体的技术细节（但能够指导研发同学进行编程实现），因此消除了产品和研发在需求认知上的鸿沟。而模型驱动设计则要求领域模型能够关联业务需求和编码实现，模型的变更意味着需求变更和代码变更，协作围绕模型为中心。
 
-![image.png](https://static.jindll.com/notes/bVbtz5.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtz5.png)
 
 **精炼循环**
 
@@ -101,7 +101,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 而《解构-领域驱动设计》提出的 DDDRUP 给出了更细致的步骤、步骤与步骤之间的衔接，以及明确的阶段里程碑，最重要的是 DDDRUP 可以串联 DDD 的所有概念和模式，非常便于初学者做知识梳理和上手实践。**下文我会依照 DDDRUP 的步骤流程进行讲述，而非战略设计+战术设计的思路**。（DDDRUP 各步骤与战略&战术设计的关系见下表）。
 
-![image.png](https://static.jindll.com/notes/bVbtz6.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtz6.png)
 
 ## 5.全局分析阶段
 
@@ -115,7 +115,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 根据业务需求形成统一语言，有助于团队对事物的认知达成一致。统一语言可以通过词汇表的形式展示，其中词汇表最好还要包含术语对应的英文描述，便于研发同学在代码层面表达统一语言。示例-SMS 的统一语言词汇表如下。
 
-![image.png](https://static.jindll.com/notes/bVbtz8.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtz8.png)
 
 ### 5.2 价值需求分析
 
@@ -141,7 +141,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 **业务规则**：指对业务服务约束的描述，用于控制业务服务的对外行为。业务规则是业务服务正确性的基础。常见的业务规则有：a) 意如“若… , 就….” 的需求描述，比如示例-SMS 中可提炼出“若成绩录入时间间隔超过一周，不予修改”；b) 具有事务性的操作。
 
-![image.png](https://static.jindll.com/notes/bVbtz9.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtz9.png)
 
 #### **5.3.2 子领域**
 
@@ -186,7 +186,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 **自我履行：**限界上下文能够根据自己拥有的知识来完成业务能力。自我履行体现了限界上下文**纵向切分业务能力**的特征。
 
 这里需要强调一下**业务模块（横向切分）**和**限界上下文（纵向切分）**的区别。业务模块不具备完整、独立的业务能力，它没有按照同一个业务变化的方向进行。而限界上下文是对目标系统架构的纵向切分，切分的依据是从业务进行考虑的领域维度。为了提供完整的业务能力，在根据领域维度进行划分时，还需要考虑支撑业务能力的基础设施实现，如与该业务相关的数据访问逻辑，以及将领域知识持久化的数据库模型，形成纵向的逻辑边界，即限界上下文边界。
-![image.png](https://static.jindll.com/notes/bVbtAa.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAa.png)
 
 **稳定空间：**限界上下文必须防止和减少外部变化带来的影响。
 
@@ -241,7 +241,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 引入防腐层的目的是为了**隔离耦合**。防腐层往往位于下游，通过它隔离上游上下文发生的变化。
 
-![image.png](https://static.jindll.com/notes/bVbtAb.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAb.png)
 
 #### **6.3.2 开放主机服务**
 
@@ -256,7 +256,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 - 面向事件，比如基于消息中间件，称为订阅者（Subscriber）；
 - 面向视图模型，比如基于 MVC，称为控制器（Controller）；
 
-![image.png](https://static.jindll.com/notes/bVbtAc.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAc.png)
 
 #### **6.3.3 发布语言**
 
@@ -266,7 +266,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 说到这里，我们惊讶地发现**防腐层**，**开放主机服务**和**发布语言**可以完美联动！
 
-![image.png](https://static.jindll.com/notes/bVbtAd.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAd.png)
 
 #### **6.3.4 共享内核**
 
@@ -274,7 +274,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 但是，在特定的场景下，共享内核不见得不是一种合理的方式。**任何软件设计决策都要考量成本与收益，只有收益高于成本，决策才是合理的。**一般对于一些领域通用的值对象是相对稳定的，这些类型通常属于通用子领域，会被系统中几乎所有的限界上下文复用，那么这些领域模型就适合使用共享内核的方式。共享内核的收益不言而喻，而面临的风险则是共享的领域模型可能产生的变化。
 
-![image.png](https://static.jindll.com/notes/bVbtAe.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAe.png)
 
 #### **6.3.5 合作者**
 
@@ -324,7 +324,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 上下文映射图如下所示。
 
-![image.png](https://static.jindll.com/notes/bVbtAf.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAf.png)
 
 ## 7.领域建模阶段
 
@@ -382,7 +382,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 约束一般是对领域概念的限制，我们可以将约束条件提取到自己的方法中，并通过方法名显式地表达约束的含义。比如示例-SMS 中关于 GPA 运算的约束。
 
-![image.png](https://static.jindll.com/notes/bVbtAg.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAg.png)
 
 有些时候，约束条件无法用单独一个方法来轻松表达，抑或约束条件中会使用到与对象职责无关的信息，那么我们就可以将其提取到一个显式的对象中。
 
@@ -395,11 +395,11 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 - （验证）验证对象，检查它是否能满足某些标准，比如示例-SMS 中成绩实体在修改分数时就需要通过规约判断当前是否满足修改的标准；
 - （选择）从集合中选择一个符合要求的对象，**可以搭配资源库使用**；
 - （根据要求来创建）指定在创建新对象时必须满足某种要求。
-  ![image.png](https://static.jindll.com/notes/bVbtAh.png)
+  ![image.png](https://static.jiabanmoyu.com/notes/bVbtAh.png)
 
 规格由“谓词”概念演变而来，因此我们可以使用“AND”，“OR”和“NOT”等运算对规格进行组合和修改。比如在 SMS 中，教务员需要查询流程完结的申请单，我们就可以通过“AND”组合不同的规格进行实现。
 
-![image.png](https://static.jindll.com/notes/bVbtAi.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAi.png)
 
 #### **7.2.4 归纳抽象**
 
@@ -419,7 +419,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 
 这些领域对象之间的关系如下图所示。
 
-![image.png](https://static.jindll.com/notes/bVbtAj.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAj.png)
 
 ### 7.3 领域设计建模
 
@@ -466,8 +466,8 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 - **自我验证**：验证传入值对象的外部数据是否正确，一般在创建该值对象时进行验证。
 - **自我组合**：当值对象涉及到数值运算时，可以定义相同类型值对象的方法，使值对象具有自我组合能力。比如示例-SMS 中，在统计成绩时会涉及学分相加的运算，因此我们可以将相加运算定义为可组合的方法，便于调用者使用。
 
-![image.png](https://static.jindll.com/notes/bVbtAl.png)
-![preview](https://static.jindll.com/notes/bVbtAm-20220504154223288.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAl.png)
+![preview](https://static.jiabanmoyu.com/notes/bVbtAm-20220504154223288.png)
 
 - **自我运算**：根据业务规则对属性值进行运算的行为。
 
@@ -567,7 +567,7 @@ DDD 提出的战略设计覆盖了问题空间和解空间，而战术设计则�
 **法则 3 通过身份标识符关联其他聚合。**
 
 注意这里强调了**关联关系**，关联关系会涉及聚合 A 对聚合 B 的生命周期管理的问题，对于这种聚合间的关联关系，我们通过**身份标识**建立关联。而当聚合 A 引用聚合 B，但不需要对聚合 B 进行生命周期管理时，我们认为这是一种**依赖关系**（比如方法中的入参，而非类中的属性），对于聚合间的依赖关系，我们可以通过**对象引用**（聚合根实体的引用）的方式建立依赖。（PS：假设设计之初难以判断聚合之间到底是关联关系，还是依赖关系，我们就统一使用身份标识符作为关系引用即可）
-![image.png](https://static.jindll.com/notes/bVbtAn.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAn.png)
 
 聚合间的依赖关系通常分为两种方式
 
@@ -645,13 +645,13 @@ PS: 实际上**根据关联关系来区分边界的方法同样适用于限界�
 
 **聚合设计**：
 
-![image.png](https://static.jindll.com/notes/bVbtAo.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAo.png)
 
 **服务设计**：
 
 下面只罗列非查询类的服务设计。
 
-![image.png](https://static.jindll.com/notes/bVbtAp.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAp.png)
 ![image.png](https://aijishu.com/img/bVbtAq)
 ![image.png](https://aijishu.com/img/bVbtAr)
 
@@ -664,7 +664,7 @@ PS: 实际上**根据关联关系来区分边界的方法同样适用于限界�
 领域模型中的服务包括了**应用服务**、**领域服务**、**领域行为**和**端口**。其中通过 Provider（面向服务行为）、Resource（面向服务资源）、Subscriber（面向事件）、Controller（面向视图模型）对外进行暴露的，我们称为**远程服务**。
 
 领域模型中的服务与测试金字塔的关系如下图所示。
-![image.png](https://static.jindll.com/notes/bVbtAt.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAt.png)
 
 #### **7.4.2 测试驱动开发**
 
@@ -682,7 +682,7 @@ PS: 实际上**根据关联关系来区分边界的方法同样适用于限界�
 
 ### 8.1 分层架构
 
-![image.png](https://static.jindll.com/notes/bVbtAu.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAu.png)
 
 代码架构分层是经典 DDD 四层：**用户接口层**，**应用层**，**领域层**和**基础设施层**。
 
@@ -791,7 +791,7 @@ PS: 实际上**根据关联关系来区分边界的方法同样适用于限界�
 
 而上述我们对微服务的基本要求，实际上与限界上下文的特征（最小完备，自我履行，稳定空间，独立进化）不谋而合，因此，我们可以把**限界上下文映射为微服务**。我在日常实践中，都是将限界上下文和微服务的关系进行一一对应的，但这不是绝对的！限界上下文是站在领域角度给出的逻辑边界，而微服务的设计往往还要考虑物理边界，以及实际的质量需求（性能，可用性，安全性等），比如当我们采用的是 CQRS 架构，领域模型会被分为命令模型和查询模型，虽然它们同属一个限界上下文，但是它们往往是物理隔离的。因此，限界上下文只能作为微服务拆分的指导，而拆分过程中需要考虑质量需求，架构设计等技术因素。
 
-![image.png](https://static.jindll.com/notes/bVbtAv.png)
+![image.png](https://static.jiabanmoyu.com/notes/bVbtAv.png)
 
 ### 9.2 事务
 

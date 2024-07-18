@@ -57,7 +57,7 @@ git version 2.31.1
 
 > 搜到结果较多，只需安装 Remote-SSH 即可
 
-<img src="https://static.jindll.com/notes/image-20220312165400062.png" alt="image-20220312165400062" style="zoom:33%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220312165400062.png" alt="image-20220312165400062" style="zoom:33%;" />
 
 二、配置资源管理
 
@@ -65,11 +65,11 @@ git version 2.31.1
 > 2. 如果你除了 Remote-SSH 插件外，还安装了 `Remote-WSL` 或者 `Remote-Containers` ，那你会多出一个 **`3`** 选择框，然后选择 `SSH Target` ，然后点击 设置图标 **`(2)`** 
 > 3. 如果你只安装了 Remote-SSH 插件，那么直接点击设置图标
 
-<img src="https://static.jindll.com/notes/image-20220312165726122.png" alt="image-20220312165726122" style="zoom:33%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220312165726122.png" alt="image-20220312165726122" style="zoom:33%;" />
 
 ### 然后进行配置
 
-<img src="https://static.jindll.com/notes/image-20220312170705139.png" alt="image-20220312170705139" style="zoom:33%;" /><img src="https://static.jindll.com/notes/image-20220312171254640.png" alt="image-20220312171254640" style="zoom:33%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220312170705139.png" alt="image-20220312170705139" style="zoom:33%;" /><img src="https://static.jiabanmoyu.com/notes/image-20220312171254640.png" alt="image-20220312171254640" style="zoom:33%;" />
 
 ### 在打开的文件里输入以下内容
 
@@ -81,17 +81,17 @@ git version 2.31.1
 >
 > Port 默认22，可省略，如果修改了SSH端口，这里需要指定
 
-<img src="https://static.jindll.com/notes/image-20220312171509469.png" alt="image-20220312171509469" style="zoom:33%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220312171509469.png" alt="image-20220312171509469" style="zoom:33%;" />
 
 ### 远程连接服务器
 
-<img src="https://static.jindll.com/notes/image-20220312171819558.png" alt="image-20220312171819558" style="zoom:33%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220312171819558.png" alt="image-20220312171819558" style="zoom:33%;" />
 
 ### 然后会来几个弹窗，让你确认是否连接，一直往下走，等到让你输入密码的时候，输入服务器密码进行连接即可
 
 ### 连接成功之后，打开项目，在这里就可以看到你的项目了，下次直接点击，就可以打开到项目了
 
-<img src="https://static.jindll.com/notes/image-20220312172311937.png" alt="image-20220312172311937" style="zoom:33%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220312172311937.png" alt="image-20220312172311937" style="zoom:33%;" />
 
 ## 配置免密登录
 
@@ -103,7 +103,7 @@ ssh-keygen -t rsa
 
 > 没有截到图，用张别人的图
 
-<img src="https://static.jindll.com/notes/image-20220312172837463.png" alt="image-20220312172837463" style="zoom:33%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220312172837463.png" alt="image-20220312172837463" style="zoom:33%;" />
 
 ### 将公钥拷贝到服务器
 
@@ -131,7 +131,7 @@ ssh-keygen -t rsa
 >
 > `IdentityFile xxx/id_rsa`
 
-<img src="https://static.jindll.com/notes/image-20220312174313843.png" alt="image-20220312174313843" style="zoom: 50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220312174313843.png" alt="image-20220312174313843" style="zoom: 50%;" />
 
 ### 重启VS Code，免密生效，完成
 

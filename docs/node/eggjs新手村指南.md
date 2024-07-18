@@ -246,7 +246,7 @@ module.exports = HomeController;
 
 然后使用 **postman** 进行测试下：
 
-<img src="https://static.jindll.com/notes/WX20200407-173649.png" style="zoom:67%;" />
+<img src="https://static.jiabanmoyu.com/notes/WX20200407-173649.png" style="zoom:67%;" />
 
 接口成功返回了 “hi, post” ，控制台也成功打印了入参，控制台我就不贴图了。
 
@@ -498,7 +498,7 @@ module.exports = HomeController;
 
 配置完成之后，我们 `npm run docs` 运行一下，然后会在 `app/public/docs` 生成接口文档，重新运行项目，访问 `http://127.0.0.1:7001/public/docs/index.html` 就可以看输出的接口文档了
 
-![](https://static.jindll.com/notes/0010091209323.png)
+![](https://static.jiabanmoyu.com/notes/0010091209323.png)
 
 根据截图我们再回头解释下上面的注释都是什么意思
 

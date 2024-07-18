@@ -10,7 +10,7 @@ description: 人生太短，要干的事太多，我要争分夺秒。&emsp;&ems
 lang: zh-CN
 ---
 
-![](https://static.jindll.com/notes/5cd962f40001a7a706400360.jpg)
+![](https://static.jiabanmoyu.com/notes/5cd962f40001a7a706400360.jpg)
 
 > 人生太短，要干的事太多，我要争分夺秒。
 > 

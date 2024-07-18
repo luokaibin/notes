@@ -44,7 +44,7 @@ deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-f
 
 **更改完成之后，按 `ctrl+o` 保存，会让你修改文件名，如下图，当然你的可能是英文，这里不重要，然后 回车 确认文件名，再按 `ctrl+x` 关闭编辑器**
 
-![image-20211028195404975](https://static.jindll.com/notes/image-20211028195404975.png)
+![image-20211028195404975](https://static.jiabanmoyu.com/notes/image-20211028195404975.png)
 
 #### 3. 修改 raspi.list 文件
 
