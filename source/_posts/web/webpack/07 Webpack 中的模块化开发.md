@@ -11,7 +11,7 @@ description: 要成就一件大事业，必须从小事做起。&emsp;&emsp;&ems
 lang: zh-CN
 ---
 
-![](https://static.jiabanmoyu.com/notes/5cd96312000163ce06400359-20200507163531005.jpg)
+![](https://img.picgo.net/2025/01/24/1000006083a3c63a53dd514e.avif)
 
 > 要成就一件大事业，必须从小事做起。
 > 

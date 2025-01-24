@@ -12,7 +12,7 @@ description: 自定义SSH远程登录后提示信息，可以用来加一下重�
 ---
 自定义SSH远程登录后提示信息，可以用来加一下重要说明，如下：
 
-![image-20211106173147579](https://static.jiabanmoyu.com/notes/image-20211106173147579.png)
+![image-20211106173147579](https://img.picgo.net/2025/01/24/10000358c1c53af0ea95e38a.avif)
 
 如果我们想自定义SSH登录后的提示信息，需要修改 `/etc/motd` 文件
 

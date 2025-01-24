@@ -233,8 +233,8 @@ server {
 
 **未开启**
 
-![image-20200217173519190](https://static.jiabanmoyu.com/notes/image-20200217173519190.png)
+![image-20200217173519190](https://img.picgo.net/2025/01/24/1000000938aaf36b78cc0c18.avif)
 
 **开启后**
 
-![image-20200217173642958](https://static.jiabanmoyu.com/notes/image-20200217173642958.png)
+![image-20200217173642958](https://img.picgo.net/2025/01/24/1000001010ae11616e529204.avif)

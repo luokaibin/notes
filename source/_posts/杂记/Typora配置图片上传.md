@@ -14,7 +14,7 @@ description: 前言个人比较喜欢用 Typora 写文档，对于文档中的�
 
 个人比较喜欢用 Typora 写文档，对于文档中的图片之前一直是手动上传到七牛云，复制地址，在粘回文档，比较累。就一直在想怎么能实现图片自动上传呢，然后最近就发现 window 版的 Typora 也支持自定义图床了(mac很久之前就支持了)，就专门研究了下，下面就分享下怎么把图片自动上传到七牛云。先看下最后的实现效果：
 
-<img src="https://static.jiabanmoyu.com/notes/2020050701.gif" alt="2020050701" style="zoom:67%;" />
+<img src="https://img.picgo.net/2025/01/24/100001384fe892ee72947262.avif" alt="2020050701" style="zoom:67%;" />
 
 ## 前置条件
 
@@ -24,7 +24,7 @@ description: 前言个人比较喜欢用 Typora 写文档，对于文档中的�
 
 我们先打开 Typora 的设置，选择到图像，插入图片时选择上传图片，下面的选项根据自己的需要选，下方的上传服务选择自定义命令( `Custom Command` )
 
-![2020050702](https://static.jiabanmoyu.com/notes/2020050702.png)
+![2020050702](https://img.picgo.net/2025/01/24/10000139f7bb51fb5169d60a.avif)
 
 自定义命令要输入的就是上传图片时会执行的命令，假入我们输入的是 `node index.js` 那么最后上传图片时执行的就是 `node index.js xxx.jpg` ，执行完成之后必须在控制台打印出最后的图片地址。
 

@@ -499,7 +499,7 @@ module.exports = HomeController;
 
 配置完成之后，我们 `npm run docs` 运行一下，然后会在 `app/public/docs` 生成接口文档，重新运行项目，访问 `http://127.0.0.1:7001/public/docs/index.html` 就可以看输出的接口文档了
 
-![](https://static.jiabanmoyu.com/notes/0010091209323.png)
+![](https://img.picgo.net/2025/01/24/1000001583d60bdfff157faf.avif)
 
 根据截图我们再回头解释下上面的注释都是什么意思
 

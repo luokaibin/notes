@@ -1,6 +1,6 @@
 ---
-updated: 2024/12/06 09:56:53
-date: 2024/12/09 18:13:09
+updated: 2025/01/24 10:49:41
+date: 2025/01/24 10:49:41
 categories: 
   - web
 title: puppeteer截图转码存储一条龙
@@ -14,21 +14,21 @@ description: ⚠️服务端使用puppeteer注意事项当我们安装 时，它
 
 但是当我们将它部署到服务器启动时，它会报各种错误
 
-![img](https://static.jiabanmoyu.com/notes/5eecdaf48460cde58dfa2147842b208b9d786356f42cba500fae826e239291fadf5da1287db9ed9265a117e969287064b3556dd637a4c748b5866e8a8a92427b889008d76156f19a1adbb8d1b959492bc6b4360b8ebdb98d9508fd59fedd0e8f.png)
+![img](https://img.picgo.net/2025/01/24/10000052228e142aa05cac96.avif)
 
-![img](https://static.jiabanmoyu.com/notes/5eecdaf48460cde58dfa2147842b208b9d786356f42cba500fae826e239291fadf5da1287db9ed9265a117e9692870642e7db3f9075d499c48c14600539619b3f61cd55a3e7a4ca087da9c5b90400cfbd01f0db579f1bd14149565b860957ab4.png)
+![img](https://img.picgo.net/2025/01/24/1000005367e606e647d921da.avif)
 
-![img](https://static.jiabanmoyu.com/notes/5eecdaf48460cde58dfa2147842b208b9d786356f42cba500fae826e239291fadf5da1287db9ed9265a117e96928706411c9ac59adaa2024526ea9039de45f2341d1fff6f1034808839e3b1a0f164d221e3a14beb5bc34131051f7e0fe55f913.png)
+![img](https://img.picgo.net/2025/01/24/100000546bd1554faf7dd911.avif)
 
-![img](https://static.jiabanmoyu.com/notes/5eecdaf48460cde58dfa2147842b208b9d786356f42cba500fae826e239291fadf5da1287db9ed9265a117e96928706454d8659e66ee1cfcf17aa88295cbc8ab3a4905eb0247f3ff0665df596a2f5b8122c5e6329b696eb5a900dfd662445084.png)
+![img](https://img.picgo.net/2025/01/24/10000055a0c7e406086a3a95.avif)
 
-![img](https://static.jiabanmoyu.com/notes/5eecdaf48460cde58dfa2147842b208b9d786356f42cba500fae826e239291fadf5da1287db9ed9265a117e9692870649af4bc8078ce3967f93dbbf7182ad4038c78849e39645d5dfc942bb6c2bb8ba7327bcd6a758baec2a900dfd662445084.png)
+![img](https://img.picgo.net/2025/01/24/100000565769970840885d52.avif)
 
 查看故障文档，它在linux上运行还需要再安装一系列的系统依赖项，想要运行起来并没有那么容易
 
 [参考链接](https://pptr.dev/troubleshooting#chrome-doesnt-launch-on-linux)
 
-![img](https://static.jiabanmoyu.com/notes/5eecdaf48460cde58dfa2147842b208b9d786356f42cba500fae826e239291fadf5da1287db9ed9265a117e969287064da46cabd3a4f52910834ae71ecca5ccb419b8baf2979354f835580288370933ba84a4ba4e571b727f2ac17fb040400bd.png)
+![img](https://img.picgo.net/2025/01/24/10000057b9f111484dc0bf1b.avif)
 
 # **免费的解决方案**
 

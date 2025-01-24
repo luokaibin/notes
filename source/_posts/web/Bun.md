@@ -1,6 +1,6 @@
 ---
-updated: 2024/07/18 19:14:05
-date: 2024/12/04 19:20:04
+updated: 2025/01/24 10:47:15
+date: 2025/01/24 10:47:15
 categories: 
   - web
 title: Bun
@@ -481,7 +481,7 @@ Notification.requestPermission().then(res => {
 
 > 用户可以重置或修改权限
 >
-> <img src="https://static.jiabanmoyu.com/notes/image-20230925163729540.png" alt="image-20230925163729540" style="zoom:25%;" />
+> <img src="https://img.picgo.net/2025/01/24/1000001675607691deedb362.avif" alt="image-20230925163729540" style="zoom:25%;" />
 
 ### 主线程发送通知
 
