@@ -47,13 +47,13 @@ du（是 disk usage 的简称）用来显示目录或文件的大小，查找文
 
 [linuxmi@linux:~/Linux迷] $ du -sh * | sort -rh
 
-![img](https://static.jiabanmoyu.com/notes/5e9bccfb7f4e5351caadfaa5bd9b6595.png)
+![img](https://img.picgo.net/2025/01/24/10000003260955bdf41e2070.avif)
 
 2、统计当前目录的大小，以直观方式展现
 
 [linuxmi@linux:~/Linux迷] $ du -sh
 
-![img](https://static.jiabanmoyu.com/notes/2ff081446890aaeeae5ea18ddc984ebd.png)
+![img](https://img.picgo.net/2025/01/24/100000048fe5e8931ce47e5a.avif)
 
 查看当前目录总共占的容量，而不单独列出各子项占用的容量。
 
@@ -67,7 +67,7 @@ du（是 disk usage 的简称）用来显示目录或文件的大小，查找文
 [linuxmi@linux:~] $ sudo du -h --max-depth=1 |sort
 ```
 
-![img](https://static.jiabanmoyu.com/notes/9cd5362ead55f6cb42af84d458654076.png)
+![img](https://img.picgo.net/2025/01/24/10000005e7d666824135d888.avif)
 
 4、以人性化的方式显示文件大小
 
@@ -79,7 +79,7 @@ du（是 disk usage 的简称）用来显示目录或文件的大小，查找文
 [linuxmi@linux:~/Linux] $ du -h Debian.iso
 ```
 
-![img](https://static.jiabanmoyu.com/notes/cd032f0a9f985df0cbf399d083268624.png)
+![img](https://img.picgo.net/2025/01/24/100000069bc54d465074c88d.avif)
 
 5、查看当前目录下一级子文件和子目录占用的磁盘容量
 
@@ -91,7 +91,7 @@ du（是 disk usage 的简称）用来显示目录或文件的大小，查找文
 [linuxmi@linux:~/Linux] $ du -lh --max-depth=1
 ```
 
-![img](https://static.jiabanmoyu.com/notes/12a5bf8450c2e9362d4751be209d92d7.png)
+![img](https://img.picgo.net/2025/01/24/10000007b5ac9b0fda83541e.avif)
 
 当--max-depth设定为0时, 只显示当前文件夹总大小，可见，--max-depth=0的作用，相当于-s
 
@@ -113,4 +113,4 @@ du（是 disk usage 的简称）用来显示目录或文件的大小，查找文
 
 如下图：
 
-![img](https://static.jiabanmoyu.com/notes/4b164cc3cb793e1da23b7c28c9d05a00.png)
+![img](https://img.picgo.net/2025/01/24/100000085747438a3cdefe26.avif)

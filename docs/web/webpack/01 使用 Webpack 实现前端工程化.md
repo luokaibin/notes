@@ -12,7 +12,7 @@ lang: zh-CN
 
 
 
-![](https://static.jiabanmoyu.com/notes/5cdb7d6600011eab06400359.jpg)
+![](https://img.picgo.net/2025/01/24/100000582dfc08303fb6968f.avif)
 
 > 人的影响短暂而微弱，书的影响则广泛而深远
 > 

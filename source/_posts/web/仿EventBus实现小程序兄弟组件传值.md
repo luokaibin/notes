@@ -16,7 +16,7 @@ description: 背景公司业务中有个场景，需要在用户点击标签的�
 
 首先先看下demo：
 
-![2020042801](https://static.jiabanmoyu.com/notes/2020042801.gif?123)
+![2020042801](https://static.jiabanmoyu.com/notes/2020042801.gif)
 
 标签的部分和输入框部分是页面的两个组件，我们要做的就是点击标签的时候，将标签的内容添加到输入框中。
 
@@ -219,7 +219,7 @@ export default new Bus();
 
 编写完成这一部分，我们就可以先看下效果了
 
-![2020050101](https://static.jiabanmoyu.com/notes/temp/2020050101.gif?gf)
+![2020050101](https://static.jiabanmoyu.com/notes/temp/2020050101.gif)
 
 ## 编写业务
 

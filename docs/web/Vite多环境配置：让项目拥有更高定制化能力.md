@@ -9,7 +9,7 @@ comments: true
 description: 业务背景近些年来，随着前端工程架构发展，使得前端项目中也能拥有如后端工程的模块能力。正所谓 “能力越大，责任越大”，现在的前端工程不仅仅要满足业务需求，还伴随更多复杂的环境适配问题，例如：api请求的域名会根据不同环境而不同；线上环境和测试环境在打包策略有所不同「如线上要隔离sourceMap、屏蔽vue|react devtools等...」；
 ---
 
-<img src="https://static.jiabanmoyu.com/notes/image-20220504154702827.png" alt="image-20220504154702827"  />
+<img src="https://img.picgo.net/2025/01/24/1000001931a3165ded7bb777.avif" alt="image-20220504154702827"  />
 
 ## 业务背景
 
@@ -25,7 +25,7 @@ description: 业务背景近些年来，随着前端工程架构发展，使得�
 
 我们先来了解，在多环境下要求前端工程架构流程是怎样的？
 
-![image.png](https://static.jiabanmoyu.com/notes/b6dacd4186094ab7a28e502e8944078c~tplv-k3u1fbpfcp-zoom-in-crop-mark:1304:0:0:0.awebp)
+![image.png](https://img.picgo.net/2025/01/24/1000002095cc733e3fc9fc26.avif)
 
 如上图所示，在工程`启动 / 构建`时：
 
@@ -45,7 +45,7 @@ description: 业务背景近些年来，随着前端工程架构发展，使得�
 
 `Vite`通过 [多模式](https://link.juejin.cn?target=https%3A%2F%2Fcn.vitejs.dev%2Fguide%2Fenv-and-mode.html%23modes) 来配置不同启动场景下的特性环境变量，你可以创建自定义的模式文件，如下： 
 
-![image-20220504155219650](https://static.jiabanmoyu.com/notes/image-20220504155219650.png)
+![image-20220504155219650](https://img.picgo.net/2025/01/24/10000021236f4e1d506821e6.avif)
 
 这个项目创建了4种模式分别兼容`release、beta、测试、本地`环境，每种模式下有自己特定的环境变量，例如`.env.local`的内如如下：
 
@@ -242,7 +242,7 @@ const viteEnv: IEnv = import.meta.env;
 
 ### 效果图
 
-![image-20220504155339816](https://static.jiabanmoyu.com/notes/image-20220504155339816.png)
+![image-20220504155339816](https://img.picgo.net/2025/01/24/10000022184b58470d8f9786.avif)
 
 ## 解决的业务场景思考
 

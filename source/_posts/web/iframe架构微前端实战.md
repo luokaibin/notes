@@ -20,9 +20,9 @@ demo演示：[https://notes.jindll.com/frame](https://notes.jindll.com/frame)
 
 项目地址：[https://github.com/luokaibin/miniWeb](https://github.com/luokaibin/miniWeb)
 
-![image-20200305000033162](https://static.jiabanmoyu.com/notes/image-20200305000033162.png?imageView2/0/w/600/h/1000/q/75|imageslim)
+![image-20200305000033162](https://static.jiabanmoyu.com/notes/image-20200305000033162.png)
 
-![image-20200305000001482](https://static.jiabanmoyu.com/notes/image-20200305000001482.png?imageView2/0/w/600/h/1000/q/75|imageslim)
+![image-20200305000001482](https://static.jiabanmoyu.com/notes/image-20200305000001482.png)
 
 项目可以分为两部分，一部分是统一的登陆注册入口，一分部是主要的管理内容区。
 
