@@ -37,7 +37,7 @@ mount -t davfs http://127.0.0.1:7780/ /home/aliyun
 nano /etc/davfs2/davfs2.conf
 ```
 
-![image-20221015204117137](https://static.jindll.com/notes/image-20221015204117137.png)
+![image-20221015204117137](https://static.jiabanmoyu.com/notes/image-20221015204117137.png)
 
 **第二步、修改secrets文件，添加账号信息**
 
@@ -51,7 +51,7 @@ nano /etc/davfs2/secrets
 http://127.0.0.1:7780/ admin b4qfbgkd1z9LHC
 ```
 
-![image-20221015204359201](https://static.jindll.com/notes/image-20221015204359201.png)
+![image-20221015204359201](https://static.jiabanmoyu.com/notes/image-20221015204359201.png)
 
 **第三步、添加开机挂载命令**
 
@@ -65,5 +65,5 @@ nano /etc/rc.local
 mount -t davfs http://127.0.0.1:7780/ /home/aliyun
 ```
 
-![image-20221015204610483](https://static.jindll.com/notes/image-20221015204610483.png)
+![image-20221015204610483](https://static.jiabanmoyu.com/notes/image-20221015204610483.png)
 

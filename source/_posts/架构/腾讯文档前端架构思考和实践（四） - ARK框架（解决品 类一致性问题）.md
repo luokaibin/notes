@@ -31,7 +31,7 @@ description: 在腾讯文档快速发展的初期阶段，几大品类都是参�
 
 前段时间刚好在码客上看到这样一个问题：
 
-<img src="https://static.jindll.com/notes/image-20220503194003818.png" alt="image-20220503194003818" style="zoom: 33%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503194003818.png" alt="image-20220503194003818" style="zoom: 33%;" />
 
 在某个角度看来，腾讯文档业务其实和码客上这位同学的业务，要解决的是同一类问题。虽然腾讯文档面临的实际问题域还要大一些。
 
@@ -55,7 +55,7 @@ description: 在腾讯文档快速发展的初期阶段，几大品类都是参�
 
 ## 分歧在哪里
 
-![img](https://static.jindll.com/notes/050319455217_01.png)
+![img](https://static.jiabanmoyu.com/notes/050319455217_01.png)
 
 先拿sheet、doc、slide、流程图4个品类来进行观察，很明显，它们最大的分歧是编辑区（红色方框）位置几乎完全不一样。其他位置都具有很大的相似度。
 
@@ -228,7 +228,7 @@ const extensionConfig: IExtensionDescription[] = [
 
 流程如下：
 
-<img src="https://static.jindll.com/notes/image-20220503195409323.png" alt="image-20220503195409323" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503195409323.png" alt="image-20220503195409323" style="zoom:50%;" />
 
 其中通用的部分主要是模块依赖顺序和代码执行流程，可以用一个模版方法来表达：
 
@@ -327,7 +327,7 @@ userInfo.save();
 
 回到腾讯文档业务，虽然每个品类所需要的vilidate、request、mutation这几个服务的具体实现不一样，但它们还是能抽象出很多共同点，比如这些服务中含有的public方法都是一样的。我们可以为这些public方法建立抽象接口。然后让其他上下游去依赖这些抽象接口。这些抽象接口是很稳定的，不会因为处在不同品类中而产生变化，所以我们整个模块也变得稳定。
 
-<img src="https://static.jindll.com/notes/image-20220503200832241.png" alt="image-20220503200832241" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503200832241.png" alt="image-20220503200832241" style="zoom:50%;" />
 
 程序在编译期依靠同一个interface通过了类型检查，但在运行时，如何能指向正确的服务呢？比如在sheet里这个接口对应的真实服务分别是sheet-vilidate，sheet-request，sheet-mutation，而在doc里，对应的真实服务分别是doc-vilidate，doc-request，doc-mutation。
 
@@ -335,9 +335,9 @@ userInfo.save();
 
 这里我们利用依赖注入能力完成接口与具体服务的映射和关联。可以看到，我们在构造函数里申明的模块与模块的依赖关系，并不是指具体的某个类，而是指向的某个接口。
 
-<img src="https://static.jindll.com/notes/image-20220503200923243.png" alt="image-20220503200923243" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503200923243.png" alt="image-20220503200923243" style="zoom:50%;" />
 
-<img src="https://static.jindll.com/notes/image-20220503200946768.png" alt="image-20220503200946768" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503200946768.png" alt="image-20220503200946768" style="zoom:50%;" />
 
 在其他系统的低层位置，我们会去真正的绑定接口和具体服务的关系。
 
@@ -371,9 +371,9 @@ serviceRegistry.register(ITitleService，TitleService);
 
 为了不让程序中充斥if，else语句，我们参考vscode处理同类问题的方案，采用表达式配置来处理动态运行时分歧。
 
-<img src="https://static.jindll.com/notes/image-20220503201115188.png" alt="image-20220503201115188" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503201115188.png" alt="image-20220503201115188" style="zoom:50%;" />
 
-<img src="https://static.jindll.com/notes/image-20220503201143493.png" alt="image-20220503201143493" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503201143493.png" alt="image-20220503201143493" style="zoom:50%;" />
 
 ### 处理多宿主&终端分歧：
 
@@ -452,7 +452,7 @@ serviceRegistry.register(IMsgChannel，MsgChannelService);
 serviceRegistry.register(IExportFileCommand，ExportFileCommand);
 ```
 
-<img src="https://static.jindll.com/notes/image-20220503211303012.png" alt="image-20220503211303012" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503211303012.png" alt="image-20220503211303012" style="zoom:50%;" />
 
 我们从为每个端提供不同的入口，在入口处就给它们分别分配了不同的service实现，各个service之间的依赖关系都是通过interface联系起来的，而这些service都运行在各自终端环节下，永远不会交叉。
 
@@ -543,9 +543,9 @@ export class ArkProcesson extends BaseArkApplication {
 
 我们利用了团队 ziofatli 同学开发的 workbench 框架来达成这件事情，workbench 框架是为文档 型应用设计的一个工作台框架，其中提供了适配器将文档编辑器和其他部分连接起来。 
 
-<img src="https://static.jindll.com/notes/image-20220503211755649.png" alt="image-20220503211755649" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503211755649.png" alt="image-20220503211755649" style="zoom:50%;" />
 
-<img src="https://static.jindll.com/notes/image-20220503211814369.png" alt="image-20220503211814369" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503211814369.png" alt="image-20220503211814369" style="zoom:50%;" />
 
 Workbench 提供了一个 Adapter 接口，要求对应的编辑器 SDK 去实现这个接口，工作台就能保持一致的方式去操作各个编辑器。 
 
@@ -557,15 +557,15 @@ Workbench 提供了一个 Adapter 接口，要求对应的编辑器 SDK 去实�
 
 **流程图**
 
-<img src="https://static.jindll.com/notes/image-20220503212458857.png" alt="image-20220503212458857" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503212458857.png" alt="image-20220503212458857" style="zoom:50%;" />
 
 **sheet**
 
-<img src="https://static.jindll.com/notes/image-20220503212542622.png" alt="image-20220503212542622" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503212542622.png" alt="image-20220503212542622" style="zoom:50%;" />
 
 **doc**
 
-<img src="https://static.jindll.com/notes/image-20220503212608801.png" alt="image-20220503212608801" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503212608801.png" alt="image-20220503212608801" style="zoom:50%;" />
 
 ### 总结
 
@@ -603,5 +603,5 @@ Workbench 提供了一个 Adapter 接口，要求对应的编辑器 SDK 去实�
 
 我们将整套解决方案，包装成tencent-ark框架，除了一些细节分歧在代码内部处理之外，一个新品类的接入，大致可以分为8份配置文件 + 通用服务 + 编辑器的组成。
 
-<img src="https://static.jindll.com/notes/image-20220503212820758.png" alt="image-20220503212820758" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20220503212820758.png" alt="image-20220503212820758" style="zoom:50%;" />
 

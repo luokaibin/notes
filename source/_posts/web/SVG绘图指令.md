@@ -1,6 +1,6 @@
 ---
-updated: 2023/08/22 11:08:00
-date: 2023/09/19 19:23:57
+updated: 2024/07/18 19:14:05
+date: 2024/07/18 19:14:05
 categories: 
   - web
 title: SVG绘图指令
@@ -10,7 +10,7 @@ description: SVG 坐标系stroke 描边颜色stroke-width 描边宽度fill 填�
 ---
 ## SVG 坐标系
 
-![image-20230814165101476](https://static.jindll.com/notes/image-20230814165101476.png)
+![image-20230814165101476](https://static.jiabanmoyu.com/notes/image-20230814165101476.png)
 
 ## stroke 描边颜色
 
@@ -76,7 +76,7 @@ L x y
 
 画弧形
 
-![image-20230814181912686](https://static.jindll.com/notes/image-20230814181912686.png)
+![image-20230814181912686](https://static.jiabanmoyu.com/notes/image-20230814181912686.png)
 
 ```
 A rx ry x-axis-rotation large-arc-flag sweep-flag x y

@@ -51,13 +51,13 @@ Mem:        3880200      256216     2159544         520     1464440     3361912
 Swap:             0           0           0
 ```
 
-<img src="https://static.jindll.com/notes/image-20211124194524583.png" alt="image-20211124194524583" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20211124194524583.png" alt="image-20211124194524583" style="zoom:50%;" />
 
 ## 内核参数修改
 
 > 所有机器都执行
 
-<img src="https://static.jindll.com/notes/image-20211124194718999.png" alt="image-20211124194718999" style="zoom:50%;" />
+<img src="https://static.jiabanmoyu.com/notes/image-20211124194718999.png" alt="image-20211124194718999" style="zoom:50%;" />
 
 ```shell
 # 开启

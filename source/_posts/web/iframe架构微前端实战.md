@@ -20,9 +20,9 @@ demo演示：[https://notes.jindll.com/frame](https://notes.jindll.com/frame)
 
 项目地址：[https://github.com/luokaibin/miniWeb](https://github.com/luokaibin/miniWeb)
 
-![image-20200305000033162](https://static.jindll.com/notes/image-20200305000033162.png?imageView2/0/w/600/h/1000/q/75|imageslim)
+![image-20200305000033162](https://static.jiabanmoyu.com/notes/image-20200305000033162.png?imageView2/0/w/600/h/1000/q/75|imageslim)
 
-![image-20200305000001482](https://static.jindll.com/notes/image-20200305000001482.png?imageView2/0/w/600/h/1000/q/75|imageslim)
+![image-20200305000001482](https://static.jiabanmoyu.com/notes/image-20200305000001482.png?imageView2/0/w/600/h/1000/q/75|imageslim)
 
 项目可以分为两部分，一部分是统一的登陆注册入口，一分部是主要的管理内容区。
 
@@ -53,7 +53,7 @@ demo演示：[https://notes.jindll.com/frame](https://notes.jindll.com/frame)
 
 ### 一、主内容区组件划分
 
-![image-20200307232341533](https://static.jindll.com/notes/image-20200307232341533.png)
+![image-20200307232341533](https://static.jiabanmoyu.com/notes/image-20200307232341533.png)
 
 主内容区由四部分组成，header组件(对应的文件是 `/src/components/header.vue` )，aside组件(对应的文件是 `/src/components/menu.vue` )， 和面包屑导航与具体菜单项对应的欢迎部分组成；四部分在 `/src/views/main.vue` 中完成组装，面包屑没有单独提出来封装直接在 `main.vue` 中写的，欢迎部分是 `router-view`。
 
@@ -432,7 +432,7 @@ export default {
 
 然后我们使用 `postMessage` 构建起了父子通信的桥梁，并且因为 `postMessage` 是H5标准的一部分，它不会限制你的技术栈，它可以在 `Vue` `React` `angular` 三大前端框架间随意发送消息；第二点也由于他是H5标准的一部分，到目前为止，所有的浏览器已经都支持了 `postMessage` API。
 
-![image-20200308152830958](https://static.jindll.com/notes/image-20200308152830958.png)
+![image-20200308152830958](https://static.jiabanmoyu.com/notes/image-20200308152830958.png)
 
 最核心的部分已经完了，接下来就是与交互有关的问题与解决方案了。
 
@@ -444,7 +444,7 @@ export default {
 
 正常来说，子项目是父项目用 iframe 加载进来的，iframe 也就红色框起来这么大。那对话框的遮罩也就这么大。
 
-![image-20200308154205316](https://static.jindll.com/notes/image-20200308154205316.png)
+![image-20200308154205316](https://static.jiabanmoyu.com/notes/image-20200308154205316.png)
 
 所以对话框的遮罩要覆盖住全屏，那么 iframe 的宽高就需要和屏幕宽高一样大（准确说是浏览器可视区域）；这里有两个实现方式：
 

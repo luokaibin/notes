@@ -292,7 +292,7 @@ $: git rebase -i k-15^
 
 然后会进入vim编辑界面
 
-![image-20221110102555656](https://static.jindll.com/notes/image-20221110102555656.png)
+![image-20221110102555656](https://static.jiabanmoyu.com/notes/image-20221110102555656.png)
 
 找到我们要删除的commit，然后将前面的 `pick` 修改为 `drop` ，最后保存。
 

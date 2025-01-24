@@ -22,10 +22,8 @@
   },
   "homepage": "https://github.com/luokaibin/notes#readme",
   "dependencies": {
-    "@cloudbase/cli": "^1.7.0",
-    "vuepress": "^1.2.0"
-  },
-  "devDependencies": {
-    "@vuepress/plugin-pwa": "^1.2.0"
+    "axios": "^1.7.9",
+    "form-data": "^4.0.1",
+    "sharp": "^0.33.5"
   }
 }

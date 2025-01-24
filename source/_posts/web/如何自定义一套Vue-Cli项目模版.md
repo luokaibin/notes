@@ -169,7 +169,7 @@ module.exports = (api, options, rootOptions) => {
 
 使用 `vue create --preset username/repo my-project` 去创建你的项目，`username/repo` 是你的github用户名和仓库名
 
-![image-20200319162012041](https://static.jindll.com/notes/image-20200319162012041.png)
+![image-20200319162012041](https://static.jiabanmoyu.com/notes/image-20200319162012041.png)
 
 ### 完成
 

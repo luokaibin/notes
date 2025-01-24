@@ -14,7 +14,7 @@ description: 前言个人比较喜欢用 Typora 写文档，对于文档中的�
 
 个人比较喜欢用 Typora 写文档，对于文档中的图片之前一直是手动上传到七牛云，复制地址，在粘回文档，比较累。就一直在想怎么能实现图片自动上传呢，然后最近就发现 window 版的 Typora 也支持自定义图床了(mac很久之前就支持了)，就专门研究了下，下面就分享下怎么把图片自动上传到七牛云。先看下最后的实现效果：
 
-<img src="https://static.jindll.com/notes/2020050701.gif" alt="2020050701" style="zoom:67%;" />
+<img src="https://static.jiabanmoyu.com/notes/2020050701.gif" alt="2020050701" style="zoom:67%;" />
 
 ## 前置条件
 
@@ -24,7 +24,7 @@ description: 前言个人比较喜欢用 Typora 写文档，对于文档中的�
 
 我们先打开 Typora 的设置，选择到图像，插入图片时选择上传图片，下面的选项根据自己的需要选，下方的上传服务选择自定义命令( `Custom Command` )
 
-![2020050702](https://static.jindll.com/notes/2020050702.png)
+![2020050702](https://static.jiabanmoyu.com/notes/2020050702.png)
 
 自定义命令要输入的就是上传图片时会执行的命令，假入我们输入的是 `node index.js` 那么最后上传图片时执行的就是 `node index.js xxx.jpg` ，执行完成之后必须在控制台打印出最后的图片地址。
 
@@ -74,13 +74,13 @@ const upload = async () => {
     fileName =  LocalFile.split('/');
     fileName = fileName[fileName.length - 1];
     res = await exec(`/Applications/qshell/qshell fetch ${LocalFile} blog -k notes/${fileName}`);
-    console.log(`https://static.jindll.com/notes/${fileName}`)
+    console.log(`https://static.jiabanmoyu.com/notes/${fileName}`)
   } else {
     // 处理本地图片
     fileName = LocalFile.split(/[\/|\\]/);
     fileName = fileName[fileName.length - 1];
     res = await exec(`/Applications/qshell/qshell fput --overwrite blog notes/${fileName} ${LocalFile}`);
-    console.log(`https://static.jindll.com/notes/${fileName}`)
+    console.log(`https://static.jiabanmoyu.com/notes/${fileName}`)
   }
 }
 
@@ -128,16 +128,16 @@ const upload = async () => {
     fileName =  LocalFile.split('/');
     fileName = fileName[fileName.length - 1];
     res = await exec(`qshell fetch ${LocalFile} blog -k notes/${fileName}`);
-    console.log(`https://static.jindll.com/notes/${fileName}`)
+    console.log(`https://static.jiabanmoyu.com/notes/${fileName}`)
   } else {
     fileName = LocalFile.split(/[\/|\\]/);
     fileName = fileName[fileName.length - 1];
     res = await exec(`qshell fput --overwrite blog notes/${fileName} ${LocalFile}`);
-    console.log(`https://static.jindll.com/notes/${fileName}`)
+    console.log(`https://static.jiabanmoyu.com/notes/${fileName}`)
   }
   // const reg = /=>.*(notes\/.*)\s*success!/
   // if (reg.test(res)) {
-  //   console.log(`https://static.jindll.com/${RegExp.$1}`)
+  //   console.log(`https://static.jiabanmoyu.com/${RegExp.$1}`)
   // }
 }
 

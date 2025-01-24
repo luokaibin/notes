@@ -17,13 +17,13 @@ description: Mac Docker Desktop新版换源的问题一、问题因为官方仓�
 
 当前使用的版本
 
-![img](https://static.jindll.com/notes/1)
+![img](https://static.jiabanmoyu.com/notes/1)
 
 ## 2、解决
 
 看了下资料，其实也很简单打开 Prefreences 点击Docker Engine ，如图
 
-![img](https://static.jindll.com/notes/1-20210201102237916)
+![img](https://static.jiabanmoyu.com/notes/1-20210201102237916)
 
 然后将我们国内源加入即可,完整配置如下
 

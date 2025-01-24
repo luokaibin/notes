@@ -89,7 +89,7 @@ git push origin master
 revert是放弃指定提交的修改，但是会生成一次新的提交，需要填写提交注释，以前的历史记录都在，而reset是指将HEAD指针指到指定提交，历史记录中不会出现放弃的提交记录。如果还没有理解的话，我们做如下测试：
 假设我们有以下三次提交记录：
 
-![这里写图片描述](https://static.jindll.com/notes/SouthEast.png)
+![这里写图片描述](https://static.jiabanmoyu.com/notes/SouthEast.png)
 
 现在我们使用revert放弃最后一次提交，之后执行git log：
 
@@ -98,7 +98,7 @@ git revert HEAD
 git log
 ```
 
-![这里写图片描述](https://static.jindll.com/notes/SouthEast-20210610164118407.png)
+![这里写图片描述](https://static.jiabanmoyu.com/notes/SouthEast-20210610164118407.png)
 
 历史记录中还有第三次提交的记录，并且多了一次的提交，但是仓库内容已经回到了第二次提交之后的状态。 现在我们使用reset回到第三次提交，之后执行git log：
 
@@ -107,7 +107,7 @@ git reset --hard HEAD^
 git log
 ```
 
-![这里写图片描述](https://static.jindll.com/notes/SouthEast-20210610164118580.png)
+![这里写图片描述](https://static.jiabanmoyu.com/notes/SouthEast-20210610164118580.png)
 
 历史记录中已经没有之前revert生成的提交记录了，现在应该明白了吧。 如果删除远程仓库的最后一次提交的时候不需要保留历史记录的话，可以使用reset，命令如下：
 
@@ -122,7 +122,7 @@ git push origin master -f
 
 这种情况需要先用git log命令在历史记录中查找到想要删除的某次提交的commit id，比如下图中圈出来的就是注释为”2”的提交的commit id（由此可见提交的注释很重要，一定要认真写）
 
-![这里写图片描述](https://static.jindll.com/notes/SouthEast-20210610164118918.png)
+![这里写图片描述](https://static.jiabanmoyu.com/notes/SouthEast-20210610164118918.png)
 
 然后执行以下命令（”commit id”替换为想要删除的提交的”commit id”，需要注意最后的^号，意思是commit id的前一次提交）：
 
@@ -132,7 +132,7 @@ git rebase -i "commit id"^
 
 执行该条命令之后会打开一个编辑框，内容如下，列出了包含该次提交在内之后的所有提交。
 
-![这里写图片描述](https://static.jindll.com/notes/SouthEast-20210610164118981.png)
+![这里写图片描述](https://static.jiabanmoyu.com/notes/SouthEast-20210610164118981.png)
 
 然后在编辑框中删除你想要删除的提交所在行，然后保存退出就好啦，如果有冲突的需要解决冲突。接下来，执行以下命令，将本地仓库提交到远程库就完成了：
 

@@ -1,6 +1,6 @@
 ---
-updated: 2023/09/08 19:21:20
-date: 2024/02/25 12:32:07
+updated: 2024/07/18 19:14:05
+date: 2024/07/18 19:14:05
 categories: 
   - 杂记
 title: 从 png 到 base64
@@ -22,7 +22,7 @@ Base64编码最早出现于1977年，由美国国家标准与技术研究院（N
 
 Base64编码使用64个字符来表示256个字符集中的数据，它的基本原理是将每3个字节的二进制数据划分成4组，每组6位，但6位不够一个字节，所以再往前补两个0，这样原本的3字节数据，被扩充成了4字节【**这就是为什么图片被转成base64之后，体积会增大33%，原本三字节被转成了4字节，体积可不得增大吗**】，然后将这8位的二进制数据转成10进制，然后根据下表进行匹配到对应字符，将这些字符拼接起来，就成了我们看到的base64编码。
 
-![image-20230421171715548](https://static.jindll.com/notes/image-20230421171715548.png)
+![image-20230421171715548](https://static.jiabanmoyu.com/notes/image-20230421171715548.png)
 
 ## 【不够三字节】单字节编码
 
@@ -241,13 +241,13 @@ js 的字符串编码采用 utf-16 进行编码
 
 [ECMA262对字符串值的定义](https://tc39.es/ecma262/multipage/overview.html#sec-terms-and-definitions-string-value)
 
-![image-20230905110308152](https://static.jindll.com/notes/image-20230905110308152.png)
+![image-20230905110308152](https://static.jiabanmoyu.com/notes/image-20230905110308152.png)
 
 UTF-16 所能表示的最大数字为 16个1`1111111111111111` 即65535，也就是说最多可以表示 65515个字符。
 
 **但是unicode字符集目前的可表示的字符数为[149186（unicode15.0.0 2022.9.13）](https://unicode.org/versions/Unicode15.0.0/)**  
 
-![image-20230906094325014](https://static.jindll.com/notes/image-20230906094325014.png)
+![image-20230906094325014](https://static.jiabanmoyu.com/notes/image-20230906094325014.png)
 
 这就导致用两个字节存储一个字符，无法表达全部的 **unicode** 字符，因此就出现了其他的编码方式，如 `utf-8` `utf-32` 
 

@@ -61,7 +61,7 @@ description: Docker 是什么Docker 可以做什么如何配置Docker如何借�
 >
 > 所罗门主要作者之一。
 
-![image-20210131193122611](https://static.jindll.com/notes/image-20210131193122611.png)
+![image-20210131193122611](https://static.jiabanmoyu.com/notes/image-20210131193122611.png)
 
 > Docker 的作者已经离开了维护Docker的团队。
 
@@ -172,7 +172,7 @@ docker load -i 镜像文件
 > docker tag 运行起来的镜像ID 要起的名字:重新修改版本号
 > ```
 >
-> ![image-20210201143939723](https://static.jindll.com/notes/image-20210201143939723.png)
+> ![image-20210201143939723](https://static.jiabanmoyu.com/notes/image-20210201143939723.png)
 
 ### 2.4 容器的操作
 

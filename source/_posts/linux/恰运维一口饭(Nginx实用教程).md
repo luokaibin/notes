@@ -233,8 +233,8 @@ server {
 
 **未开启**
 
-![image-20200217173519190](https://static.jindll.com/notes/image-20200217173519190.png)
+![image-20200217173519190](https://static.jiabanmoyu.com/notes/image-20200217173519190.png)
 
 **开启后**
 
-![image-20200217173642958](https://static.jindll.com/notes/image-20200217173642958.png)
+![image-20200217173642958](https://static.jiabanmoyu.com/notes/image-20200217173642958.png)
