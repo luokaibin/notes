@@ -114,5 +114,4 @@ a---c("精确的定点更新")---c1("oldVnode,newVnode")
   on <a href="https://codepen.io">CodePen</a>.
 </iframe>
 
-### 简历
 

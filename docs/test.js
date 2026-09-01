@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
+// const FormData = require('form-data');
+const axios = require('axios');
 
 function findMarkdownFiles(directory) {
     let markdownFiles = [];
@@ -29,35 +31,47 @@ async function replaceLinksInFile(filePath) {
         for (let link of links) {
             link = link.replace(/\"/g, '')
             const newLink = await uploadContent(link);
-            // content = content.replace(link, newLink);
+            // if (newLink) {
+            //   content = content.replace(link, newLink);
+            // }
         }
         // fs.writeFileSync(filePath, content, 'utf-8');
     }
 }
-let i = 0;
+let i = 10000358;
+// let initNum = 10000000;
 const KB = 1024;
 const MB = 1024 * 1024;
 async function uploadContent(url) {
   i++
-  console.log(i, ":", url)
-  // const response = await fetch(url);
-  // const blob = await response.arrayBuffer();
-  // const size = blob.byteLength / MB < 1 ? (blob.byteLength / KB).toFixed(2) + "KB" : (blob.byteLength / MB).toFixed(2) + "MB";
-  // const img = sharp(blob).avif({quality: 50})
-  // const buff = await img.toBuffer();
-  // const buffSize = buff.length / MB < 1 ? (buff.length / KB).toFixed(2) + "KB" : (buff.length / MB).toFixed(2) + "MB";
-  // console.log(i, ":", size, ":", buffSize)
-  // console.log(i, ":", response)
-    // const newUrl = await uploadToNewLocation(response.data);
-    // return newUrl;
+  if (i > 10000361) return;
+  try {
+    const response = await fetch(url);
+    const blob = await response.arrayBuffer();
+    const size = blob.byteLength / MB < 1 ? (blob.byteLength / KB).toFixed(2) + "KB" : (blob.byteLength / MB).toFixed(2) + "MB";
+    const img = sharp(blob).avif({quality: 50})
+    // const metadata = await img.metadata()
+    const buff = await img.toBuffer();
+    // const base64DataUrl = `${buff.toString("base64")}`;
+    const buffSize = buff.length / MB < 1 ? (buff.length / KB).toFixed(2) + "KB" : (buff.length / MB).toFixed(2) + "MB";
+    console.log(i, ":", size, ":", buffSize)
+    const newBlob = new Blob([buff], { type: 'application/octet-stream' });
+    const newUrl = await uploadToNewLocation(newBlob, i);
+    return newUrl;
+  } catch (error) {
+    console.log(i, ":", url, ":", error);
+    return '';
+  }
+  
 }
 
-async function uploadToNewLocation(buff) {
+async function uploadToNewLocation(buff, fileName) {
   const form = new FormData();
   form.append('source', buff, {
-    filename: `${dayjs().format('YYYY-MM-DD')}.avif`, // 指定文件名
+    filename: `${fileName}.avif`, // 指定文件名
     contentType: 'application/octet-stream' // 指定 MIME 类型
   })
+  // form.append('source', buff)
   form.append('format', 'json')
   
   const config = {
@@ -65,17 +79,19 @@ async function uploadToNewLocation(buff) {
     maxBodyLength: Infinity,
     url: 'https://www.picgo.net/api/1/upload',
     headers: { 
-      'X-API-Key': 'chv_Kiai_fa008b4ad7d75085cdd13b90cc5a385c9a352d9583e59bba2d50b4f0957bd515e7e792bb814681be41a8b9a393f3e28541db07ceb8fea3d8f85f8e1c58a1b52b', 
-      ...form.getHeaders()
+      'X-API-Key': '<YOUR_PICGO_API_KEY>', 
+      // ...form.getHeaders()
     },
     data : form
   };
-  if (!screenshot.length) return
-  const result = await axios.request(config)
-  const imgUrl = result?.data?.image?.url
+  if (!buff.size) return
+  const result = await fetch('https://www.picgo.net/api/1/upload',{method: 'POST', body: form, maxBodyLength: Infinity, headers: { 'X-API-Key': '<YOUR_PICGO_API_KEY>' }})
+  const json = await result.json()
+  console.log(await result.json())
+  const imgUrl = json?.image?.url
     // 这里实现上传逻辑，返回新链接
     // 示例：假设上传返回一个新的URL
-    return "https://new.location.com/uploaded_content";
+  return imgUrl;
 }
 
 async function main() {
